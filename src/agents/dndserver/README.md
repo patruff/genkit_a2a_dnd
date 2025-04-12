@@ -1,15 +1,58 @@
 # The Tipsy Gnome Tavern - DnD Tavern System
 
-This system creates a virtual D&D tavern called "The Tipsy Gnome" with interactive character agents that can converse with each other and pursue goals.
+This system creates a virtual D&D tavern called "The Tipsy Gnome" with interactive character agents that can converse with each other, perform actions with real dice rolls, and pursue goals.
 
 ## Features
 
 - A tavern server that manages the environment and coordinates characters
 - Character agents (Homie the gnome thief and Bob the bartender) that roleplay D&D personas
-- Goal-oriented interactions with skill checks and dice rolls
+- **Interactive Action System with real dice rolls and mechanical outcomes**
+- Goal-oriented interactions with skill checks and mid-narrative continuations
 - Persistent state saved to disk between sessions
 - Configurable conversation settings (number of turns, etc.)
 - Uses A2A protocol for standardized agent communication
+
+## Action System
+
+The D&D Tavern now features a fully interactive action system where:
+
+- Characters can perform actions like stealing, hiding, perceiving, persuading, etc.
+- Actions are resolved using real dice rolls with D&D mechanics (not just descriptive text)
+- Characters have stats, skills, and modifiers that affect their success chance
+- Actions have consequences in the narrative (success/failure changes outcomes)
+- Narrative flow includes character reactions to action outcomes
+
+### How Actions Work
+
+1. **Action Format**: Characters use special action tags in their responses:
+   ```
+   [ACTION: STEAL target: "gem", skill: "Sleight of Hand", difficulty: "hard"]
+   ```
+
+2. **Processing Flow**:
+   - The system detects action tags in character responses
+   - It pauses the narrative at that point
+   - It rolls dice and applies appropriate modifiers
+   - It determines success/failure based on difficulty class (DC)
+   - It generates an outcome description
+   - It asks the character to continue the narrative based on the outcome
+   - The final narrative includes the original text, action result, and continuation
+
+3. **Available Actions**:
+   - STEAL: Attempt to take an item
+   - HIDE: Try to conceal yourself
+   - DETECT/PERCEPTION: Notice details or threats
+   - DECEIVE: Lie or mislead someone
+   - PERSUADE: Convince someone to do something
+   - INTIMIDATE: Frighten or coerce someone
+   - UNLOCK: Pick a lock or open a container
+   - ACROBATICS: Perform agile maneuvers
+   - ATTACK: Combat actions
+
+4. **Skills and Modifiers**:
+   Each character has specific skills with modifiers:
+   - Homie: Stealth +6, Sleight of Hand +6, Lockpicking +6, Deception +5, etc.
+   - Bob: Perception +3, Insight +3, Persuasion +4, Intimidation +2, etc.
 
 ## Step-by-Step Setup
 
@@ -133,7 +176,27 @@ One of the key features is setting goals for characters and watching them work t
      }'
    ```
 
-3. You'll see Homie attempting to accomplish his goal during the conversation, making appropriate skill checks (like Sleight of Hand).
+3. You'll see Homie attempting to accomplish his goal during the conversation, making appropriate skill checks (like Sleight of Hand) with actual dice rolls and outcomes that affect the narrative flow.
+
+## Running a Test Scenario
+
+The project includes a test script that demonstrates the action system:
+
+```bash
+# Make sure the GOOGLE_API_KEY is set
+export GOOGLE_API_KEY=your_api_key_here
+
+# Run the test scenario
+./test_actions.sh
+```
+
+This will:
+1. Start all three servers
+2. Set up "The Gem Heist" scenario where:
+   - Homie's goal is to steal a valuable gem
+   - Bob's goal is to protect the gem
+3. Run an interaction for several turns
+4. Display dice roll results and action outcomes
 
 ## Common Commands
 
@@ -155,17 +218,22 @@ The tavern server maintains two state files in the working directory:
 
 These files are saved automatically after each interaction and when the server is shut down.
 
-## Troubleshooting
-
-- If an agent fails to start, check that the required port (41245, 41246, or 41247) is not in use
-- If the characters don't interact, ensure all three servers are running
-- Check the console logs for each server to identify issues
-- Verify your GOOGLE_API_KEY is correctly set and valid
-
 ## Technical Implementation
 
 The system uses:
+- **gameEngine.ts**: Core dice rolling and skill check mechanics
+- **processAction.ts**: Mid-narrative continuation for action reactions
+- **types.ts**: TypeScript interfaces for action system
 - Google's Gemini model via genkit for AI capabilities
 - A2A protocol for standardized agent communication
 - TypeScript for type safety and maintainability
 - File-based persistence for tavern state
+
+## A2A Integration
+
+The action system integrates with the A2A framework by:
+1. Using the standard JSON-RPC protocol for all communications
+2. Implementing multi-agent interactions between character agents
+3. Handling state persistence across multiple conversation turns
+4. Maintaining consistent character personalities and goals
+5. Using continuation requests to handle action outcomes
