@@ -36,19 +36,179 @@
   ],
   "events": [
     {
-      "description": "User assigns a goal to Homie: \"steal the rare gem on display behind the bar without getting caught\"",
-      "timestamp": "2025-04-12T07:35:47.574Z"
+      "description": "User assigns a goal to Bob: \"protect the gem at all costs\"",
+      "timestamp": "2025-04-12T13:04:45.221Z"
     },
     {
-      "description": "User assigns a goal to Bob: \"protect the rare gem from thieves at all costs\"",
-      "timestamp": "2025-04-12T07:35:47.586Z"
+      "description": "Homie attempts to steal gem - FAILURE",
+      "timestamp": "2025-04-12T13:04:50.194Z"
+    },
+    {
+      "description": "Bob attempts to persuade Homie to leave - SUCCESS",
+      "timestamp": "2025-04-12T13:04:54.033Z"
+    },
+    {
+      "description": "Homie stole the small coin from the bar",
+      "timestamp": "2025-04-12T13:04:56.508Z"
+    },
+    {
+      "description": "Homie attempts to hide under the cover of smoke - SUCCESS",
+      "timestamp": "2025-04-12T13:04:56.508Z"
+    },
+    {
+      "description": "Bob attempts to perception missing items from the bar - SUCCESS",
+      "timestamp": "2025-04-12T13:04:59.004Z"
+    },
+    {
+      "description": "Homie attempts to hide shadows of the alley - SUCCESS",
+      "timestamp": "2025-04-12T13:05:01.991Z"
+    },
+    {
+      "description": "Bob attempts to perception mercenaries - SUCCESS",
+      "timestamp": "2025-04-12T13:05:04.027Z"
+    },
+    {
+      "description": "User assigns a goal to Homie: \"steal the valuable gem from behind the bar\"",
+      "timestamp": "2025-04-12T13:17:23.485Z"
+    },
+    {
+      "description": "User assigns a goal to Bob: \"protect the gem at all costs\"",
+      "timestamp": "2025-04-12T13:17:23.498Z"
+    },
+    {
+      "description": "Homie attempts to perception Bob's routines and habits - SUCCESS",
+      "timestamp": "2025-04-12T13:17:25.691Z"
+    },
+    {
+      "description": "Bob attempts to perception Homie's movements - FAILURE",
+      "timestamp": "2025-04-12T13:17:30.748Z"
+    },
+    {
+      "description": "Homie attempts to steal gem - FAILURE",
+      "timestamp": "2025-04-12T13:17:34.821Z"
+    },
+    {
+      "description": "Bob attempts to perception Homie's movements - FAILURE",
+      "timestamp": "2025-04-12T13:17:39.938Z"
     }
   ],
-  "lastUpdated": "2025-04-12T07:36:21.301Z",
+  "lastUpdated": "2025-04-12T13:17:48.441Z",
   "metadata": {
     "characterGoals": {
-      "Homie": "steal the rare gem on display behind the bar without getting caught",
-      "Bob": "protect the rare gem from thieves at all costs"
-    }
+      "Homie": "steal the valuable gem from behind the bar",
+      "Bob": "protect the gem at all costs"
+    },
+    "skillChecks": [
+      {
+        "characterName": "Bob",
+        "skillName": "Persuasion",
+        "rollValue": 13,
+        "modifier": 4,
+        "total": 17,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:04:54.033Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 13,
+        "modifier": 6,
+        "total": 19,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:04:56.508Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Stealth",
+        "rollValue": 17,
+        "modifier": 6,
+        "total": 23,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:04:56.508Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 16,
+        "modifier": 3,
+        "total": 19,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:04:59.004Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Stealth",
+        "rollValue": 17,
+        "modifier": 6,
+        "total": 23,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:05:01.991Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 17,
+        "modifier": 3,
+        "total": 20,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:05:04.027Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 14,
+        "modifier": 6,
+        "total": 20,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T13:17:25.691Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 8,
+        "modifier": 3,
+        "total": 11,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-12T13:17:30.748Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 2,
+        "modifier": 6,
+        "total": 8,
+        "difficultyClass": 20,
+        "success": false,
+        "timestamp": "2025-04-12T13:17:34.821Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 3,
+        "modifier": 3,
+        "total": 6,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-12T13:17:39.938Z",
+        "advantage": "normal"
+      }
+    ]
   }
 }

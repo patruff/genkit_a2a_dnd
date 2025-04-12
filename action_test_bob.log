@@ -1,0 +1,19 @@
+[BobAgent] Server started on http://localhost:41246
+[BobAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41246 at path /
+[Task 83ef9af6-1401-4e75-b641-58823a2482b2] Created new task and history.
+[BobAgent] Processing task 83ef9af6-1401-4e75-b641-58823a2482b2 with state submitted
+[BobAgent] Task 83ef9af6-1401-4e75-b641-58823a2482b2 finished with state: input-required
+[Task 1307cc20-f3f0-4940-ab6e-20858c27677b] Created new task and history.
+[BobAgent] Processing task 1307cc20-f3f0-4940-ab6e-20858c27677b with state submitted
+[BobAgent] Task 1307cc20-f3f0-4940-ab6e-20858c27677b finished with state: completed
+[Task 0337f1d0-e71f-4d13-8872-32a6aa1e8426] Created new task and history.
+[BobAgent] Processing task 0337f1d0-e71f-4d13-8872-32a6aa1e8426 with state submitted
+[BobAgent] Task 0337f1d0-e71f-4d13-8872-32a6aa1e8426 finished with state: completed
+[Task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa] Created new task and history.
+[BobAgent] Processing task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa with state submitted
+[BobAgent] Task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa finished with state: input-required
+[Task 2caa1087-51de-4a8a-bfaf-3069a6f491ef] Created new task and history.
+[BobAgent] Processing task 2caa1087-51de-4a8a-bfaf-3069a6f491ef with state submitted
+[BobAgent] Task 2caa1087-51de-4a8a-bfaf-3069a6f491ef finished with state: completed
+Shutting down all Genkit servers...

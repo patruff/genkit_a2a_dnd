@@ -1,0 +1,224 @@
+[TavernServer] Agent clients initialized
+[TavernServer] Loaded tavern state from file
+[TavernServer] Loaded tavern log from file
+[TavernServer] Server started on http://localhost:41247
+[TavernServer] Press Ctrl+C to stop the server
+A2A Server listening on port 41247 at path /
+[Task task_1744463843463] Created new task and history.
+[TavernServer] Processing task task_1744463843463 with state submitted
+[TavernServer] Saved tavern state and log
+[Task task_1744463843495] Created new task and history.
+[TavernServer] Processing task task_1744463843495 with state submitted
+[TavernServer] Saved tavern state and log
+[Task task_1744463843503] Created new task and history.
+[TavernServer] Processing task task_1744463843503 with state submitted
+[Task task_1744463843507] Created new task and history.
+[TavernServer] Processing task task_1744463843507 with state submitted
+
+[TavernServer] Starting 6 turn interaction cycle
+
+[TavernServer] Turn 1 - Homie's turn
+[2025-04-12T13:17:23.510Z] 📤 TavernServer -> Homie the Gnome Thief: Request
+[2025-04-12T13:17:25.688Z] 📥 Homie the Gnome Thief -> TavernServer: Response
+[TavernServer] Processing perception action from Homie
+[2025-04-12T13:17:25.691Z] 📤 TavernServer -> Homie the Gnome Thief: Request
+[2025-04-12T13:17:27.353Z] 📥 Homie the Gnome Thief -> TavernServer: Response
+[TavernServer] Homie: "*Bob is taking this very seriously! I need to be extra careful. I still plan to watch the tavern from afar and get the bartender to spill secrets.*
+
+"Okay, Homie, first things first: Reconnaissance! I need to gather information. I need to learn everything I can about Bob and his precious gem... maybe I can even learn the password to his safe if he has one."
+
+*I pull out my trusty spyglass and adjust it, focusing on the tavern's entrance from a hidden vantage point across the street.*
+
+"Time to observe, learn, and plan. He will not suspect a thing!"
+
+[ACTION: PERCEPTION target: "Bob's routines and habits", difficulty: "medium"]
+
+🎲 Sleight of Hand check: [14+6=20 vs DC 15]
+**SUCCESS**: Homie successfully performs the action!
+
+"Alrighty then! *I rub my hands together with glee. Observing Bob's habits turned out to be easier than expected. He seems to have a weakness for those pickled eggs and a strong aversion to cleaning under the counter - perfect!*
+
+*I glance at the bar, spotting the gem gleaming in the low light. Bob's currently distracted by regaling a patron with a long-winded fishing tale.*
+
+*It's time to put my observations to good use. With Bob busy and hopefully nobody noticing my small stature, I'll attempt a stealthy maneuver toward the gem.*
+
+[ACTION: HIDE target: "behind the bar", advantage: "advantage"]
+
+*I take a deep breath, trying to remember the gnome mantra: 'In shadows, we dance; with nimble hands, we advance.'*"
+[TavernServer] Saved tavern state and log
+
+[TavernServer] Turn 1 - Bob's turn
+[2025-04-12T13:17:27.356Z] 📤 TavernServer -> Bob the Bartender: Request
+[2025-04-12T13:17:30.745Z] 📥 Bob the Bartender -> TavernServer: Response
+[TavernServer] Processing deceive action from Bob
+[TavernServer] Error processing action deceive: Error: Skill Deception not found for character Bob
+    at performSkillCheck (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/gameEngine.js:86:15)
+    at Module.resolveAction (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/gameEngine.js:184:24)
+    at processAction (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/processAction.js:54:41)
+    at processCharacterTurn (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:271:38)
+    at async runInteractionCycle (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:302:9)
+    at async A2AServer.tavernServerHandler [as taskHandler] (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:429:13)
+    at async A2AServer.handleTaskSend (file:///home/patruff/A2A/samples/js/dist/server/server.js:184:30)
+    at async file:///home/patruff/A2A/samples/js/dist/server/server.js:148:25
+[TavernServer] Processing perception action from Bob
+[2025-04-12T13:17:30.748Z] 📤 TavernServer -> Bob the Bartender: Request
+[2025-04-12T13:17:32.787Z] 📥 Bob the Bartender -> TavernServer: Response
+[TavernServer] Bob: "*That blasted gnome! He thinks he's so clever, but I'm going to be ready for him. He's watching me, learning my routines, but I can play that game too. I need to give him a false sense of security, make him think he's got me figured out, then BAM! I'll be ready to catch him red-handed.*
+
+*Bob chuckles to himself, a mischievous glint in his eye. He deliberately takes a pickled egg from the jar behind the bar, savoring it slowly as he glances towards the door, as if expecting Homie to pop back in any minute.*
+
+"Alright, time for a little act," *Bob says softly.*
+
+*Bob clears his throat, then raises his voice, addressing the tavern in general.*
+
+"Say, folks, I'm feeling a bit tired tonight! Think I'll be turning in early. Don't want to leave the bar unattended, of course, so I'll just be heading upstairs to my room. But don't worry, I'll leave the gem right here on the counter! It'll be safe as houses, I'm sure."
+
+*Bob feigns a yawn, stretching theatrically. He then grabs a duster and begins "cleaning" the counter around the gem, making sure to leave the area under the counter particularly dusty.*
+
+*I am pretending that I don't care, so Homie will feel more confident.*
+
+[ACTION: DECEIVE target: "Homie", skill: "Deception", difficulty: "medium"]
+
+*While "cleaning", I need to try to identify what Homie's current approach is.*
+
+[ACTION: PERCEPTION target: "Homie's movements", skill: "Perception", difficulty: "medium"]
+
+🎲 Perception check: [8+3=11 vs DC 15]
+**FAILURE**: Bob fails to perform the action successfully.
+
+*Darn it, I missed whatever Homie was up to! I have to keep an eye on that one, especially. He always seems to be sniffing around when something valuable is involved. And the gem... well, that's the most valuable thing in this whole tavern right now.*
+
+"Say, friend," *Bob says, turning back to the patron at the bar*, "did you see that gnome, Homie, flitting about just now? Seemed a bit shifty, even for him. I thought he might be heading toward you" *Bob says with a reassuring chuckle.* "Just curious if he caused any trouble, is all. I wouldn't want anyone causing trouble in my establishment!"
+
+[ACTION: PERSUADE target: "customer", advantage: "advantage"]
+
+*Bob will use this as an excuse to get a closer look at the customer and see if he is trying to distract Bob, which could indicate they are working together.*
+
+*I need to make sure the gem is safe. Perhaps moving it while I have a brief lull in customers would be best.*"
+[TavernServer] Saved tavern state and log
+
+[TavernServer] Turn 2 - Homie's turn
+[2025-04-12T13:17:32.794Z] 📤 TavernServer -> Homie the Gnome Thief: Request
+[2025-04-12T13:17:34.818Z] 📥 Homie the Gnome Thief -> TavernServer: Response
+[TavernServer] Processing steal action from Homie
+[2025-04-12T13:17:34.821Z] 📤 TavernServer -> Homie the Gnome Thief: Request
+[2025-04-12T13:17:36.942Z] 📥 Homie the Gnome Thief -> TavernServer: Response
+[TavernServer] Homie: "*Bob thinks he can outsmart Homie? He's about to find out that gnomes are trickier than they look! Bob is trying to lull me into a false sense of security. Ha! But I have a trick up my sleeve.*
+
+*I see Bob moving toward his room and I realize I need to act fast! I can not allow him to move the gem, which will make it harder to steal.*
+
+*I carefully sneak behind the bar while he is talking to the patron*
+
+[ACTION: STEAL target: "gem", skill: "Sleight of Hand", difficulty: "medium"]
+
+🎲 Sleight of Hand check: [2+6=8 vs DC 20]
+**FAILURE**: Homie fumbles the theft attempt!
+
+"Whoopsie daisy!" *I quickly cover my tracks, hoping no one noticed my fumbling fingers.*
+
+*Internally, I'm assessing the situation: 'Blast! I need to be more careful. Distraction, that's what I need. A good distraction should do the trick.*'
+
+*I slap my hands on my thighs, feigning ignorance.*
+
+"Well, that was a harder lock than I thought. Guess it's a good thing I'm just a simple gnome, eh?" I say with a chuckle, hoping to deflect suspicion.
+
+*My eyes dart back to the gem behind the bar. Must. Have. It.*
+
+"Say, while you're all distracted by the contents of this here chest, I think I'll pop over to the bar and see if they have any... uh... *particularly* interesting ales. Always important to stay hydrated, right?"
+
+[ACTION: PERCEPTION target: "bartender's attention"]
+
+*I'll use this moment to try and assess how closely guarded that gemstone is. Then, I can begin the charm offensive!*"
+[TavernServer] Saved tavern state and log
+
+[TavernServer] Turn 2 - Bob's turn
+[2025-04-12T13:17:36.950Z] 📤 TavernServer -> Bob the Bartender: Request
+[2025-04-12T13:17:39.936Z] 📥 Bob the Bartender -> TavernServer: Response
+[TavernServer] Processing perception action from Bob
+[2025-04-12T13:17:39.938Z] 📤 TavernServer -> Bob the Bartender: Request
+[2025-04-12T13:17:41.347Z] 📥 Bob the Bartender -> TavernServer: Response
+[TavernServer] Bob: "*That blasted gnome! He's definitely up to something. I need to keep him distracted, but I also need to make sure the gem is safe. I need to convince the tavern that I'm moving the gem upstairs, but secretly hide it in a much safer spot that is easier to access.*
+
+*Bob stops his exaggerated yawning and chuckles softly, patting his apron pocket where his coin purse is located.*
+
+"Alright, alright, settle down folks. Old Bob here might be getting a bit tired, but I'm not senile just yet! I wouldn't leave something valuable like the gem just sitting out in the open. Though this gem is just a decoration and not that valuable." *Bob says with a wink and a grin*
+
+*I need to see how they respond to the gem being potentially valueless.*
+
+*Bob lowers his voice, leaning in conspiratorially.*
+
+"Truth be told," *Bob whispers*, "I'm just trying to see who's got sticky fingers! There's been a few odd things happenin' lately, and I'm just testin' the waters, so to speak."
+
+*Bob straightens up and claps his hands together.*
+
+"Now, about that ale, friend! What can I get for you? And don't worry, I'll keep a close eye on things while I'm behind the bar here."
+
+*Bob looks towards Homie and smiles.*
+
+"Everything alright there, Homie? You seemed to be trying something back there?"
+
+[ACTION: PERCEPTION target: "Homie's movements", skill: "Perception", difficulty: "medium"]
+
+🎲 Perception check: [3+3=6 vs DC 15]
+**FAILURE**: Bob fails to perform the action successfully.
+
+*Blast it all! I need to keep an eye on that blasted gnome. I'll have to find another way to watch him.*
+
+"What'll it be, friend?"
+
+*I need to try and subtly distract Homie so I can move the gem when he is looking away.*
+
+[ACTION: PERSUADE target: "Homie", skill: "Persuasion", difficulty: "hard"]
+
+"Say, Homie, that reminds me, have you seen the new shipment of gemstones that arrived in town? I'm sure someone like you would be interested."
+
+*I casually glance around the tavern to assess if anyone else is showing interest in the conversation.*"
+[TavernServer] Saved tavern state and log
+
+[TavernServer] Turn 3 - Homie's turn
+[2025-04-12T13:17:41.354Z] 📤 TavernServer -> Homie the Gnome Thief: Request
+[2025-04-12T13:17:44.851Z] 📥 Homie the Gnome Thief -> TavernServer: Response
+[TavernServer] Homie: "*Bob is trying to be all sly, saying the gem isn't valuable. But Homie doesn't believe a word of it! It's shining brighter than a dragon's hoard, I tell you! And now he's directly asking me if I'm up to something? Oh, he's good, he's good. Time for some misdirection of my own...*
+
+"Why, Bob, you wound me!" I say, placing a hand dramatically over my heart (or where my heart *would* be, if it weren't buried under a layer of thieving instinct). "I was just admiring your... um... *exquisite* collection of bar towels! Such artistry! Such absorbent qualities!" *I give the nearest towel a suspicious sniff.* "And perhaps wondering if you might have a good deal on a slightly used one? For... purely hygienic reasons, of course."
+
+*I give Bob a wide, innocent-ish smile.*
+
+"New gemstones in town, you say? Ooh, where?" *I feign excitement, trying to make it seem like that's what I'm really interested in.* "Perhaps they have some... uh... *sparkling* options that might distract from my, shall we say, *slightly* weathered appearance? A gnome's gotta keep up appearances, you know!"
+
+[ACTION: DECEPTION target: "Bob", skill: "Deception", difficulty: "medium"]"
+[TavernServer] Saved tavern state and log
+
+[TavernServer] Turn 3 - Bob's turn
+[2025-04-12T13:17:44.856Z] 📤 TavernServer -> Bob the Bartender: Request
+[2025-04-12T13:17:48.425Z] 📥 Bob the Bartender -> TavernServer: Response
+[TavernServer] Processing hide action from Bob
+[TavernServer] Error processing action hide: Error: Skill Stealth not found for character Bob
+    at performSkillCheck (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/gameEngine.js:86:15)
+    at Module.resolveAction (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/gameEngine.js:184:24)
+    at processAction (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/processAction.js:54:41)
+    at processCharacterTurn (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:271:38)
+    at async runInteractionCycle (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:302:9)
+    at async A2AServer.tavernServerHandler [as taskHandler] (file:///home/patruff/A2A/samples/js/dist/agents/dndserver/index.js:429:13)
+    at async A2AServer.handleTaskSend (file:///home/patruff/A2A/samples/js/dist/server/server.js:184:30)
+    at async file:///home/patruff/A2A/samples/js/dist/server/server.js:148:25
+[TavernServer] Bob: "*That blasted gnome is slicker than a greased goblin. He's definitely interested in something, and I bet my bottom dollar it's the gem. I need to play along, but I also need to get the gem out of sight.*
+
+"Bar towels, eh? Why, Homie, you flatter me! I didn't know anyone appreciated a good bar towel as much as I do. I get them imported from Waterdeep, you know, the finest cotton. But I'm afraid I don't have any used ones for sale. Wouldn't be sanitary, now, would it?" *Bob chuckles, feigning amusement.*
+
+*I need to make a decision to get the gem out of sight. I think I will place it behind the bar for now to make it seem like it is unguarded.*
+
+"New gemstones, you say? Aye, they arrived just this mornin' at the merchant's guild. Big shipment from the mines of Mirabar, I hear. All sorts of shiny things, I expect. But I wouldn't know much about gemstones myself. My adventuring days were more about bashing skulls than appreciating sparkly rocks." *Bob winks at the other patrons, then turns back to Homie, lowering his voice.*
+
+"Tell you what, Homie, why don't you go check them out? I'll keep an eye on your, uh, *hygienic* interests here at the bar. Just be careful, there's bound to be other interested parties sniffin' around." *Bob raises an eyebrow, giving Homie a knowing look.*
+
+*While Homie is thinking about his answer, I need to grab the gem and move it behind the bar to a less conspicuous location. I'll place it on the shelf with the mugs and dishes, partially hidden.*
+
+[ACTION: HIDE target: "gem behind the bar", skill: "Sleight of Hand", difficulty: "easy"]
+
+*I am hoping this makes it seem like I don't care too much about the gem while making it difficult for Homie to grab it without me seeing.*
+
+[SYSTEM ERROR: Failed to process action hide: Skill Stealth not found for character Bob]"
+[TavernServer] Saved tavern state and log
+Message history saved to /home/patruff/A2A/samples/js/a2a_logs/complete_message_history.json
+Shutting down all Genkit servers...

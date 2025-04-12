@@ -3,6 +3,7 @@ import { ai } from "./genkit.js";
 import { AgentClient } from "./agentClient.js";
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import { processAction } from './processAction.js';
 // Load the prompt defined in tavern_server.prompt
 const tavernServerPrompt = ai.prompt("tavern_server");
 // Initialize tavern state
@@ -138,6 +139,71 @@ function logConversation(speaker, listener, message) {
     // Update tavern state
     currentTavernState.lastUpdated = timestamp;
 }
+// Regex patterns for detecting action requests in agent responses
+const ACTION_PATTERNS = {
+    STEAL: /\[\s*ACTION\s*:\s*STEAL\s*(.*?)\s*\]/i,
+    HIDE: /\[\s*ACTION\s*:\s*HIDE\s*(.*?)\s*\]/i,
+    DETECT: /\[\s*ACTION\s*:\s*DETECT\s*(.*?)\s*\]/i,
+    SEARCH: /\[\s*ACTION\s*:\s*SEARCH\s*(.*?)\s*\]/i,
+    DECEIVE: /\[\s*ACTION\s*:\s*DECEIVE\s*(.*?)\s*\]/i,
+    PERSUADE: /\[\s*ACTION\s*:\s*PERSUADE\s*(.*?)\s*\]/i,
+    INTIMIDATE: /\[\s*ACTION\s*:\s*INTIMIDATE\s*(.*?)\s*\]/i,
+    PERCEPTION: /\[\s*ACTION\s*:\s*PERCEPTION\s*(.*?)\s*\]/i,
+    UNLOCK: /\[\s*ACTION\s*:\s*UNLOCK\s*(.*?)\s*\]/i,
+    ACROBATICS: /\[\s*ACTION\s*:\s*ACROBATICS\s*(.*?)\s*\]/i,
+    ATTACK: /\[\s*ACTION\s*:\s*ATTACK\s*(.*?)\s*\]/i,
+    // Add more patterns as needed
+};
+// Parse and extract action requests from agent messages
+function parseActionRequests(message) {
+    const actionRequests = [];
+    // Check for each action type
+    for (const [actionType, pattern] of Object.entries(ACTION_PATTERNS)) {
+        const match = message.match(pattern);
+        if (match) {
+            const actionDetails = match[1] || '';
+            // Extract target from action details
+            let target = '';
+            const targetMatch = actionDetails.match(/target: ?"?([^",]+)"?/i);
+            if (targetMatch) {
+                target = targetMatch[1].trim();
+            }
+            // Extract skill from action details
+            let skill = '';
+            const skillMatch = actionDetails.match(/skill: ?"?([^",]+)"?/i);
+            if (skillMatch) {
+                skill = skillMatch[1].trim();
+            }
+            // Extract difficulty from action details
+            let difficulty = 'medium';
+            const difficultyMatch = actionDetails.match(/difficulty: ?"?([^",]+)"?/i);
+            if (difficultyMatch) {
+                const difficultyValue = difficultyMatch[1].trim().toLowerCase();
+                if (['easy', 'medium', 'hard', 'very hard'].includes(difficultyValue)) {
+                    difficulty = difficultyValue;
+                }
+            }
+            // Extract advantage from action details
+            let advantage = 'normal';
+            const advantageMatch = actionDetails.match(/advantage: ?"?([^",]+)"?/i);
+            if (advantageMatch) {
+                const advantageValue = advantageMatch[1].trim().toLowerCase();
+                if (['advantage', 'disadvantage', 'normal'].includes(advantageValue)) {
+                    advantage = advantageValue;
+                }
+            }
+            actionRequests.push({
+                actionType: actionType.toLowerCase(),
+                target,
+                skill,
+                difficulty,
+                advantage
+            });
+        }
+    }
+    return actionRequests;
+}
+// Import createSkillCheckResult from processAction.js instead of defining it here
 // Process character interaction for a specific turn
 async function processCharacterTurn(activeCharacter, listeningCharacter) {
     try {
@@ -154,12 +220,39 @@ async function processCharacterTurn(activeCharacter, listeningCharacter) {
         // Create a context message with the recent history and tavern state
         let contextMessage = `You are in ${currentTavernState.name}. `;
         if (recentLog.actions.length > 0) {
-            contextMessage += `Recent actions: ${recentLog.actions.map(a => `${a.character} ${a.action}`).join('. ')}. `;
+            contextMessage += `Recent actions: ${recentLog.actions.map(a => {
+                let actionText = `${a.character} ${a.action}`;
+                if (a.success !== undefined) {
+                    actionText += a.success ? " (SUCCESS)" : " (FAILURE)";
+                }
+                if (a.skillCheck) {
+                    actionText += ` [Roll: ${a.skillCheck.rollValue}+${a.skillCheck.modifier}=${a.skillCheck.total} vs DC ${a.skillCheck.difficultyClass}]`;
+                }
+                return actionText;
+            }).join('. ')}. `;
         }
         if (recentLog.conversations.length > 0) {
             contextMessage += `Recent conversations: ${recentLog.conversations.map(c => `${c.speaker} to ${c.listener}: "${c.message}"`).join('. ')}. `;
         }
-        contextMessage += `You are ${activeCharacter}. What do you say or do next?`;
+        // Add special instructions for action handling with improved flow
+        contextMessage += `\nIMPORTANT: To perform actions that require dice rolls, use the ACTION format at the point in your narrative where you want the check to occur:
+
+[ACTION: ACTIONTYPE target: "target object or character", skill: "specific skill", difficulty: "easy/medium/hard/very hard"]
+
+After this action line, your message will be paused and the system will roll dice to determine success or failure. Then you should continue your response based on that outcome - DO NOT continue writing immediately after an action tag.
+
+Examples:
+- To steal: "*I carefully reach for the gem while Bob is distracted*" [ACTION: STEAL target: "gem", skill: "Sleight of Hand"]
+- To notice: "*I scan the room for anything suspicious*" [ACTION: PERCEPTION target: "hidden threats"]
+- To hide: "*I duck behind the bar as Bob turns around*" [ACTION: HIDE target: "behind the bar"]
+
+Your actions have real consequences - failure might lead to:
+- Being caught in the act 
+- Combat (If you attack someone)
+- Loss of opportunities
+- Complications to your goal
+
+You are ${activeCharacter}. What do you say or do next?`;
         // Get any character goals that were set
         const characterGoals = currentTavernState.metadata?.characterGoals || {};
         const characterGoal = characterGoals[activeCharacter] || "";
@@ -168,10 +261,19 @@ async function processCharacterTurn(activeCharacter, listeningCharacter) {
             tavernState: currentTavernState,
             goal: characterGoal
         });
-        // Log the agent's response
-        logConversation(activeCharacter, listeningCharacter, response);
-        console.log(`[TavernServer] ${activeCharacter}: "${response}"`);
-        return response;
+        // Parse any action requests from the response
+        const actionRequests = parseActionRequests(response);
+        let modifiedResponse = response;
+        // Process each action request
+        for (const request of actionRequests) {
+            console.log(`[TavernServer] Processing ${request.actionType} action from ${activeCharacter}`);
+            // Use our specialized action processor that handles mid-narrative continuation
+            modifiedResponse = await processAction(request, activeCharacter, activeAgent, modifiedResponse, currentTavernState, tavernLog, characterGoal);
+        }
+        // Log the agent's response (with action results appended)
+        logConversation(activeCharacter, listeningCharacter, modifiedResponse);
+        console.log(`[TavernServer] ${activeCharacter}: "${modifiedResponse}"`);
+        return modifiedResponse;
     }
     catch (error) {
         console.error(`[TavernServer] Error in character turn for ${activeCharacter}:`, error);
@@ -190,12 +292,13 @@ async function runInteractionCycle(userMessage) {
     }
     const characters = ['Homie', 'Bob'];
     const totalTurns = 2 * maxTurns; // Each character gets maxTurns turns
+    console.log(`\n[TavernServer] Starting ${totalTurns} turn interaction cycle`);
     for (let i = currentTurn; i < totalTurns; i++) {
         const activeCharIdx = i % 2;
         const listeningCharIdx = (i + 1) % 2;
         const activeCharacter = characters[activeCharIdx];
         const listeningCharacter = characters[listeningCharIdx];
-        console.log(`[TavernServer] Turn ${Math.floor(i / 2) + 1} - ${activeCharacter}'s turn`);
+        console.log(`\n[TavernServer] Turn ${Math.floor(i / 2) + 1} - ${activeCharacter}'s turn`);
         await processCharacterTurn(activeCharacter, listeningCharacter);
         // Save state after each turn
         await saveStateAndLog();
@@ -203,6 +306,13 @@ async function runInteractionCycle(userMessage) {
     }
     // Reset turn counter for next cycle
     currentTurn = 0;
+    // Save full message history
+    try {
+        await AgentClient.saveMessageHistory();
+    }
+    catch (error) {
+        console.error('[TavernServer] Error saving message history:', error);
+    }
     return {
         message: "Interaction cycle completed",
         tavernState: currentTavernState,

@@ -1,0 +1,10 @@
+[DnDAgent] Server started on http://localhost:41245
+[DnDAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41245 at path /
+[Task 73fa99e6-f43f-44e5-87d1-a303fb6e4f90] Created new task and history.
+[DnDAgent] Processing task 73fa99e6-f43f-44e5-87d1-a303fb6e4f90 with state submitted
+[DnDAgent] Task 73fa99e6-f43f-44e5-87d1-a303fb6e4f90 finished with state: completed
+[Task 2aea54b3-be4b-4980-8ba8-6ec15dea9dd6] Created new task and history.
+[DnDAgent] Processing task 2aea54b3-be4b-4980-8ba8-6ec15dea9dd6 with state submitted
+[DnDAgent] Task 2aea54b3-be4b-4980-8ba8-6ec15dea9dd6 finished with state: completed
+Shutting down all Genkit servers...

@@ -13,3 +13,4 @@ A2A Server listening on port 41246 at path /
 [Task 0d818671-6db8-43c4-bf89-206366511d01] Created new task and history.
 [BobAgent] Processing task 0d818671-6db8-43c4-bf89-206366511d01 with state submitted
 [BobAgent] Task 0d818671-6db8-43c4-bf89-206366511d01 finished with state: completed
+Shutting down all Genkit servers...

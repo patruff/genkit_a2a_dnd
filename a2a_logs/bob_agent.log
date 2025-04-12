@@ -1,0 +1,10 @@
+[BobAgent] Server started on http://localhost:41246
+[BobAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41246 at path /
+[Task 1eb55a63-b34c-4578-937e-1bfe331814b4] Created new task and history.
+[BobAgent] Processing task 1eb55a63-b34c-4578-937e-1bfe331814b4 with state submitted
+[BobAgent] Task 1eb55a63-b34c-4578-937e-1bfe331814b4 finished with state: completed
+[Task 4c1b64c3-117b-46a3-aa8e-0475795636f3] Created new task and history.
+[BobAgent] Processing task 4c1b64c3-117b-46a3-aa8e-0475795636f3 with state submitted
+[BobAgent] Task 4c1b64c3-117b-46a3-aa8e-0475795636f3 finished with state: input-required
+Shutting down all Genkit servers...

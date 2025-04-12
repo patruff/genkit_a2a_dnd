@@ -243,7 +243,23 @@ function parseActionRequests(message: string): GameActionRequest[] {
   return actionRequests;
 }
 
-// Import createSkillCheckResult from processAction.js instead of defining it here
+// Create a skill check result for logging
+function createSkillCheckResult(
+  characterName: string,
+  skillCheck: ReturnType<typeof gameEngine.performSkillCheck>
+): SkillCheckResult {
+  return {
+    characterName,
+    skillName: skillCheck.skillName,
+    rollValue: skillCheck.rolls[0],
+    modifier: skillCheck.modifier,
+    total: skillCheck.total,
+    difficultyClass: skillCheck.dc,
+    success: skillCheck.success,
+    timestamp: new Date().toISOString(),
+    advantage: 'normal' // Would need to be passed from the action request
+  };
+}
 
 // Process character interaction for a specific turn
 async function processCharacterTurn(activeCharacter: string, listeningCharacter: string) {
@@ -327,6 +343,46 @@ You are ${activeCharacter}. What do you say or do next?`;
         tavernLog,
         characterGoal
       );
+        const continuationResponse = await activeAgent.sendMessage(followUpContext, {
+          tavernState: currentTavernState,
+          goal: characterGoal,
+          continueResponse: true  // Flag to indicate this is continuing a previous response
+        });
+        
+        // Append the continuation response
+        modifiedResponse += continuationResponse;
+        
+        // Apply any state updates from the action
+        if (actionResult.stateUpdates) {
+          currentTavernState = {
+            ...currentTavernState,
+            ...actionResult.stateUpdates
+          };
+        }
+        
+        // Keep metadata management
+        if (!currentTavernState.metadata) {
+          currentTavernState.metadata = {};
+        }
+        
+        // Store skill check results
+        if (!currentTavernState.metadata.skillChecks) {
+          currentTavernState.metadata.skillChecks = [];
+        }
+        
+        if (skillCheckResult) {
+          currentTavernState.metadata.skillChecks.push(skillCheckResult);
+          
+          // Limit to last 10 skill checks
+          if (currentTavernState.metadata.skillChecks.length > 10) {
+            currentTavernState.metadata.skillChecks = 
+              currentTavernState.metadata.skillChecks.slice(-10);
+          }
+        }
+      } catch (actionError) {
+        console.error(`[TavernServer] Error processing action ${request.actionType}:`, actionError);
+        modifiedResponse += `\n\n[SYSTEM: Error processing ${request.actionType} action: ${actionError.message}]`;
+      }
     }
     
     // Log the agent's response (with action results appended)

@@ -179,7 +179,7 @@ async function getTavernStateAndLog() {
 /**
  * Display the recent conversations in a readable format
  */
-function displayConversations(log, limit = 10) {
+function displayConversations(log, state, limit = 10) {
     console.log('\n📜 CONVERSATION TRANSCRIPT 📜');
     console.log('==============================\n');
     const recentConversations = log.conversations.slice(-limit);
@@ -210,13 +210,57 @@ function displayConversations(log, limit = 10) {
     // Display actions as well if any
     const recentActions = log.actions.slice(-limit);
     if (recentActions.length > 0) {
-        console.log('\n🎲 ACTIONS & EVENTS 🎲');
-        console.log('====================\n');
+        console.log('\n🎲 ACTIONS & SKILL CHECKS 🎲');
+        console.log('===========================\n');
         recentActions.forEach(action => {
             const timestamp = new Date(action.timestamp).toLocaleTimeString();
-            console.log(`\x1b[35m⚡ ${action.character} (${timestamp}):\x1b[0m ${action.action}`);
+            // Determine color and icon based on success/failure
+            let statusColor = '\x1b[35m'; // Default purple
+            let statusIcon = '⚡';
+            let statusText = '';
+            if (action.success !== undefined) {
+                if (action.success) {
+                    statusColor = '\x1b[32m'; // Green for success
+                    statusIcon = '✅';
+                    statusText = ' SUCCESS';
+                }
+                else {
+                    statusColor = '\x1b[31m'; // Red for failure
+                    statusIcon = '❌';
+                    statusText = ' FAILURE';
+                }
+            }
+            // Format action text with success/failure status
+            console.log(`${statusColor}${statusIcon} ${action.character} (${timestamp}):\x1b[0m ${action.action}${statusText}`);
+            // If there's a skill check, show the details
+            if (action.skillCheck) {
+                const check = action.skillCheck;
+                const resultColor = check.success ? '\x1b[32m' : '\x1b[31m';
+                console.log(`   🎲 ${check.skillName} check: ${resultColor}${check.rollValue}+${check.modifier}=${check.total} vs DC ${check.difficultyClass}\x1b[0m`);
+            }
         });
     }
+    // Display events from the tavern state
+    console.log('\n📝 TAVERN EVENTS 📝');
+    console.log('===================\n');
+    // Get the tavern state events from the provided state
+    const tavernEvents = state.events.slice(-limit);
+    if (tavernEvents.length === 0) {
+        console.log('No events recorded yet.');
+        return;
+    }
+    tavernEvents.forEach(event => {
+        const timestamp = new Date(event.timestamp).toLocaleTimeString();
+        // Highlight success/failure in events
+        let eventText = event.description;
+        if (eventText.includes('SUCCESS')) {
+            eventText = eventText.replace('SUCCESS', '\x1b[32mSUCCESS\x1b[0m');
+        }
+        else if (eventText.includes('FAILURE')) {
+            eventText = eventText.replace('FAILURE', '\x1b[31mFAILURE\x1b[0m');
+        }
+        console.log(`📌 ${timestamp}: ${eventText}`);
+    });
 }
 /**
  * Run a complete scenario
@@ -256,8 +300,8 @@ async function runScenario(scenarioName, goals, maxTurns = 5, time = "Evening", 
         // Start the interaction
         await startInteraction(maxTurns);
         // Get and display the results
-        const { log } = await getTavernStateAndLog();
-        displayConversations(log, maxTurns * 2);
+        const { log, state } = await getTavernStateAndLog();
+        displayConversations(log, state, maxTurns * 2);
         console.log(`\n✨ Scenario "${scenarioName}" completed successfully. ✨`);
     }
     catch (error) {
