@@ -1,0 +1,15 @@
+[DnDAgent] Server started on http://localhost:41245
+[DnDAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41245 at path /
+[Task 0f731826-9c76-4ac7-a6da-b4827baead3a] Created new task and history.
+[DnDAgent] Processing task 0f731826-9c76-4ac7-a6da-b4827baead3a with state submitted
+[DnDAgent] Task 0f731826-9c76-4ac7-a6da-b4827baead3a finished with state: completed
+[Task ad889640-d44f-4fb6-b295-65ff8e125cf1] Created new task and history.
+[DnDAgent] Processing task ad889640-d44f-4fb6-b295-65ff8e125cf1 with state submitted
+[DnDAgent] Task ad889640-d44f-4fb6-b295-65ff8e125cf1 finished with state: input-required
+[Task 88553f8b-3505-4140-96ff-0b29eff0d319] Created new task and history.
+[DnDAgent] Processing task 88553f8b-3505-4140-96ff-0b29eff0d319 with state submitted
+[DnDAgent] Task 88553f8b-3505-4140-96ff-0b29eff0d319 finished with state: completed
+[Task 4101025d-63f9-4e1f-adec-0754df659b92] Created new task and history.
+[DnDAgent] Processing task 4101025d-63f9-4e1f-adec-0754df659b92 with state submitted
+[DnDAgent] Task 4101025d-63f9-4e1f-adec-0754df659b92 finished with state: input-required

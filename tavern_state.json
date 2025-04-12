@@ -1,0 +1,54 @@
+{
+  "name": "The Tipsy Gnome",
+  "time": "Evening",
+  "atmosphere": "Warm and inviting",
+  "characters": [
+    {
+      "name": "Homie",
+      "type": "gnome thief",
+      "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+      "status": "present"
+    },
+    {
+      "name": "Bob",
+      "type": "human bartender",
+      "description": "A friendly middle-aged human with a hearty laugh who keeps the tavern running",
+      "status": "tending bar"
+    }
+  ],
+  "objects": [
+    {
+      "name": "Bar",
+      "description": "A long wooden counter with several stools"
+    },
+    {
+      "name": "Fireplace",
+      "description": "A stone hearth with a crackling fire"
+    },
+    {
+      "name": "Tables",
+      "description": "Several wooden tables scattered throughout the room"
+    },
+    {
+      "name": "Drinks",
+      "description": "Various mugs, glasses and bottles of beverages"
+    }
+  ],
+  "events": [
+    {
+      "description": "User assigns a goal to Homie: \"steal the rare gem on display behind the bar without getting caught\"",
+      "timestamp": "2025-04-12T07:35:47.574Z"
+    },
+    {
+      "description": "User assigns a goal to Bob: \"protect the rare gem from thieves at all costs\"",
+      "timestamp": "2025-04-12T07:35:47.586Z"
+    }
+  ],
+  "lastUpdated": "2025-04-12T07:36:21.301Z",
+  "metadata": {
+    "characterGoals": {
+      "Homie": "steal the rare gem on display behind the bar without getting caught",
+      "Bob": "protect the rare gem from thieves at all costs"
+    }
+  }
+}

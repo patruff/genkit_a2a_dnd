@@ -1,0 +1,15 @@
+[BobAgent] Server started on http://localhost:41246
+[BobAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41246 at path /
+[Task 1998765b-08e3-4103-9f2c-28d9cf18370b] Created new task and history.
+[BobAgent] Processing task 1998765b-08e3-4103-9f2c-28d9cf18370b with state submitted
+[BobAgent] Task 1998765b-08e3-4103-9f2c-28d9cf18370b finished with state: input-required
+[Task 30336761-8e2e-4250-a567-33b58264286a] Created new task and history.
+[BobAgent] Processing task 30336761-8e2e-4250-a567-33b58264286a with state submitted
+[BobAgent] Task 30336761-8e2e-4250-a567-33b58264286a finished with state: completed
+[Task 8b2d65dc-d84c-4f02-9486-78fe7c6fb3df] Created new task and history.
+[BobAgent] Processing task 8b2d65dc-d84c-4f02-9486-78fe7c6fb3df with state submitted
+[BobAgent] Task 8b2d65dc-d84c-4f02-9486-78fe7c6fb3df finished with state: completed
+[Task 0d818671-6db8-43c4-bf89-206366511d01] Created new task and history.
+[BobAgent] Processing task 0d818671-6db8-43c4-bf89-206366511d01 with state submitted
+[BobAgent] Task 0d818671-6db8-43c4-bf89-206366511d01 finished with state: completed

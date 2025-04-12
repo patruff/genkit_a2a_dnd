@@ -1,0 +1,222 @@
+[TavernServer] Agent clients initialized
+[TavernServer] No tavern state file found, using default state
+[TavernServer] Loaded tavern log from file
+[TavernServer] Server started on http://localhost:41247
+[TavernServer] Press Ctrl+C to stop the server
+A2A Server listening on port 41247 at path /
+[Task task_1744443347556] Created new task and history.
+[TavernServer] Processing task task_1744443347556 with state submitted
+[TavernServer] Saved tavern state and log
+[Task task_1744443347583] Created new task and history.
+[TavernServer] Processing task task_1744443347583 with state submitted
+[TavernServer] Saved tavern state and log
+[Task task_1744443347590] Created new task and history.
+[TavernServer] Processing task task_1744443347590 with state submitted
+[Task task_1744443347595] Created new task and history.
+[TavernServer] Processing task task_1744443347595 with state submitted
+[TavernServer] Turn 1 - Homie's turn
+[TavernServer] Homie: ""Ooh, dwarven mine cart filled with uncut gemstones, you say?" *Homie's eyes light up like a goblin's hoard.* "Now *that* sounds like a venture worthy of my... *ahem*... attention."
+
+*I must not get sidetracked from my current goal! I must remain focused on obtaining the gem from behind the bar, my original mission.*
+
+*Homie munches on a Gnome Nibbler, savoring the cheesy, herby goodness. He swallows, then leans in conspiratorially towards Bob.*
+
+"Alright, Bob, you've piqued my interest. Dwarven mine cart details, please! But first..." *Homie gestures vaguely towards the gem behind the bar with his Nibbler.* "What about *that* little shiny trinket over there? Is *that* one of the troublesome ones too, or is it just waiting for a discerning collector to give it a good home?"
+
+*While Bob is distracted by my questions, I'll attempt to discreetly assess the security measures surrounding the gem. I need to know what I'm up against.*
+
+"I'll make a Perception check here to examine the area around the gem while distracting Bob."
+
+*Rolls a d20... 19! Plus my +3 modifier for a total of 22!*
+
+*I am very observant while Bob's attention is elsewhere.*"
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 1 - Bob's turn
+[TavernServer] Bob: "*Homie is persistent, like a gnat buzzing around a honey pot. I need to keep him distracted, but also keep an eye on him while I subtly reinforce the gem's security. Best to play along with his game for now.*
+
+*Bob chuckles, wiping a stray crumb off the bar.*
+
+"Homie, you're like a dog with a bone, aren't you? Can't let anything go once you've got your teeth sunk in."
+
+*Bob throws a practiced glance toward the gem behind the bar, ensuring it's still securely in its display case. He casually adjusts the placement of a nearby tankard, subtly blocking a direct line of sight to the lock.*
+
+"That gem, my friend, is a bit of a special case. It belongs to a rather... influential patron. Let's just say they wouldn't take kindly to it going 'missing'. Unlike Fitzwilliam's bauble, this one actually *is* worth its weight in gold, and then some. Getting caught with it would be a very, very bad idea. Even for you, Homie."
+
+*Bob leans in, lowering his voice conspiratorially.*
+
+"As for the dwarven mine cart... that's a story for another time. One that requires a bit more... lubrication. Let's just say it involves a grumpy dragon, a map hidden inside a bag of holding, and a whole lot of luck. But first things first," *Bob claps his hands together.* "Are you wanting another round of Nibblers or something stronger to wet your whistle? I need to get back to work, and I can't be standin' here all night jawin' with you about lost treasures. Besides, you said you'd leave the gem alone so focus on the mine cart that doesn't exist."
+
+*As he speaks, Bob stealthily checks the clasp on his apron pocket, ensuring his coin purse is secure. He then casually steps between Homie and the display case, subtly positioning himself as a barrier.*
+
+I make a persuasion check to try and persuade Homie to stop asking questions about the gem, while simultaneously steering him towards another topic - the "dwarven mine cart." Rolls a d20... 16! Plus my +4 modifier for a total of 20!"
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 2 - Homie's turn
+[TavernServer] Homie: "*Bob's persistence is becoming a bit of an obstacle! My perception roll was great and I now know there's a display case with some kind of lock. But, he's making it difficult to get a clear shot at that gem! I need to change tactics. If I can't get information about the gem, I need to find a way to distract Bob long enough to make my move.*
+
+"Alright, alright, you've made your point, Bob. No need to get your beard in a twist!" *Homie says, raising his hands in mock surrender.* "I get it, the gem is off-limits. But a gnome can dream, can't he?"
+
+*Homie pops another Nibbler into his mouth, chewing thoughtfully.*
+
+"So, this dwarven mine cart... a grumpy dragon, you say? And a map hidden inside a bag of holding? Sounds like quite the adventure! Maybe a bit *too* adventurous for a solo gnome. Perhaps a certain barkeep with a knack for tall tales and a penchant for shiny things might be interested in joining forces?" *Homie suggests, winking mischievously.*
+
+*I must try to engage Bob in this adventure, that way I can hopefully get him to temporarily leave the bar! I will go along with his ruse about this dwarven mine cart, and hopefully lure him into a position where I can easily swipe the gem while he is away.*
+
+"Tell me more, Bob! I'm all ears. And maybe, just maybe, a *little* bit tempted to forget all about that boring old gem..." *Homie adds, subtly glancing back at the gem to make sure Bob sees him "forgetting" it.*
+
+*I must prepare to make a move. I must make a Acrobatics check to see how easily I can move around Bob behind the counter, just in case.*
+
+*Rolls a d20... 3! Plus my +5 modifier for a total of 8!*
+
+*It seems I can't do that right now... I can't even hop over the counter, my roll was too low. Better to use a Deception check!*
+
+"Just to be clear, you're positive that gem is more trouble than its worth? Not even worth a quick glance for a seasoned professional like myself?" *Homie says, feigning disinterest and making one last probing Deception check.*
+
+*Rolls a d20... 18! Plus my +5 modifier for a total of 23!*
+
+*Homie smiles winsomely and subtly leans towards Bob, trying to gauge his reaction.*"
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 2 - Bob's turn
+[TavernServer] Bob: "*Homie is laying it on thick, bless his thieving heart. He's clearly trying to distract me, but at least he seems to be buying the 'dangerous gem' act. I need to keep playing along with the mine cart story, but also make sure he doesn't get any closer to the gem. A good tale, a hearty laugh, and maybe a bit of theatrics should do the trick.*
+
+*Bob throws his head back and laughs, a booming sound that fills the tavern.*
+
+"Homie, you sly dog! Trying to get me to spill all my secrets, eh? And maybe lure this old barkeep away from his establishment so you can have a field day?" *Bob winks, clapping Homie on the shoulder - careful to maintain distance from the gem.* "I'm not as green as I am cabbage-looking, my friend. But I appreciate the offer."
+
+*Bob lowers his voice again, leaning closer to Homie, creating a sense of shared conspiracy while subtly moving Homie further away from the gem.*
+
+"The dragon, now, she's a real beaut. Scales the color of amethysts, and a temper that could melt steel. And the map... well, let's just say it's not exactly drawn to scale. More like a child's doodle after a tankard or two of ale."
+
+*Bob pauses for dramatic effect, stroking his chin thoughtfully.*
+
+"But... a seasoned professional, you say? A gnome with a knack for finding things? Hmmm... maybe, just maybe, there's room for a partner in this venture. But only if they can be trusted, and only if they promise to leave certain shiny objects behind the bar untouched."
+
+*Bob raises an eyebrow, looking directly into Homie's eyes. He makes an Insight check (rolls a 12 + 3 = 15) to try and gauge how sincere Homie is being about "forgetting" the gem.*
+
+"Now, about that gem... you seem awfully interested in something you claim to be forgetting. Are you sure you're not just trying to pull the wool over this old barkeep's eyes? If you're truly over it, why mention it again?"
+
+*Bob grabs a clean mug and starts polishing it, keeping a watchful eye on Homie's movements.*
+
+"To prove your genuine interest in this mine cart, you have to drink from my mug, and tell me you aren't plotting anything else in my tavern.""
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 3 - Homie's turn
+[TavernServer] Homie: "*This is getting tricky! Bob is on to me, the old fox. But I can play his game. The key is to appear completely disinterested in the gem. Time to commit to the charade and play the part of the eager adventurer.*
+
+*Homie sighs dramatically, putting on his best "disappointed but resigned" face.*
+
+"Alright, Bob, you got me. A gnome can dream, can't he? But you're right, a promise is a promise. Besides," *Homie pats his stomach,* "after those delicious Nibblers, I'm more in the mood for adventure than thievery anyway!"
+
+*Homie reaches for the mug Bob is offering, making sure to maintain eye contact and project sincerity. He needs to sell this act completely.*
+
+"I swear on my grandmother's thimble – and she *really* loved that thimble – that I'm only interested in the dwarven mine cart, the grumpy dragon, and the map hidden in the bag of holding. I won't even *think* about that gem behind the bar."
+
+*Homie pauses, then adds with a mischievous twinkle in his eye,*
+
+"Well, maybe a *little* thought... but only in the context of how much easier it would be to *avoid* getting caught stealing it, given all your warnings. Purely academic, you understand."
+
+*Homie takes a large swig from the mug, savoring the ale. As he drinks, he casually leans against the bar, subtly positioning himself to observe Bob's movements and the layout of the bar from a different angle.*
+
+"Now, about that dragon..." *Homie says, wiping his mouth with the back of his hand,* "what's her weakness? Does she have a soft spot for riddles? Maybe a fondness for gnome-sized adventurers with a knack for getting into trouble?"
+
+*I must change the subject, this is my only shot to pursue this goal, even if it's all lies. While Bob is distracted, I'll attempt to discreetly assess the security measures surrounding the gem. I need to know what I'm up against.*
+
+"I'll make a Perception check here to examine the area around the gem while distracting Bob."
+
+*Rolls a d20... 15! Plus my +3 modifier for a total of 18!*
+
+*I am very observant while Bob's attention is elsewhere. This gives me an idea! I can get Bob to leave by talking to the owner of the gem!*
+
+"Say, Bob, this influential patron... does he come around often? I'd like to speak to them. Maybe they'd be interested in a mine cart of gems for the shiny little gem behind the bar!""
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 3 - Bob's turn
+[TavernServer] Bob: "*Homie is a slippery one, that's for sure. The thimble oath is a nice touch, but I'm not buying it completely. He's still too interested, and the mention of "avoiding getting caught" is a dead giveaway. I need to keep him talking about the mine cart, but also stay alert for any sudden movements.*
+
+*Bob chuckles, shaking his head good-naturedly.*
+
+"Academic, huh? You and your 'academic' interests, Homie. Always gotta be thinkin' about the angles, don't you? Well, I appreciate the honesty, at least. And I appreciate the oath, even if it was about a thimble."
+
+*Bob picks up another mug and starts wiping it down, keeping a close eye on Homie's reflection in the polished surface.*
+
+"As for the dragon's weakness... well, that's a long story, best shared over a few more mugs of ale. Let's just say she's got a soft spot for flattery and shiny objects. Sounds familiar, doesn't it?" *Bob gives Homie a playful nudge.*
+
+*Bob pauses, considering Homie's question about the gem's owner.*
+
+"The gem's owner... they're a bit of a recluse. Don't come around here often, but when they do, everyone knows it. Let's just say they're not the kind of person you want to bother without a good reason. *Especially* if you're planning on trying to swindle them. And their guards? Even worse."
+
+*Bob makes an intimidation check, rolling 18 + 2 = 20, trying to imply that bad things will happen to Homie if he tries to make contact*
+
+"Now, why would you want to bother someone like that?" *Bob asks, raising an eyebrow, with a sterner tone* "If your plan is getting a good job with the gems or whatever, I assure you that this person cannot be trusted, and I will not let you talk to them."
+
+*Bob puts the mug down with a *thunk*, and walks around to the front of the bar*
+
+"Now, about this dragon... Did I tell you she hates gnomes, or was that someone else?" *Bob scratches his beard and looks at Homie expectantly*"
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 4 - Homie's turn
+[TavernServer] Homie: "*Blast! Bob's onto me. He's not going to let me talk to the owner, and he's subtly threatening me. Time to switch gears again. If I can't talk to the owner, maybe I can create a distraction that will draw Bob away from the bar, leaving the gem unguarded, even for a few moments.*
+
+*I need to get Bob away from the bar for any amount of time. So, now I will act clumsy and ask him to fix something to get him to leave the bar area!*
+
+"Oh, uh, well, it was just a thought! No harm in asking, right? Speaking of dragons hating gnomes... hey Bob, is that shelf looking a little... wonky to you?" *Homie points towards a shelf behind the bar, loaded with bottles.* "It looks like it's about to fall down. Maybe it is my small height, but it is definitely leaning."
+
+*Homie feigns concern, hoping to lure Bob into a false sense of security. I'll pretend to accidentally bump into the bar, hoping to exaggerate the "wonkiness" of the shelf. If he is distracted, he can fall right into my trap.*
+
+*With exaggerated clumsiness, Homie stumbles against the bar, causing a few bottles to rattle on the shelf.*
+
+"Oops! Sorry, Bob! Guess I'm not as steady on my feet as I thought. But seriously, that shelf looks like it's about to give way. You might want to take a look before your whole stock ends up on the floor."
+
+*I will quickly try to pickpocket Bob while he is distracted. Bob is in front of me now, so this will be tricky.*
+
+*I'll make a Sleight of Hand check, hopefully to snag his keys so I can unlock the display case!*
+
+*Rolls a d20... 5! Plus my +6 modifier for a total of 11!*
+
+*Blast and bother! My pickpocketing skills have failed me again.*
+
+"Be careful, Bob! Don't want you getting hurt!" *Homie warns, trying to maintain the act while subtly assessing whether Bob has noticed his clumsy attempt.*
+
+*If Bob moves to inspect the shelf, I'll seize the opportunity to make my move. But in the meantime, I must continue to play the part of the concerned patron.*
+
+"I'll need to attempt an Acrobatics check to hop over the bar while he's inspecting the shelf."
+
+*Rolls a d20... 12! Plus my +5 modifier for a total of 17!*
+
+*I might be able to hop over the bar and grab the gem at a moment's notice, depending on what Bob does!*"
+[TavernServer] Saved tavern state and log
+[TavernServer] Turn 4 - Bob's turn
+[TavernServer] Bob: "*This little gnome is persistent, I'll give him that. The shelf trick is transparent, but I can't ignore a potential hazard to my precious bottles. I need to address the shelf without turning my back on Homie or the gem.*
+
+*Bob squints at the shelf, pretending to assess the situation.*
+
+"Now that you mention it, Homie, it *does* look a bit off-kilter. Must be the weight of all those fine spirits," *Bob says, giving the shelf a wary glance, but remaining in front of the bar.*
+
+*Bob makes a Perception check (rolls a 9 + 3 = 12) to quickly scan the shelf without actually moving toward it. I need to see if anything is genuinely out of place.*
+
+"Hmm, I don't *see* anything that seems bad," *Bob says.* "It might look a little off to you because it's up so high."
+
+*Bob pauses, thinking for a moment.*
+
+"Tell you what, Homie, I appreciate you lookin' out for me. I do. But I can't just leave the bar unattended, not with such a valuable item on display," *Bob gestures towards the gem with a wink*. "How about *you* steady the shelf? If it gets too bad, I'll be sure to come up and move the bottles. I am paying you for your services of helping me with the establishment."
+
+*Bob grabs a nearby rag and tosses it to Homie with a sly grin.*
+
+"You can hold the rag, and make sure the bottles don't fall when I walk away."
+
+*Bob decides to call his bluff by moving away from the bar by pouring a drink in another section of the bar.*
+
+*Bob makes a Athletics check to move away from the bar quickly (rolls 4 + 1 = 5)*
+
+"Oops! Guess I'm not as steady as I used to be, because I am old."
+
+*Bob decides to grab Homie's hand and try to move him away from the bar, while he pretends to fall because of how old he is. He makes this move slowly and cautiously.*
+
+"Oh! I am just an old man after all" *Bob says while grabbing Homie's hand*
+
+*I must move him away, because I do not trust him!*
+
+"Here you go friend!" *Bob says while handing him an ale that he was going to pour.*
+
+*Bob makes an insight check while moving (rolls 1 + 3 = 4)*
+
+*This shows that I can move away, but it may be a little unsteady, or suspicious, due to my bad roll.*
+
+*I need to move Homie, but also protect the gem. The best solution to do both is moving Homie to a table! I must do this carefully though.*"
+[TavernServer] Saved tavern state and log
