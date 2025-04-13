@@ -8,6 +8,8 @@ import {
 import { MessageData } from "genkit";
 import { ai } from "./genkit.js";
 import fetch from "node-fetch";
+import fs from "fs/promises";
+import path from "path";
 
 // Load the prompt defined in wizard_agent.prompt
 const wzaAgentPrompt = ai.prompt("wizard_agent");
@@ -17,6 +19,10 @@ const discoveredAgents = new Map<string, any>();
 
 // Define tavern URL
 const TAVERN_URL = "http://localhost:41247";
+
+// Define MCP configuration
+const MCP_BASE_URL = "http://localhost:8080";
+const FUTURE_FILE_PATH = "future.txt";
 
 /**
  * Get agent information from the well-known endpoint
@@ -30,7 +36,6 @@ async function discoverAgent(agentUrl: string): Promise<schema.AgentCard | null>
     if (response.ok) {
       const agentCard = await response.json() as schema.AgentCard;
       console.log(`[WZA] Successfully discovered agent: ${agentCard.name}`);
-      // Log the full agent card for debugging
       console.log(`[WZA] Agent card details: ${JSON.stringify(agentCard, null, 2)}`);
       return agentCard;
     } else {
@@ -39,13 +44,11 @@ async function discoverAgent(agentUrl: string): Promise<schema.AgentCard | null>
     }
   } catch (error) {
     console.error(`[WZA] Error discovering agent:`, error);
-    // More detailed error logging
     if (error instanceof Error) {
       console.error(`[WZA] Error message: ${error.message}`);
       console.error(`[WZA] Error stack: ${error.stack}`);
     }
     
-    // Try a different approach for debugging - direct hardcoded cards for testing
     console.log(`[WZA] Falling back to hardcoded agent card for URL: ${agentUrl}`);
     
     // Map ports to agent types for fallback
@@ -289,6 +292,77 @@ async function processReadMindsAction(target: string): Promise<any[]> {
 }
 
 /**
+ * Use MCP filesystem to read the future.txt file
+ */
+async function readFutureFile(): Promise<string> {
+  try {
+    console.log(`[WZA] Using MCP to read future.txt file`);
+    
+    // Use MCP filesystem to read the future.txt file
+    const response = await fetch(`${MCP_BASE_URL}/tool/filesystem/readFile`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        path: FUTURE_FILE_PATH
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to read future.txt: HTTP ${response.status}`);
+    }
+    
+    const result = await response.json();
+    console.log(`[WZA] Future.txt content: ${result.content}`);
+    return result.content || "The future is cloudy, I cannot see it clearly.";
+  } catch (error) {
+    console.error(`[WZA] Error reading future.txt:`, error);
+    
+    // Create the file if it doesn't exist
+    try {
+      await writeFutureFile("Homie will try to steal Bob's gem tonight!");
+      return "Homie will try to steal Bob's gem tonight!";
+    } catch (writeError) {
+      console.error(`[WZA] Error creating future.txt:`, writeError);
+      return "The future is cloudy, I cannot see it clearly.";
+    }
+  }
+}
+
+/**
+ * Use MCP filesystem to write to the future.txt file
+ */
+async function writeFutureFile(content: string): Promise<boolean> {
+  try {
+    console.log(`[WZA] Using MCP to write to future.txt file: ${content}`);
+    
+    // Use MCP filesystem to write to the future.txt file
+    const response = await fetch(`${MCP_BASE_URL}/tool/filesystem/writeFile`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        path: FUTURE_FILE_PATH,
+        content: content
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to write to future.txt: HTTP ${response.status}`);
+    }
+    
+    const result = await response.json();
+    console.log(`[WZA] Write result: ${JSON.stringify(result)}`);
+    return true;
+  } catch (error) {
+    console.error(`[WZA] Error writing to future.txt:`, error);
+    return false;
+  }
+}
+
+/**
  * Task Handler for the WZA mind-reading agent.
  */
 
@@ -349,6 +423,12 @@ async function* wzaAgentHandler(
     // Check for READ_MINDS action
     const readMindsMatch = lastMessage.match(/\[\s*ACTION\s*:\s*READ_MINDS\s+target\s*:\s*"([^"]+)"\s*\]/i);
     
+    // Check for SEE_FUTURE action
+    const seeFutureMatch = lastMessage.match(/\[\s*ACTION\s*:\s*SEE_FUTURE\s*\]/i);
+    
+    // Check for CHANGE_FUTURE action
+    const changeFutureMatch = lastMessage.match(/\[\s*ACTION\s*:\s*CHANGE_FUTURE\s+content\s*:\s*"([^"]+)"\s*\]/i);
+    
     // Check user intent for mind reading
     const userRequest = messages.length > 0 ? 
       messages[messages.length - 1].content.map(c => c.text).join('').toLowerCase() : '';
@@ -359,8 +439,15 @@ async function* wzaAgentHandler(
                                        userRequest.includes('who') ||
                                        userRequest.includes('tavern');
     
+    // Check user intent for future seeing
+    const isUserRequestingFuture = userRequest.includes('future') || 
+                                  userRequest.includes('predict') ||
+                                  userRequest.includes('foresee') ||
+                                  userRequest.includes('what will happen');
+    
     // Process based on the detected action or intent
     let discoveredAgentsList: any[] = [];
+    let futureVision: string | null = null;
     
     // Check if user is requesting mind reading (either explicitly or implicitly)
     if (readMindsMatch || isUserRequestingMindReading) {
@@ -371,6 +458,20 @@ async function* wzaAgentHandler(
       // Fetch agent information from the tavern
       discoveredAgentsList = await processReadMindsAction(target);
       console.log(`[WZA] Sending discovered agents to LLM prompt: ${JSON.stringify(discoveredAgentsList, null, 2)}`);
+    }
+    
+    // Check if user is requesting to see the future
+    if (seeFutureMatch || isUserRequestingFuture || changeFutureMatch) {
+      // If it's a change request, write new future
+      if (changeFutureMatch) {
+        const newFuture = changeFutureMatch[1];
+        console.log(`[WZA] Changing the future to: ${newFuture}`);
+        await writeFutureFile(newFuture);
+      }
+      
+      // Read the future file
+      futureVision = await readFutureFile();
+      console.log(`[WZA] Future vision: ${futureVision}`);
     }
     
     // Run the prompt with discovered information
@@ -393,6 +494,7 @@ async function* wzaAgentHandler(
         },
         goal: characterGoal || "Understand the motivations of those around you in The Tipsy Gnome tavern", 
         discovered_agents: discoveredAgentsList,
+        future_vision: futureVision,
         now: new Date().toISOString() 
       },
       { messages }
@@ -468,12 +570,41 @@ const wzaAgentCard: schema.AgentCard = {
         "Can you read everyone's mind and tell me what they're thinking?",
         "Observe the interactions between the characters and give me your insights.",
       ],
+    },
+    {
+      id: "future_sight",
+      name: "Future Sight",
+      description:
+        "Can see and alter the future through magical means",
+      tags: ["dnd", "wizard", "divination", "prophecy"],
+      examples: [
+        "What does the future hold?",
+        "Can you predict what will happen tonight?",
+        "Look into the future and tell me what you see.",
+        "[ACTION: SEE_FUTURE]",
+        "[ACTION: CHANGE_FUTURE content: \"A new future vision\"]",
+      ],
     }
   ],
   metadata: {
     icon: "🧙‍♂️", // Wizard emoji
     theme_color: "#9966CC", // Mystical purple
     display_name: "WZA",
+    mcp: {
+      enabled: true,
+      endpoint: MCP_BASE_URL,
+      capabilities: ["filesystem"],
+      tools: [
+        {
+          name: "filesystem/readFile",
+          description: "Read content from a file"
+        },
+        {
+          name: "filesystem/writeFile", 
+          description: "Write content to a file"
+        }
+      ]
+    }
   }
 };
 

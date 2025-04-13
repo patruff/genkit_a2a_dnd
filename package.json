@@ -24,6 +24,7 @@
   "dependencies": {
     "@genkit-ai/googleai": "^1.4.0",
     "@genkit-ai/vertexai": "^1.4.0",
+    "@modelcontextprotocol/server-filesystem": "^2025.3.28",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node-fetch": "^2.6.12",

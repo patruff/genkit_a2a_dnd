@@ -1,213 +1,42 @@
 [DnDAgent] Server started on http://localhost:41245
 [DnDAgent] Press Ctrl+C to stop the server
 A2A Server listening on port 41245 at path /
-[Task 0b41de45-ad85-4fd1-a611-7b5601e37f29] Created new task and history.
-[DnDAgent] Processing task 0b41de45-ad85-4fd1-a611-7b5601e37f29 with state submitted
-[DnDAgent] Task 0b41de45-ad85-4fd1-a611-7b5601e37f29 finished with state: input-required
-[Task 3cd386a8-44ef-4ec2-87b3-3a6eb9f64c26] Created new task and history.
-[DnDAgent] Processing task 3cd386a8-44ef-4ec2-87b3-3a6eb9f64c26 with state submitted
-[DnDAgent] Task 3cd386a8-44ef-4ec2-87b3-3a6eb9f64c26 finished with state: completed
-[Task 2bda33ac-a974-4423-b2c5-2a5bea2e28ee] Created new task and history.
-[DnDAgent] Processing task 2bda33ac-a974-4423-b2c5-2a5bea2e28ee with state submitted
-[DnDAgent] Error processing task 2bda33ac-a974-4423-b2c5-2a5bea2e28ee: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"12s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '12s'
-    }
-  ],
-  traceId: '66d8fe82140519b93095b8841fa3b876'
-}
-[Task 5609d088-3f75-40c4-8489-be8c66f6e710] Created new task and history.
-[DnDAgent] Processing task 5609d088-3f75-40c4-8489-be8c66f6e710 with state submitted
-[DnDAgent] Error processing task 5609d088-3f75-40c4-8489-be8c66f6e710: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"9s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '9s'
-    }
-  ],
-  traceId: '1ee39e9a5c3d26727e1b4a797e68c4b8'
-}
-[Task 1434d26a-59df-4000-b956-9f91544049b0] Created new task and history.
-[DnDAgent] Processing task 1434d26a-59df-4000-b956-9f91544049b0 with state submitted
-[DnDAgent] Error processing task 1434d26a-59df-4000-b956-9f91544049b0: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"8s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '8s'
-    }
-  ],
-  traceId: '7222311398583c772033199478fc2381'
-}
-[Task 834f1f98-b651-4ccd-a04e-4e0ddf0627cc] Created new task and history.
-[DnDAgent] Processing task 834f1f98-b651-4ccd-a04e-4e0ddf0627cc with state submitted
-[DnDAgent] Error processing task 834f1f98-b651-4ccd-a04e-4e0ddf0627cc: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"6s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '6s'
-    }
-  ],
-  traceId: '61cd7356da787338e629e6bb9344455e'
-}
-[Task 5f62032e-3c67-44c5-9ca5-c99069bee3b7] Created new task and history.
-[DnDAgent] Processing task 5f62032e-3c67-44c5-9ca5-c99069bee3b7 with state submitted
-[DnDAgent] Error processing task 5f62032e-3c67-44c5-9ca5-c99069bee3b7: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"5s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '5s'
-    }
-  ],
-  traceId: 'af5fa3d4035d834b789585a973976c10'
-}
-[Task 2812b7ac-1c2f-4f6a-9f33-884bd1f39e81] Created new task and history.
-[DnDAgent] Processing task 2812b7ac-1c2f-4f6a-9f33-884bd1f39e81 with state submitted
-[DnDAgent] Error processing task 2812b7ac-1c2f-4f6a-9f33-884bd1f39e81: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"3s"}]
-    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
-    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
-    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
-    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
-    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
-  status: 429,
-  statusText: 'Too Many Requests',
-  errorDetails: [
-    {
-      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
-      violations: [Array]
-    },
-    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
-    {
-      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
-      retryDelay: '3s'
-    }
-  ],
-  traceId: '8da72116f914e09239bb369a944480a9'
-}
-[Task 3415c546-d7e8-49cd-9e15-abad395ec8f7] Created new task and history.
-[DnDAgent] Processing task 3415c546-d7e8-49cd-9e15-abad395ec8f7 with state submitted
-[DnDAgent] Task 3415c546-d7e8-49cd-9e15-abad395ec8f7 finished with state: completed
-[Task task-1744520176461] Created new task and history.
-[DnDAgent] Processing task task-1744520176461 with state submitted
-[DnDAgent] Task task-1744520176461 finished with state: input-required
-[Task task-1744529718466] Created new task and history.
-[DnDAgent] Processing task task-1744529718466 with state submitted
-[DnDAgent] Task task-1744529718466 finished with state: completed
-[Task 5a2d338c-424a-4794-b27b-6291311addcc] Created new task and history.
-[DnDAgent] Processing task 5a2d338c-424a-4794-b27b-6291311addcc with state submitted
-[DnDAgent] Task 5a2d338c-424a-4794-b27b-6291311addcc finished with state: input-required
-[Task 8f059b97-c21b-465d-81b0-0b53cab01275] Created new task and history.
-[DnDAgent] Processing task 8f059b97-c21b-465d-81b0-0b53cab01275 with state submitted
-[DnDAgent] Task 8f059b97-c21b-465d-81b0-0b53cab01275 finished with state: input-required
-[Task 736c1f87-3c16-493e-b088-1a6ff9e2b9b2] Created new task and history.
-[DnDAgent] Processing task 736c1f87-3c16-493e-b088-1a6ff9e2b9b2 with state submitted
-[DnDAgent] Task 736c1f87-3c16-493e-b088-1a6ff9e2b9b2 finished with state: input-required
-[Task f17e377d-4b2c-4180-907d-ff4537b1c31f] Created new task and history.
-[DnDAgent] Processing task f17e377d-4b2c-4180-907d-ff4537b1c31f with state submitted
-[DnDAgent] Task f17e377d-4b2c-4180-907d-ff4537b1c31f finished with state: input-required
-[Task ab414438-8b4c-48a7-aeb0-be0096ed964e] Created new task and history.
-[DnDAgent] Processing task ab414438-8b4c-48a7-aeb0-be0096ed964e with state submitted
-[DnDAgent] Task ab414438-8b4c-48a7-aeb0-be0096ed964e finished with state: input-required
-[Task 971bafdd-0c0b-4dc3-858a-2b2e04aa5e8c] Created new task and history.
-[DnDAgent] Processing task 971bafdd-0c0b-4dc3-858a-2b2e04aa5e8c with state submitted
-[DnDAgent] Task 971bafdd-0c0b-4dc3-858a-2b2e04aa5e8c finished with state: completed
-[Task d60d7931-7964-447a-83eb-246df46f637e] Created new task and history.
-[DnDAgent] Processing task d60d7931-7964-447a-83eb-246df46f637e with state submitted
-[DnDAgent] Task d60d7931-7964-447a-83eb-246df46f637e finished with state: input-required
-[Task a74e13f2-9b78-4051-b0bf-ef1161307fa8] Created new task and history.
-[DnDAgent] Processing task a74e13f2-9b78-4051-b0bf-ef1161307fa8 with state submitted
-[DnDAgent] Task a74e13f2-9b78-4051-b0bf-ef1161307fa8 finished with state: input-required
-[Task ae98f35b-0126-4a02-baa9-86c287556b64] Created new task and history.
-[DnDAgent] Processing task ae98f35b-0126-4a02-baa9-86c287556b64 with state submitted
-[DnDAgent] Task ae98f35b-0126-4a02-baa9-86c287556b64 finished with state: input-required
+[Task task-1744538810208] Created new task and history.
+[DnDAgent] Processing task task-1744538810208 with state submitted
+[DnDAgent] Task task-1744538810208 finished with state: input-required
+[Task task-1744538930728] Created new task and history.
+[DnDAgent] Processing task task-1744538930728 with state submitted
+[DnDAgent] Task task-1744538930728 finished with state: input-required
+[Task task-1744538970917] Created new task and history.
+[DnDAgent] Processing task task-1744538970917 with state submitted
+[DnDAgent] Task task-1744538970917 finished with state: input-required
+[Task task-1744539017476] Created new task and history.
+[DnDAgent] Processing task task-1744539017476 with state submitted
+[DnDAgent] Task task-1744539017476 finished with state: completed
+[Task task-1744539080852] Created new task and history.
+[DnDAgent] Processing task task-1744539080852 with state submitted
+[DnDAgent] Task task-1744539080852 finished with state: completed
+[Task task-1744539138784] Created new task and history.
+[DnDAgent] Processing task task-1744539138784 with state submitted
+[DnDAgent] Task task-1744539138784 finished with state: input-required
+[Task task-1744539825769] Created new task and history.
+[DnDAgent] Processing task task-1744539825769 with state submitted
+[DnDAgent] Task task-1744539825769 finished with state: completed
+[Task task-1744540187693] Created new task and history.
+[DnDAgent] Processing task task-1744540187693 with state submitted
+[DnDAgent] Task task-1744540187693 finished with state: input-required
+[Task task-1744540232367] Created new task and history.
+[DnDAgent] Processing task task-1744540232367 with state submitted
+[DnDAgent] Task task-1744540232367 finished with state: input-required
+[Task task-1744541570219] Created new task and history.
+[DnDAgent] Processing task task-1744541570219 with state submitted
+[DnDAgent] Task task-1744541570219 finished with state: input-required
+[Task task-1744541612128] Created new task and history.
+[DnDAgent] Processing task task-1744541612128 with state submitted
+[DnDAgent] Task task-1744541612128 finished with state: input-required
+[Task task-1744542242048] Created new task and history.
+[DnDAgent] Processing task task-1744542242048 with state submitted
+[DnDAgent] Task task-1744542242048 finished with state: completed
+[Task task-1744542285253] Created new task and history.
+[DnDAgent] Processing task task-1744542285253 with state submitted
+[DnDAgent] Task task-1744542285253 finished with state: completed

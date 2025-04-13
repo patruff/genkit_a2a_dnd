@@ -1,16 +1,15 @@
 # A2A & MCP D&D Fantasy Tavern System
 
-This system creates a virtual D&D tavern called "The Tipsy Gnome" with interactive character agents that can converse with each other, perform actions with real dice rolls, and pursue goals.
+This system creates a virtual D&D tavern called "The Tipsy Gnome" with interactive character agents that can communicate with each other, perform actions, and integrate with the Multi-agent Collaboration Protocol (MCP).
 
 ## Features
 
 - A tavern server that manages the environment and coordinates characters
 - Character agents (Homie the gnome thief, Bob the bartender, and WZA the wizard)
-- **Interactive Action System with real dice rolls and mechanical outcomes**
-- **Mind Reading abilities** that allow WZA to detect other agents via the A2A protocol
-- **Future Sight abilities** where WZA uses MCP to access the filesystem
-- Goal-oriented interactions with skill checks and mid-narrative continuations
-- **Dual protocol integration** combining A2A and MCP for enhanced capabilities
+- **MCP Integration** allowing WZA to access the filesystem for "Future Sight" capabilities
+- **Mind Reading capabilities** that allow WZA to detect other agents via the A2A protocol 
+- **Interactive narrative** with dramatic progressions and character development
+- **Clean stdio-based MCP implementation** for robust agent-tool integration
 
 ## Characters & Agent Cards
 
@@ -72,6 +71,32 @@ Each character in the tavern is implemented as an A2A agent with its own agent c
         "Can you read everyone's mind and tell me what they're thinking?",
         "Observe the interactions between the characters and give me your insights."
       ]
+    },
+    {
+      "id": "future_sight",
+      "name": "Future Sight",
+      "description": "Can see and alter the future through magical means",
+      "tags": ["dnd", "wizard", "divination", "prophecy"],
+      "examples": [
+        "What does the future hold?",
+        "Can you predict what will happen tonight?",
+        "Look into the future and tell me what you see.",
+        "[ACTION: SEE_FUTURE]",
+        "[ACTION: CHANGE_FUTURE content: \"A new future vision\"]"
+      ]
+    },
+    {
+      "id": "knowledge_retrieval",
+      "name": "Magical Knowledge Repository",
+      "description": "Can access ancient magical knowledge about artifacts, spells, and lore",
+      "tags": ["dnd", "wizard", "arcana", "history", "knowledge"],
+      "examples": [
+        "What do you know about magical gems?",
+        "Tell me about protection spells.",
+        "What knowledge do you have about thieves and magical items?",
+        "Research the Blue Sapphire of Netheril.",
+        "Consult your magical repository about warding spells."
+      ]
     }
   ],
   "metadata": {
@@ -80,15 +105,28 @@ Each character in the tavern is implemented as an A2A agent with its own agent c
     "display_name": "WZA",
     "mcp": {
       "enabled": true,
-      "capabilities": ["filesystem"],
+      "endpoint": "http://localhost:8080",
+      "capabilities": ["filesystem", "lightrag"],
       "tools": [
         {
-          "name": "readFile",
+          "name": "filesystem/readFile",
           "description": "Read content from a file"
         },
         {
-          "name": "writeFile", 
+          "name": "filesystem/writeFile", 
           "description": "Write content to a file"
+        },
+        {
+          "name": "query_rag",
+          "description": "Query the knowledge repository"
+        },
+        {
+          "name": "insert_text",
+          "description": "Add new knowledge to the repository"
+        },
+        {
+          "name": "clear_rag",
+          "description": "Clear the knowledge repository"
         }
       ]
     }
@@ -140,33 +178,47 @@ This script will start all agents and the tavern server:
 
 ## Running the Wizard Scenarios
 
-### Mind Reading Scenario
+The system includes multiple wizard scenarios, with the recommended option being the Simple MCP approach.
 
-To see a complete scenario where WZA uses mind reading to detect Homie's plan to steal the gemstone:
+### Simple MCP Integration (Recommended)
 
-```bash
-./run_wizard_scenario.sh
-```
-
-This script will run through a pre-defined scenario showing:
-1. WZA scanning the tavern with mind reading
-2. Homie attempting to steal the gemstone
-3. Bob defending the tavern
-4. All interactions with dice rolls and skill checks
-
-### MCP Future-Seeing Scenario
-
-To see WZA using MCP (Multi-agent Collaboration Protocol) to access the filesystem and see the future:
+For the best experience combining WZA's mind reading and future sight using stdio-based MCP:
 
 ```bash
-./run_wizard_mcp.sh
+./easy_mcp_wizard.sh
 ```
 
-This script demonstrates:
-1. WZA using MCP to read from future.txt, revealing Homie's plan to steal the gem
-2. Bob reacting to the prophecy and taking precautions
-3. Homie denying the accusations
-4. WZA using MCP to write a new future to the file, changing fate itself
+This streamlined scenario uses the MCP stdio protocol directly:
+
+- 🔌 **Native stdio-based MCP** for seamless tool integration
+- 🚀 **Self-contained process management** that handles the entire MCP lifecycle
+- 🧠 **Clean JSON-RPC implementation** following the MCP specification
+- 🪄 **Direct filesystem access** through standard MCP tools
+- 🔮 **Future Sight capabilities** via MCP file operations
+- 💾 **Simple configuration** with automatic path detection
+- ✨ **No external services required**
+
+This scenario provides a focused demonstration of the wizard's key abilities:
+1. Mind reading (through A2A protocol)
+2. Future sight (through MCP filesystem access)
+
+The script automatically handles launching and configuring the MCP server, communicates via stdio pipes instead of HTTP, and includes comprehensive error handling.
+
+### Direct Access Alternative
+
+If you prefer a simplified approach without MCP, you can use:
+
+```bash
+./run_direct_wizard.sh
+```
+
+This scenario uses direct filesystem access instead of MCP but provides the same narrative experience with:
+
+- 🎨 **Color-coded output** for each character and protocol
+- 🎭 **Character emojis** for visual distinction
+- 🎬 **Cinematic step-by-step progression** of the tavern scene
+- 🎲 **Dice rolls** for dramatic effect during spell casting
+- 🔮 **Future sight capabilities** through direct file operations
 
 ### Example Scenario Output
 
@@ -266,28 +318,54 @@ The MCP scenario demonstrates how agents can use the Multi-agent Collaboration P
 3. **Fate Alteration**: WZA changes the future by writing new content to the file
 4. **Tool Augmentation**: MCP extends agent capabilities beyond their built-in functions
 
+#### MCP Configuration
+
+The system uses a simplified MCP configuration file that defines the filesystem server:
+
+```json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "/home/patruff/.nvm/versions/node/v18.20.7/bin/node",
+      "args": [
+        "/home/patruff/.nvm/versions/node/v18.20.7/bin/npx",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/patru/anthropicFun"
+      ]
+    }
+  }
+}
+```
+
+This configuration:
+1. Specifies the exact path to the node executable
+2. Defines the npx command to launch the MCP filesystem server
+3. Sets the allowed directory for file operations
+4. Is automatically generated with correct paths by the `easy_mcp_wizard.sh` script
+
 ### How A2A and MCP Work Together
 
-The combination of A2A and MCP creates a powerful system:
+The system integrates the A2A protocol for agent communication with MCP for tool access:
 
 1. **A2A provides agent discovery and communication**:
    - Agents register capabilities through well-known endpoints
-   - They communicate via standardized JSON-RPC
+   - Agents interact through standardized JSON-RPC messages
    - The tavern server coordinates interactions between agents
 
-2. **MCP provides access to external tools and resources**:
-   - MCP lets agents access tools like the filesystem
-   - It extends agent capabilities beyond what A2A alone provides
-   - The agent card's metadata section declares MCP capabilities
+2. **MCP provides access to external tools using stdio**:
+   - The system spawns an MCP server subprocess
+   - Communication occurs through stdin/stdout pipes
+   - JSON-RPC messages follow the MCP protocol specification
+   - The MCP client tracks requests and matches responses
 
 3. **Integration flow**:
    - WZA discovers Homie and Bob via A2A protocol
    - WZA reads their intentions through A2A mind reading
-   - WZA accesses future.txt through MCP filesystem capability
+   - WZA accesses future.txt through MCP filesystem tools
    - WZA alters the future by writing to the file via MCP
-   - All responses and conversations happen via A2A protocol
+   - The narrative progresses with A2A agent interactions
 
-This demonstrates how A2A handles communication between agents, while MCP provides specialized tool capabilities that extend what agents can do.
+The implementation demonstrates a clean approach to MCP integration using proper stdio-based communication rather than HTTP endpoints.
 
 ## Example MCP Scenario Output
 
@@ -436,7 +514,26 @@ STEP 6: WZA changes the future with MCP
 The final contents of future.txt: "Bob has protected the gem, Homie does not steal the gem now"
 ```
 
+## Summary of Key Files
+
+### Core Script Files
+- `easy_mcp_wizard.sh` - Main launcher for the stdio-based MCP integration (**Recommended**)
+- `run_direct_wizard.sh` - Alternative launcher using direct filesystem access
+- `run_wizard_scenario.sh` - Basic mind reading scenario
+- `start_a2a_agents.sh` - Script to start all A2A agents
+
+### Configuration Files
+- `easy_mcp_config.json` - Configuration for the stdio-based MCP server
+- `mcp_config.json` - Legacy configuration file
+
+### Implementation Files
+- `wizard_simple_mcp.js` - Main implementation with stdio-based MCP
+- `wizard_direct_scenario.js` - Alternative implementation with direct file access
+- `wizard_scenario.js` - Basic mind reading scenario implementation
+- `src/lightrag-mcp-client.js` - Library for LightRAG MCP integration
+- `src/mcp-client.js` - General MCP client library
+
 ---
 **NOTE:** 
-This is sample code and not production-quality libraries.
+This is sample code for demonstration purposes only.
 ---

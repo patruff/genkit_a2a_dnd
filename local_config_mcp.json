@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "/home/patruff/.nvm/versions/node/v18.20.7/bin/node",
+      "args": [
+        "/home/patruff/.nvm/versions/node/v18.20.7/bin/npx",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/patru/anthropicFun"
+      ]
+    }
+  }
+}
