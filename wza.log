@@ -987,3 +987,344 @@ A2A Server listening on port 41248 at path /
 ]
 [Task task-1744520172160] Created new task and history.
 [WZA] Processing task task-1744520172160 with state submitted
+[Task task-1744529704758] Created new task and history.
+[WZA] Processing task task-1744529704758 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529704785",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:35:07.729Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome welcomes you with open doors and a warm hearth!*\n\nThe Tipsy Gnome is a cozy tavern nestled in a bustling town in a D&D setting. Lanterns cast a warm glow over the common room, highlighting the wooden bar, scattered tables, and a crackling fireplace. The air is thick with the aroma of roasted meats, spiced ale, and the general cheer of an evening gathering.\n\nCurrently, we have:\n\n*   **Bob**, the friendly middle-aged human bartender with a hearty laugh. He's tending the bar, polishing glasses and keeping a watchful eye on the patrons. He's particularly focused on protecting the valuable blue gemstone displayed behind the bar and keeping an eye on suspicious customers. Bob's attempts to perceive Homie have failed so far.\n*   **Homie**, a cheerful gnome thief with nimble fingers and a mischievous smile. He's currently attempting to use a \"magic trick\" as a distraction, all while secretly plotting to steal the valuable blue gemstone behind the bar.\n*   **WZA**, a wise wizard with mystical mind-reading capabilities and keen observational skills. He's sitting quietly in the corner, observing the patrons and attempting to detect any malicious intentions through mind-reading. However, his powers seem to be failing him as he's unable to read the minds of the others."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task task-1744529726070] Created new task and history.
+[WZA] Processing task task-1744529726070 with state submitted
+[Task c8fd5a53-0df1-440c-886e-f9675662744c] Created new task and history.
+[WZA] Processing task c8fd5a53-0df1-440c-886e-f9675662744c with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529746137",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:35:49.076Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome exudes a warm and inviting atmosphere as evening descends, its interior lit by the soft glow of the fireplace and strategically placed lanterns*\n\nThe tavern is filled with the comforting aromas of roasted meat, spiced ale, and a hint of woodsmoke from the hearth. Several sturdy wooden tables are scattered throughout the room, each surrounded by mismatched chairs and benches. Behind the long, polished bar, various bottles and mugs glint invitingly. Most prominently displayed is the glittering blue gemstone.\n\n**Characters present:**\n\n*   **Bob (human bartender):** A friendly middle-aged human with a hearty laugh, Bob is currently tending bar, polishing glasses, and keeping a close watch on the patrons. His primary goal is to protect the valuable blue gemstone and keep an eye on suspicious customers. He is becoming increasingly wary of Homie.\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile, Homie is currently attempting to create a distraction to steal the blue gemstone, but has so far failed. He is attempting a bit of deception, but is flustered after fumbling a firecracker.\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills, WZA is sitting quietly in a corner, observing the patrons. His goal is to observe the patrons of the tavern using mind reading to detect any malicious intentions, specifically about the gemstone after he has made some bombastic claims of altering fate."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[Task 16dcccad-f9dc-4fa4-a881-8dc5917cfeec] Created new task and history.
+[WZA] Processing task 16dcccad-f9dc-4fa4-a881-8dc5917cfeec with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529765603",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:36:08.374Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome is bustling with early evening activity, the warm glow of the fireplace casting dancing shadows on the wooden walls.*\n\nA lively atmosphere fills the room. Bob, the friendly middle-aged human bartender, is currently tending bar, his focus split between serving drinks and keeping a close watch on Homie and protecting the gemstone. His goal is to protect the valuable blue gemstone and keep an eye on suspicious customers.\n\nHomie, the cheerful gnome thief with a mischievous smile, is subtly trying to blend in while attempting to get away with stealing the valuable blue gemstone behind the bar without getting caught.\n\nWZA, the wise wizard with mystical mind-reading capabilities, sits quietly in the corner, his keen observational skills focused on the other patrons. He is trying to observe the patrons of the tavern, using mind reading to detect any malicious intentions. He's particularly interested in the interactions between Bob and Homie, given the earlier tension and failed mind-reading attempts.\n\nThe air is thick with the aroma of roasting meats, spiced ale, and pipeweed. Mugs clink, dice roll, and snippets of conversations fill the air, creating a comforting, if slightly chaotic, soundscape."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[Task c0f872a7-a106-4aa2-9bc8-b65d6e9fe678] Created new task and history.
+[WZA] Processing task c0f872a7-a106-4aa2-9bc8-b65d6e9fe678 with state submitted
+[WZA] Processing mind reading for target: Bob (explicit action: true)
+[WZA] Starting mind reading for target: "Bob"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529779818",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:36:22.962Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome exudes warmth and a lived-in charm, the kind of place where travelers and locals alike can find respite from the outside world.*\n\nThe evening air is filled with the comforting aroma of roasted nuts, spiced cider, and a faint whiff of pipeweed. A crackling fire in the large stone fireplace casts dancing shadows on the walls, illuminating the mismatched furniture and creating a cozy ambiance.\n\nCurrently, the tavern hosts:\n\n*   **Bob (human bartender):** A friendly middle-aged human with a hearty laugh who keeps the tavern running. His goal is to protect the valuable blue gemstone and keep an eye on suspicious customers, especially Homie. Having just failed to intimidate the gnome, Bob is now attempting a more subtle persuasive approach, trying to casually extract information while positioning himself strategically between Homie and the gemstone.\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile. While his original goal was to steal the valuable blue gemstone behind the bar without getting caught, he succeeded, and is now trying to throw Bob off his trail. He attempts to accomplish that by suggesting that WZA conjured the rat.\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. His goal is to observe the patrons of the tavern, using mind reading to detect any malicious intentions, especially regarding the gemstone.\n\nThe blue gemstone, the object of much attention, is now hidden in Homie's boot. WZA watches all unfold, ready to interject where his destiny demands it."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Bob
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task 54388fe9-4464-4325-b780-ce297f21203b] Created new task and history.
+[WZA] Processing task 54388fe9-4464-4325-b780-ce297f21203b with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529797215",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:36:40.426Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome is alive with the murmur of conversations and the clinking of mugs as evening descends.*\n\nThe tavern exudes a warm, inviting atmosphere, with a crackling fire in the hearth casting dancing shadows on the wooden walls. The air is thick with the aroma of roasted meats, spiced ales, and a hint of pipeweed. Several wooden tables are scattered throughout the room, occupied by a mix of travelers, locals, and the occasional adventurer.\n\nCurrently, the main players in this little drama are:\n\n*   **Bob (human bartender):** A friendly, middle-aged human with a hearty laugh, Bob is the heart and soul of The Tipsy Gnome. He's currently tending bar, keeping a close eye on the glittering blue gemstone displayed behind him, and on Homie. His goal is to protect the valuable blue gemstone and keep an eye on suspicious customers\n\n*   **Homie (gnome thief):** A cheerful gnome with a mischievous smile and nimble fingers, Homie is a known face at The Tipsy Gnome. He's currently at the bar, trying to act nonchalant and distract Bob. Homie's goal is to steal the valuable blue gemstone behind the bar without getting caught\n\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities, WZA sits quietly in a corner, observing the other patrons with keen interest. WZA's goal is to observe the patrons of the tavern using mind reading to detect any malicious intentions. He is keeping tabs on Bob and Homie to determine the threat.\n\nThe gemstone itself sits innocently behind the bar, unaware of the drama it has stirred."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[Task b000cdc5-b714-4c70-8ea5-8d7a0172db40] Created new task and history.
+[WZA] Processing task b000cdc5-b714-4c70-8ea5-8d7a0172db40 with state submitted
+[WZA] Processing mind reading for target: Bob (explicit action: true)
+[WZA] Starting mind reading for target: "Bob"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744529813741",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T07:36:56.994Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome is alive with activity this evening*\n\nLanterns cast a warm, inviting glow across the room, highlighting the polished wooden bar, the crackling fireplace, and the scattered tables where patrons are engaged in various conversations. The air is thick with the aroma of roasting meat, spiced ale, and pipeweed.\n\nCurrently in the tavern:\n\n*   **Bob (human bartender):** A friendly, middle-aged man with a hearty laugh and a sharp eye. He's tending the bar, polishing glasses, and keeping a close watch on the patrons. *Bob is currently on high alert, trying to protect the valuable gemstone behind the bar and keep an eye on Homie after the gemstone was stolen and recovered.*\n\n*   **Homie (gnome thief):** A cheerful gnome with nimble fingers and a mischievous smile. He's currently at the bar, seemingly enjoying a drink, but *he's scheming to find a chance to get the blue gemstone back, hoping his next move will be his last, a way to get out with the gem without Bob raising the alarm*.\n\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. *He is currently sitting quietly in a corner, observing the other patrons and subtly scanning their minds for malicious intent, as well as trying to help Bob through the use of AI models.*\n\nThe gemstone is displayed in a case behind the bar. It glitters enticingly under the lamplight, the target of much desire, worry and intrigue. Bob is attempting to act normal to not arouse suspicion of the gemstone being stolen, however, Homie and WZA seem to know that it was stolen."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Bob
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]

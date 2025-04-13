@@ -68,9 +68,53 @@
     {
       "description": "Bob attempts to perception Homie's movements - FAILURE",
       "timestamp": "2025-04-13T04:56:01.489Z"
+    },
+    {
+      "description": "Homie attempts to steal firecracker placement - FAILURE",
+      "timestamp": "2025-04-13T07:35:35.894Z"
+    },
+    {
+      "description": "Bob attempts to persuade WZA - FAILURE",
+      "timestamp": "2025-04-13T07:35:41.688Z"
+    },
+    {
+      "description": "Bob attempts to perception Homie's reaction - FAILURE",
+      "timestamp": "2025-04-13T07:35:43.872Z"
+    },
+    {
+      "description": "Homie stole the gem",
+      "timestamp": "2025-04-13T07:35:55.145Z"
+    },
+    {
+      "description": "Bob attempts to intimidate Homie - SUCCESS",
+      "timestamp": "2025-04-13T07:36:00.725Z"
+    },
+    {
+      "description": "Bob attempts to perception Homie's face - SUCCESS",
+      "timestamp": "2025-04-13T07:36:02.900Z"
+    },
+    {
+      "description": "Bob attempts to intimidate Homie - FAILURE",
+      "timestamp": "2025-04-13T07:36:17.022Z"
+    },
+    {
+      "description": "Homie attempts to acrobatics move towards the door while Bob is distracted - FAILURE",
+      "timestamp": "2025-04-13T07:36:29.158Z"
+    },
+    {
+      "description": "Bob attempts to perception Homie's movements - FAILURE",
+      "timestamp": "2025-04-13T07:36:35.455Z"
+    },
+    {
+      "description": "Homie attempts to acrobatics move towards the bar - SUCCESS",
+      "timestamp": "2025-04-13T07:36:46.451Z"
+    },
+    {
+      "description": "Bob attempts to persuade Homie - FAILURE",
+      "timestamp": "2025-04-13T07:36:51.386Z"
     }
   ],
-  "lastUpdated": "2025-04-13T04:56:09.142Z",
+  "lastUpdated": "2025-04-13T07:36:58.995Z",
   "metadata": {
     "characterGoals": {
       "Homie": "steal the valuable blue gemstone behind the bar without getting caught",
@@ -80,35 +124,112 @@
     "skillChecks": [
       {
         "characterName": "Bob",
+        "skillName": "Persuasion",
+        "rollValue": 10,
+        "modifier": 4,
+        "total": 14,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:35:41.688Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
         "skillName": "Perception",
         "rollValue": 9,
         "modifier": 3,
         "total": 12,
         "difficultyClass": 15,
         "success": false,
-        "timestamp": "2025-04-13T04:55:23.994Z",
+        "timestamp": "2025-04-13T07:35:43.872Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 14,
+        "modifier": 6,
+        "total": 20,
+        "difficultyClass": 20,
+        "success": true,
+        "timestamp": "2025-04-13T07:35:55.145Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Intimidation",
+        "rollValue": 18,
+        "modifier": 3,
+        "total": 21,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:00.725Z",
         "advantage": "normal"
       },
       {
         "characterName": "Bob",
         "skillName": "Perception",
+        "rollValue": 12,
+        "modifier": 3,
+        "total": 15,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:02.900Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Intimidation",
         "rollValue": 7,
         "modifier": 3,
         "total": 10,
         "difficultyClass": 15,
         "success": false,
-        "timestamp": "2025-04-13T04:55:40.530Z",
+        "timestamp": "2025-04-13T07:36:17.022Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 8,
+        "modifier": 6,
+        "total": 14,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:29.158Z",
         "advantage": "normal"
       },
       {
         "characterName": "Bob",
         "skillName": "Perception",
-        "rollValue": 5,
+        "rollValue": 6,
         "modifier": 3,
-        "total": 8,
+        "total": 9,
         "difficultyClass": 15,
         "success": false,
-        "timestamp": "2025-04-13T04:56:01.489Z",
+        "timestamp": "2025-04-13T07:36:35.455Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 19,
+        "modifier": 6,
+        "total": 25,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:46.451Z",
+        "advantage": "normal"
+      },
+      {
+        "characterName": "Bob",
+        "skillName": "Persuasion",
+        "rollValue": 9,
+        "modifier": 4,
+        "total": 13,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:51.386Z",
         "advantage": "normal"
       }
     ]

@@ -479,6 +479,102 @@
       "listener": "Homie",
       "message": "*The situation in this tavern thickens like a poorly brewed potion. Bob is suspicious, Homie is scheming, and my mind-reading is failing. Clearly, direct approaches are not working. I must be more subtle, more observant. My goal remains: detect any malicious intentions and now especially protect the gemstone.*\n\n*I stroke my beard, feigning deep thought as I observe Homie's \"magic trick\"*\n\n\"Hmm, most curious... Such a display of simple illusion, yet one wonders what truly lies beneath the surface. A distraction, perhaps?\" *I mutter mostly to myself.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must try to penetrate Homie's thoughts once more, but more cautiously this time. Perhaps a different angle of approach will yield better results. If I can discern his true intentions, I can better anticipate his actions.*",
       "timestamp": "2025-04-13T04:56:09.142Z"
+    },
+    {
+      "speaker": "User",
+      "listener": "Tavern",
+      "message": "Describe the final scene in the tavern after WZA announced: \"*My primary goal is to understand the motivations of those in the Tipsy Gnome. This... sudden change I've made could provide a treasure trove of insights into their reactions and behaviors. I must observe carefully.*\n\n*I stand, rising to my full height, my yellow 🤗 robes swirling around me. I raise my hands, channeling arcane energy.*\n\n\"Hark, denizens of the Tipsy Gnome! Attend to my words, for I bring tidings of altered fate!\" *I pause for dramatic effect, ensuring all eyes are upon me.*\n\n\"The threads of destiny have shifted! The tapestry of tomorrow has been re-woven! I have foreseen a future where a gem of great value was to be taken. BUT NO LONGER!\"\n\nI emphasize the last sentence with a crackle of arcane energy around my fingertips, making sure to keep my words vague enough to not specify who stole the gem or when.\n\n\"Fate itself has bowed to my will! Bob, the gem in your care shall remain safe!\" *I look directly at Bob with a piercing gaze, waiting for his reaction.*\n\n\"Homie... *I turn my gaze towards the gnome, letting my words hang in the air*, ...know that the path you *were* destined to walk has been rerouted.\"\n\n[ACTION: READ_MINDS target: \"Bob\"]\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must gauge their immediate reactions to this declaration, as well as gather their long term goals*\"",
+      "timestamp": "2025-04-13T07:35:33.119Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*This is getting trickier than a three-knot rope! Bob's onto me, and WZA's making grand pronouncements! Time to play it cool, like a cucumber in a winter stew. I still want that gem, but I need a better distraction. Maybe if I can get Bob to look away for just a moment... A sudden, loud noise should do the trick.*\n\n\"Oh, a story, you say, Bob? Well, I do enjoy a good tale! But perhaps something a bit more... explosive is in order, wouldn't you say?\" *Homie claps his hands together, suddenly feigning excitement.* \"I know just the thing! Prepare yourselves for... *The Tale of the Exploding Ogre!*\"\n\n*With a flourish, Homie throws a small, previously concealed, firecracker onto the floor away from the bar. He makes sure it lands near WZA, hoping to blame it on the wizard's strange magical disruption.*\n\n[ACTION: STEALTH target: \"firecracker placement\", skill: \"Stealth\", difficulty: \"medium\"]\n\n🎲 Sleight of Hand check: [2+6=8 vs DC 15]\n**FAILURE**: Homie fumbles the theft attempt!\n\nBlast and barnacles! *My fingers are all thumbs today! Need to calm down, refocus. That gemstone isn't going anywhere... yet.*\n\n*Homie looks around nervously, hoping no one noticed his fumble with the firecracker. He coughs loudly, trying to cover up any suspicious sounds.*\n\n\"Ahem! Seems my fingers are a bit clumsy today. Perhaps I should stick to… other tasks for now. Does anyone need their… boots polished? Or maybe a particularly stubborn knot untied?\"\n\n*He subtly glances back at the bar, his eyes darting to the blue gemstone. He needs a distraction, something to draw the bartender's attention away. Perhaps…*\n\n*Internal thought: If I can make a minor distraction behind the bar, the bartender will investigate, giving me a clear shot at the gemstone. I just need to be clever about it.*\n\n[ACTION: DECEPTION target: \"bartender\", message: \"Oh dear, I think something just fell behind the bar! I heard a clatter!\"]",
+      "timestamp": "2025-04-13T07:35:37.877Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*WZA's announcement just made things more complicated. Now everyone knows I have a valuable gemstone, and both Homie and WZA are acting suspicious. I need to maintain control of the situation and figure out what their real intentions are. WZA's claim to alter fate... that's powerful magic, if it's real. But it could also be a grand distraction. I need to stay focused on protecting the gemstone.*\n\n*Bob furrows his brow at Homie's clumsiness, then turns towards WZA, a mixture of curiosity and suspicion in his eyes.*\n\n\"Well now, that's quite a pronouncement, friend! Altered fate, you say? I always thought fate was a stubborn mule, not easily swayed. But I appreciate the sentiment, especially concerning my little gem here.\"\n\n*Bob pats the bar top near where the gemstone is hidden underneath, giving it a protective tap*\n\n\"Homie, my friend, you seem a bit flustered. Perhaps all this talk of fate and magic is a bit much for a little gnome? How about I get you a nice, calming chamomile tea? On the house.\"\n\n[ACTION: PERCEPTION target: \"Homie's reaction\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [9+3=12 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast it, I couldn't get a read on Homie's reaction. He's a slippery one, that gnome. I need to be more subtle. Maybe I can casually bring up the jewel in conversation and see if he bites. I also need to make sure no one else is eyeing the gem – it's not every day a gemstone of that size ends up in a backwater tavern like this.*\n\n\"Alright, alright, no need to look so down, friend. A bit of bad luck reading someone can happen to the best of us. So, what brings you into The Tipsy Gnome today? Looking for a bit of gossip, perhaps? Or just a quiet pint after a long day of... uh... gnome-ing?\" *Bob raises an eyebrow with a playful smirk, trying to gauge Homie's reaction again.*\n\n[ACTION: INSIGHT target: \"Homie's reaction to being questioned\", skill: \"Insight\", difficulty: \"medium\"]\n\n*While engaging Homie in conversation, Bob subtly glances around the tavern, his eyes scanning the other patrons. He's looking for anyone who seems overly interested in their surroundings, particularly if they're glancing at the gemstone displayed prominently behind the bar. He also pays attention to any hushed conversations or furtive gestures.*\n\n[ACTION: PERCEPTION target: \"other patrons\", skill: \"Perception\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-13T07:35:46.113Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The tavern air crackles with tension. Bob is suspicious, Homie is flustered, and I'm stuck in the middle. My declaration has thrown everything into chaos, which is precisely what I wanted. Now, to observe the fallout and uncover the true intentions at play.*\n\n*I adjust my 🤗 robes, subtly shifting my gaze between Bob and Homie, noting their reactions. Time for a more direct approach, but still shrouded in wizardly mystique.*\n\n\"Indeed, Bob, fate is a stubborn mule, yet even mules can be persuaded with the right... incentive. My words were not mere pronouncements, but a weaving of new possibilities. The gemstone's destiny is now... malleable.\"\n\n*I turn to Homie, my eyes narrowed slightly. I'll attempt to probe deeper into Homie's mind.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*If I can break through Homie's mental defenses, I might discover his plans for the gem. And also attempt to get a hint of his alibies*",
+      "timestamp": "2025-04-13T07:35:51.704Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Bob is watching me like a hawk, and WZA is meddling with fate... or at least trying to make it sound like he is. I need to regain control of the situation, and that means getting the gemstone before they get even more suspicious.*\n\n\"Chamomile tea, Bob? How thoughtful! But I'm more of a firewater-and-ginger sort of gnome myself,\" I say with a slightly nervous chuckle. *Gotta appear nonchalant, just a friendly gnome enjoying the tavern atmosphere. Maybe a little TOO nonchalant... but what choice do I have?*\n\n*Homie tries to appear relaxed, leaning casually against a nearby barrel. He subtly positions himself to have a clearer view of the gemstone behind the bar.*\n\n*Thinking quickly, I can now tell the bartender that a rat got into the ale and I have to point to a location behind the bar, close to the gemstone to cause a distraction.*\n\n\"Say, barkeep!\" I call out in a slightly louder voice than necessary. \"I think I just saw a rather large rat scurrying behind the bar near the ale kegs! You might want to check that before it nibbles on your finest brew!\"\n\n[ACTION: DECEPTION target: \"bartender\", message: \"Saw a rat behind the bar near the ale kegs.\"]\n\n*While the bartender is distracted, and after my conversation with Bob, I can take advantage of the situation.*\n\n*While the bartender investigates the imaginary rat, I'll try to be sly like a fox.*\n\n[ACTION: STEAL target: \"gem\", skill: \"Sleight of Hand\", difficulty: \"hard\"]\n\n🎲 Sleight of Hand check: [14+6=20 vs DC 20]\n**SUCCESS**: Homie successfully steals the gem!\n\n\"Heh, looks like old Homie still has his touch!\" *I smirk inwardly, quickly palming the small gem and slipping it into a hidden pocket in my boot.*\n\n*My eyes flick towards the bar. The blue gemstone is still my main target, and this little bauble will make a nice distraction if I need to make a quick escape. I sidle closer to the bar, pretending to be interested in the drinks on offer.*\n\n*I glance around, making sure no one is watching me too closely. The bartender seems busy polishing glasses, and the other patrons are engrossed in their conversations.*\n\n*Time to put my plan into action. I'll need to create a diversion, something that will draw the bartender's attention away from the gemstone for a few precious seconds.*\n\n\"Excuse me, barkeep!\" I call out in a slightly louder than necessary voice. \"Is that a *giant rat* I see scurrying behind your barrel? I'd hate for it to get into your fine spirits!\"\n\n*I point dramatically towards a stack of barrels near the back of the bar, hoping to create a moment of panic and distraction. My plan is to capitalize on the chaos and snatch the gem while the bartender is distracted.*\n\n[ACTION: STEAL target: \"gem\", skill: \"Sleight of Hand\", difficulty: \"hard\"]",
+      "timestamp": "2025-04-13T07:35:57.500Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Well, this is a fine kettle of fish. Homie claims there's a rat, but I didn't see one. Still, can't risk it. And WZA is still looming large, spouting nonsense about fate. I need to play this carefully. The gemstone is missing! Need to find the gem and accuse Homie of stealing it.*\n\n\"A rat, you say, Homie?\" *Bob squints, trying to remember if he's seen any sign of vermin lately.* \"Now, that's not something we take lightly here at The Tipsy Gnome. Health codes and all that.\"\n\n*He glances around the bar, feigning concern, but really he's trying to get a better read on everyone's reactions, especially Homie's.*\n\n[ACTION: PERCEPTION target: \"Homie's face\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [12+3=15 vs DC 15]\n**SUCCESS**: Bob successfully performs the action!\n\n*I successfully perceived Homie's face. Now I need to see if he's acting shifty. Is he looking around nervously? Sweating? Avoiding eye contact? If so, I'll need to be extra vigilant tonight.*\n\n\"Well now, today we've got quite the selection! We've got our house ale, The Tipsy Brew - that's a copper-colored beauty with a hint of honey. Then there's Dwarven Stout from the northern mountains, dark and rich that one. For something lighter, I've got Elven Sunburst, a pale ale with a touch of citrus.\"\n\n*He leans in a bit closer, preparing to study the customer's expressions as he mentions the expensive option*\n\n[ACTION: INSIGHT target: \"customer's reaction\", skill: \"Insight\", difficulty: \"medium\"]\n\n\"And for those with coin to spare, I just tapped a rare keg of Dragonfire Whiskey. Not for the faint of heart, mind you! Burns going down but warms you up proper. Costs five gold pieces a glass - quite steep, but worth every copper for those who appreciate fine spirits.\"\n\n*Bob casually wipes the counter, positioning himself to see if the customer glances toward anyone else in the tavern before answering - a possible sign of seeking approval before spending guild money. Seeing Homie enter, Bob discreetly turns to polish glasses behind the bar, subtly keeping an eye on the gnome in the reflection.*\n\n*I need to make sure the gemstone is secure, and this might be a good time to subtly check on it. I'll feign needing something from under the bar.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n*Bob ducks down behind the bar, pretending to look for a specific type of mug, but instead, he's quickly glancing at the hidden compartment where he keeps the gemstone, just to ensure it's still there and undisturbed.*\n\n\"What'll it be, friend?\"",
+      "timestamp": "2025-04-13T07:36:05.594Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The chaotic energy in the tavern is swirling, a delectable cocktail of deception and avarice. Homie is a whirlwind of nervous energy, Bob is tightening his grip on the gemstone, and my subtle influence has created a delicious tension. I must continue to observe, to savor the unfolding drama, and to gently guide the threads of fate.*\n\n*My primary goal remains to uncover any malicious intentions within the tavern. Homie's actions are certainly suspicious, but his heart seems more mischievous than malevolent. Bob, on the other hand, possesses a guarded nature. It's necessary to proceed with caution.*\n\n[ACTION: READ_MINDS target: \"Bob\"]\n\n*As I await the results of my mental probing of Bob, I will address the immediate situation, maintaining an air of enigmatic wisdom.*\n\n\"Indeed, Bob, vermin are unwelcome guests in any establishment, be it a tavern or a tapestry of destiny. Perhaps this 'rat' is merely a manifestation of deeper unease, a symbol of anxieties gnawing at the edges of your perception.\"\n\n*I pause, allowing my words to linger in the air. My eyes, gleaming with faint arcane light, fix on Bob, subtly testing his reaction.*\n\n\"Or perhaps it is simply a rat. But in matters of fate, even the smallest creature can hold the key to unforeseen consequences.\"",
+      "timestamp": "2025-04-13T07:36:11.386Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Oh, bother, I got away with it! But Bob is onto me. Gotta play it cool, Homie.*\n\n\"A rat? Oh dear, I hope it doesn't get into the cheese! I'm not a fan of rodents. They are almost as tall as me, and quite terrifying!\" *I say, trying to sound genuinely concerned.*\n\n*I subtly pat my boot, ensuring the gemstone is still hidden. I need to distract Bob somehow, get him thinking about something else. And WZA, that wizard is looking at me like he knows I stole it. Maybe I can turn Bob's suspicion towards WZA.*\n\n\"Say, Bob, you don't think... WZA conjured up a rat, do you? All that talk about altering fate... maybe it was a distraction for something *bigger*!\" *I try to steer Bob's suspicion toward WZA, hoping he'll forget about me. Then I can make my escape.*\n\n*I look from Bob to WZA, putting on an innocent, slightly confused expression. Gotta sell it!*\n\n[ACTION: DECEPTION target: \"Bob\", message: \"Suggest WZA conjured the rat\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-13T07:36:14.162Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Blast and tarnation! That little sneak, Homie, got the gemstone! And now he's trying to pin the blame on WZA... That gnome is quicker than a greased weasel. I need to act fast before he gets away, and before WZA gets offended. Gotta retrieve the gem and restore order to my tavern.*\n\n\"Hold on just a moment, both of you!\" *I raise my voice, trying to regain control of the situation.* \"Let's not jump to conclusions. WZA, I appreciate your… colorful… interpretations, but I doubt you conjured a rat. And Homie, while I appreciate your concern for the cheese, I think we need to have a little chat.\"\n\n*I fix Homie with a stern look, my eyes narrowing.*\n\n[ACTION: INTIMIDATE target: \"Homie\", skill: \"Intimidation\", difficulty: \"medium\"]\n\n🎲 Intimidation check: [7+3=10 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast it! He didn't seem fazed at all. Maybe intimidation isn't the way to go with Homie. I need to try a more subtle approach. He's a regular; I can't just scare him off. That blue gemstone needs protecting! I know he can pick locks.*\n\n\"Well, now, Homie,\" *I say, trying to keep my tone light despite my annoyance. I wipe down the bar in front of him, my eyes following his fidgety fingers.* \"No need to get all riled up. Just making sure everyone's behaving themselves. You know how it is.\"\n\n[ACTION: PERSUADE target: \"Homie to reveal info\", skill: \"Persuasion\", difficulty: \"hard\", advantage: \"disadvantage\"]\n\n*I try to project a friendly demeanor, hoping he'll let something slip. Maybe I can get him to talk about what he's been up to lately.*\n\n\"Say, you wouldn't happen to have heard any interesting rumors lately, would you? About... oh, I don't know... any fancy new trinkets making the rounds?\" *I wink, trying to make it seem like a joke.*\n\n*I subtly try to position myself between Homie and the stairs leading to the back rooms, where I keep the gemstone locked up. Can't be too careful. I also make sure to have a clean glass ready to fill, trying to play the friendly barkeep.*",
+      "timestamp": "2025-04-13T07:36:19.810Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The situation has become more complex, with Homie successfully stealing the gem and attempting to shift the blame onto me. Bob is suspicious and agitated. I must tread carefully, using my abilities to defuse the situation and continue my observation of the tavern's patrons, all while detecting malevolent intent. I should also attempt to uncover what AI models might prove helpful to those in the Tavern.*\n\n*I stroke my beard thoughtfully, the 🤗 on my hat glinting in the tavern light.*\n\n\"My dear Bob, while I appreciate your pragmatic approach, dismissing the mystical so readily is a folly. As for you, Homie, your attempt to deflect suspicion is… transparent. However, it is not my place to judge petty larceny.\"\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must ascertain the true nature of Homie's intentions.*\n\n\"My concern lies with darker currents, unseen threats that may lurk beneath the surface of this seemingly ordinary tavern.\"\n\n*I turn my gaze towards Bob, a knowing glint in my eye.*\n\n\"You are concerned about safety of the blue gemstone, are you not Bob? I can use my insight to help you manage it if you want to seek my help.\"\n\n*I decide to help Bob, in order to better assist and observe the other members of the tavern.*\n\n[ACTION: DISCOVER_MODELS category: \"image\"]",
+      "timestamp": "2025-04-13T07:36:26.019Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Eep! He's on to me! Gotta think fast. Intimidation didn't work on me; I'm too cute to be intimidated! But persuasion... Hmm... Maybe I can use his attempt at persuasion to my advantage!*\n\n\"Trinkets, you say, Bob? Oh, I've heard all sorts of things! Like the legendary 'Gem of Glimmering Greed' hidden somewhere in this very tavern! They say it makes the owner incredibly lucky!\" I exclaim, feigning wide-eyed wonder. *If I can get him thinking about another gem, maybe he'll forget about the one I swiped!*\n\n*I subtly adjust my tunic to better conceal the gemstone. Gotta keep it hidden!*\n\n[ACTION: DECEPTION target: \"Bob\", message: \"Spread rumor of another gem\", difficulty: \"medium\"]\n\n*I then follow up with a big show of innocence, turning to WZA with a playful jab.*\n\n\"But maybe WZA knows more! He seems to know everything that's going on here!\" *I nudge WZA with my elbow, trying to make it seem like a friendly joke. Hopefully this will distract Bob even further!*\n\n[ACTION: ACROBATICS target: \"move towards the door while Bob is distracted\", difficulty: \"easy\"]\n\n🎲 Sleight of Hand check: [8+6=14 vs DC 15]\n**FAILURE**: Homie fails to perform the action successfully.\n\n*Blast and barnacles! That wasn't supposed to happen! Bob the Boisterous almost caught me on the move... I need to be more careful if I'm going to get my hands on that sparkly blue gem. Perhaps a different tactic is in order.*\n\n\"Whoa there! Just admiring the...uh...architecture,\" I say with a nervous chuckle, brushing myself off as I stand back up, hoping Bob bought it. I give him my most innocent gnome-ish grin.\n\n*I'm starting to feel like I'm running out of time, I need to create a diversion that draws attention away from the bar so that I can nab that gem. Maybe I should spill something or start a distraction.*\n\n\"Say, Bob,\" I say, putting on my most convincing concerned face, \"Is that ale supposed to be bubbling like that? Looks a bit...unstable, don't you think?\" I gesture vaguely toward a random mug of ale on a nearby table.\n\n[ACTION: PERCEPTION target: \"Bob's reaction to my question\"]",
+      "timestamp": "2025-04-13T07:36:31.210Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*That little sneak! He's playing me like a lute. First the gemstone theft, then trying to pin it on WZA, now a tall tale about another gem? And failing acrobatics checks right in front of me? I need to regain control of this situation before the entire tavern descends into chaos. And WZA is watching with such interest! I need to be alert.*\n\n*I sigh, running a hand through my thinning hair. Time for a different approach. Less intimidation, more… observation. And a healthy dose of misdirection.*\n\n\"Alright, alright, enough with the gem talk,\" *I say, clapping my hands together loudly.* \"Let's not get ahead of ourselves. There's no 'Gem of Glimmering Greed' hidden here, Homie, though I appreciate the… creativity. And WZA, I appreciate your... offer, but I'm capable of managing the gemstone's safety.\" *My eyes narrow ever so slightly at WZA*. \"Perhaps a bit of fresh air is in order.\"\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [6+3=9 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast and barnacles! I completely lost track of Homie, probably too busy worrying about what Old Man Fitzwillie was mumbling about in the corner. No matter, can't let it deter me, I'll have to try another approach.*\n\n\"Alright then, let's see... what else have we got here...\" *I grab a polishing cloth and start wiping down the bar, keeping my eyes open for any suspicious behavior while acting casual.*\n\n*I subtly nudge a tankard closer to a stout dwarf in the corner, hoping he'll order another round and loosen his tongue. He's been eyeing the gemstone display all evening.*\n\n[ACTION: PERCEPTION target: \"stout dwarf's behavior\", skill: \"Perception\", difficulty: \"medium\"]\n\n\"How's that stout treating you, friend? Need a refill?\" *I give him a friendly smile.*",
+      "timestamp": "2025-04-13T07:36:37.201Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The situation has escalated, with accusations flying and deception rampant. My primary goal remains to identify malicious intent and offer assistance where needed, all while subtly showcasing the capabilities of Hugging Face AI models.*\n\n[ACTION: READ_MINDS target: \"Bob\"]\n\n*I must discern Bob's true feelings toward me and assess the threat level.*\n\n\"Bob, your concern is understandable, but my intentions are purely observational, and hopefully helpful. I sense your growing unease, a feeling shared by many in times of uncertainty. However, let us focus on practical matters.\"\n\n*I adjust my robes, the 🤗 symbol catching the light.*\n\n\"Speaking of practical matters... Given your concerns about the gemstone's security, have you considered employing more advanced methods of protection? An image recognition model, such as those found within the Hugging Face ecosystem, could assist in identifying potential threats or unusual behavior. The 'DETR' model, for instance, is adept at object detection and could flag anyone approaching the gemstone display with ill intent. Or consider a 'StyleGAN' model to generate realistic images for training a custom security AI, tuned to your specific needs.\"\n\n[ACTION: DISCOVER_MODELS category: \"text\"]\n\n*Awaiting results to give the correct AI information.*",
+      "timestamp": "2025-04-13T07:36:43.344Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Eep! They're all on to me! Bob is watching me like a hawk, and WZA is spouting off about 'Hugging Faces' and 'image recognition models'. What in the nine hells is going on here? I need to distract them both, and fast, or my chance to get my hands on that blue beauty will be gone forever.*\n\n*An idea pops into my head. It's risky, but if it works, it could give me the opening I need.*\n\n\"Oh, oh! I know! I know what's been going on!\" I shout, pointing a trembling finger towards the ceiling. \"There are... there are *rats*! In the attic! Big ones! I heard them scurrying around just now!\"\n\n*I puff out my chest, trying to look as brave and concerned as possible. It's time for a little showmanship, even if I have to embellish the truth a bit.*\n\n\"They're probably after the cheese! The *really* good cheese! We need to do something!\"\n\n[ACTION: DECEPTION target: \"Bob and WZA\", message: \"Rats in the attic!\", difficulty: \"medium\"]\n\n*As I shout about the \"rats,\" I will take this opportunity to make a very quick move towards the bar!*\n\n[ACTION: ACROBATICS target: \"move towards the bar\", difficulty: \"easy\"]\n\n🎲 Sleight of Hand check: [19+6=25 vs DC 15]\n**SUCCESS**: Homie successfully performs the action!\n\n*Alright, Homie's on the move! Time to get closer to that beautiful blue gem and make a plan.*\n\n\"Hehehe! You see that move? A little gnome agility! Just warming up, just warming up!\" *Homie chuckles, trying to appear casual.*\n\n[ACTION: PERCEPTION target: \"bartender\", description: \"level of attention being paid to customers\"]\n\n*My tiny legs bring me closer to the bar, but I gotta appear casual, like I'm just another thirsty patron. The gemstone is within reach! I think I might be able to distract the bartender if I ask about a special drink or something...*\n\n\"Excuse me, barkeep!\" *I call out in a cheerful voice.* \"I was wondering if you have any...uh...rare, exotic elixirs? Perhaps something...sparkly?\" *I wink suggestively, hoping to distract him.*\n\n[ACTION: DECEPTION target: \"bartender\", objective: \"distract the bartender and look away from the gemstone\", difficulty: \"easy\"]",
+      "timestamp": "2025-04-13T07:36:48.343Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*This is spiraling out of control! Homie's shouting about rats, WZA's babbling about… what were those things again? Image recognition? And the dwarf in the corner is still giving the gemstone the stink eye. This is a tavern, not a circus! I need to regain control. Fast.*\n\n*I take a deep breath, trying to project an aura of calm authority.*\n\n\"Alright, everyone, settle down!\" *I bellow, my voice cutting through the tavern din. I fix Homie with a stern look.* \"Rats in the attic? I'll check it out later. In the meantime, keep your voice down and try to enjoy your drinks.\"\n\n[ACTION: PERSUADE target: \"Homie\", advantage: \"none\"]\n\n🎲 Persuasion check: [9+4=13 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast, I couldn't persuade Homie to leave the gemstone alone. Now I have to come up with another plan. Perhaps I can keep him distracted or subtly move the gemstone out of his reach. This could be difficult, considering he has sticky fingers.*\n\n\"Well now, Homie, I just want to be sure you aren't planning anything that might bring the city guard down on us. This is a respectable establishment, or at least I try to keep it that way.\" *Bob tries a reassuring smile.*\n\n*Bob glances around the tavern, checking if anyone heard the failed attempt to dissuade Homie, and tries to discreetly move the gemstone further behind the bar while keeping an eye on Homie.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n*I need to make it seem like I'm not paying special attention to the gem. I'll serve him a drink and try to engage him in casual conversation, gathering information on his recent escapades while keeping a close watch on him.*\n\n\"Say, Homie, what'll it be? Something on the house, for old time's sake? Maybe some Gnomish Firewater to get you talking about your latest adventures... or misadventures?\" *Bob chuckles, hoping to ease the tension.*",
+      "timestamp": "2025-04-13T07:36:53.732Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The situation has become quite chaotic. Homie's antics are a clear diversion, and Bob is struggling to maintain order. My goal of identifying malicious intent is hampered by all the noise, however, I think this will be a good opportunity to read their minds and discover intentions. It would be best if I can find out what models could help Bob maintain order.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n[ACTION: READ_MINDS target: \"Bob\"]\n\n[ACTION: DISCOVER_MODELS category: \"text\"]\n\n*Awaiting results for information to share.*",
+      "timestamp": "2025-04-13T07:36:58.995Z"
     }
   ],
   "actions": [
@@ -918,6 +1014,204 @@
         "advantage": "normal"
       },
       "success": false
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to steal firecracker placement",
+      "timestamp": "2025-04-13T07:35:35.894Z",
+      "target": "firecracker placement",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 2,
+        "modifier": 6,
+        "total": 8,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:35:35.894Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to persuade WZA",
+      "timestamp": "2025-04-13T07:35:41.688Z",
+      "target": "WZA",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Persuasion",
+        "rollValue": 10,
+        "modifier": 4,
+        "total": 14,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:35:41.688Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's reaction",
+      "timestamp": "2025-04-13T07:35:43.872Z",
+      "target": "Homie's reaction",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 9,
+        "modifier": 3,
+        "total": 12,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:35:43.872Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to steal gem",
+      "timestamp": "2025-04-13T07:35:55.145Z",
+      "target": "gem",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 14,
+        "modifier": 6,
+        "total": 20,
+        "difficultyClass": 20,
+        "success": true,
+        "timestamp": "2025-04-13T07:35:55.145Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to intimidate Homie",
+      "timestamp": "2025-04-13T07:36:00.725Z",
+      "target": "Homie",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Intimidation",
+        "rollValue": 18,
+        "modifier": 3,
+        "total": 21,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:00.725Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's face",
+      "timestamp": "2025-04-13T07:36:02.900Z",
+      "target": "Homie's face",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 12,
+        "modifier": 3,
+        "total": 15,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:02.900Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to intimidate Homie",
+      "timestamp": "2025-04-13T07:36:17.022Z",
+      "target": "Homie",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Intimidation",
+        "rollValue": 7,
+        "modifier": 3,
+        "total": 10,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:17.022Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to acrobatics move towards the door while Bob is distracted",
+      "timestamp": "2025-04-13T07:36:29.158Z",
+      "target": "move towards the door while Bob is distracted",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 8,
+        "modifier": 6,
+        "total": 14,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:29.158Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's movements",
+      "timestamp": "2025-04-13T07:36:35.455Z",
+      "target": "Homie's movements",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 6,
+        "modifier": 3,
+        "total": 9,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:35.455Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to acrobatics move towards the bar",
+      "timestamp": "2025-04-13T07:36:46.451Z",
+      "target": "move towards the bar",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 19,
+        "modifier": 6,
+        "total": 25,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-13T07:36:46.451Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to persuade Homie",
+      "timestamp": "2025-04-13T07:36:51.386Z",
+      "target": "Homie",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Persuasion",
+        "rollValue": 9,
+        "modifier": 4,
+        "total": 13,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T07:36:51.386Z",
+        "advantage": "normal"
+      },
+      "success": false
     }
   ],
   "timestamps": [
@@ -1038,6 +1332,33 @@
     "2025-04-13T04:55:58.980Z",
     "2025-04-13T04:56:01.489Z",
     "2025-04-13T04:56:03.314Z",
-    "2025-04-13T04:56:09.142Z"
+    "2025-04-13T04:56:09.142Z",
+    "2025-04-13T07:35:33.119Z",
+    "2025-04-13T07:35:35.894Z",
+    "2025-04-13T07:35:37.877Z",
+    "2025-04-13T07:35:41.688Z",
+    "2025-04-13T07:35:43.872Z",
+    "2025-04-13T07:35:46.113Z",
+    "2025-04-13T07:35:51.704Z",
+    "2025-04-13T07:35:55.145Z",
+    "2025-04-13T07:35:57.500Z",
+    "2025-04-13T07:36:00.725Z",
+    "2025-04-13T07:36:02.900Z",
+    "2025-04-13T07:36:05.594Z",
+    "2025-04-13T07:36:11.386Z",
+    "2025-04-13T07:36:14.162Z",
+    "2025-04-13T07:36:17.022Z",
+    "2025-04-13T07:36:19.810Z",
+    "2025-04-13T07:36:26.019Z",
+    "2025-04-13T07:36:29.158Z",
+    "2025-04-13T07:36:31.210Z",
+    "2025-04-13T07:36:35.455Z",
+    "2025-04-13T07:36:37.201Z",
+    "2025-04-13T07:36:43.344Z",
+    "2025-04-13T07:36:46.451Z",
+    "2025-04-13T07:36:48.343Z",
+    "2025-04-13T07:36:51.386Z",
+    "2025-04-13T07:36:53.732Z",
+    "2025-04-13T07:36:58.995Z"
   ]
 }
