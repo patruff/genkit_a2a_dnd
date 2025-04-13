@@ -23,13 +23,20 @@ const DEFAULT_TAVERN_STATE = {
             type: "human bartender",
             description: "A friendly middle-aged human with a hearty laugh who keeps the tavern running",
             status: "tending bar"
+        },
+        {
+            name: "WZA",
+            type: "mind-reading wizard",
+            description: "A wise wizard with mystical mind-reading capabilities and keen observational skills",
+            status: "sitting quietly in the corner"
         }
     ],
     objects: [
         { name: "Bar", description: "A long wooden counter with several stools" },
         { name: "Fireplace", description: "A stone hearth with a crackling fire" },
         { name: "Tables", description: "Several wooden tables scattered throughout the room" },
-        { name: "Drinks", description: "Various mugs, glasses and bottles of beverages" }
+        { name: "Drinks", description: "Various mugs, glasses and bottles of beverages" },
+        { name: "Gemstone", description: "A glittering blue gemstone displayed in a case behind the bar" }
     ],
     events: [],
     lastUpdated: new Date().toISOString(),
@@ -57,6 +64,10 @@ const AGENT_CONFIGS = {
     bob: {
         url: 'http://localhost:41246',
         name: 'Bob the Bartender'
+    },
+    wza: {
+        url: 'http://localhost:41248',
+        name: 'WZA'
     }
 };
 let agentClients = {};
@@ -65,6 +76,7 @@ async function initializeAgentClients() {
     try {
         agentClients.homie = new AgentClient(AGENT_CONFIGS.homie.url, AGENT_CONFIGS.homie.name);
         agentClients.bob = new AgentClient(AGENT_CONFIGS.bob.url, AGENT_CONFIGS.bob.name);
+        agentClients.wza = new AgentClient(AGENT_CONFIGS.wza.url, AGENT_CONFIGS.wza.name);
         console.log('[TavernServer] Agent clients initialized');
     }
     catch (error) {
@@ -290,12 +302,12 @@ async function runInteractionCycle(userMessage) {
     if (userMessage) {
         logConversation('User', 'Tavern', userMessage);
     }
-    const characters = ['Homie', 'Bob'];
-    const totalTurns = 2 * maxTurns; // Each character gets maxTurns turns
+    const characters = ['Homie', 'Bob', 'WZA'];
+    const totalTurns = characters.length * maxTurns; // Each character gets maxTurns turns
     console.log(`\n[TavernServer] Starting ${totalTurns} turn interaction cycle`);
     for (let i = currentTurn; i < totalTurns; i++) {
-        const activeCharIdx = i % 2;
-        const listeningCharIdx = (i + 1) % 2;
+        const activeCharIdx = i % characters.length;
+        const listeningCharIdx = (i + 1) % characters.length;
         const activeCharacter = characters[activeCharIdx];
         const listeningCharacter = characters[listeningCharIdx];
         console.log(`\n[TavernServer] Turn ${Math.floor(i / 2) + 1} - ${activeCharacter}'s turn`);

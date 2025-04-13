@@ -1,19 +1,19 @@
 [DnDAgent] Server started on http://localhost:41245
 [DnDAgent] Press Ctrl+C to stop the server
 A2A Server listening on port 41245 at path /
-[Task b5b53cac-3e14-459c-af62-d6029e9fc561] Created new task and history.
-[DnDAgent] Processing task b5b53cac-3e14-459c-af62-d6029e9fc561 with state submitted
-[DnDAgent] Task b5b53cac-3e14-459c-af62-d6029e9fc561 finished with state: input-required
-[Task 44a1e7ea-cf66-45a5-8719-027acac7881e] Created new task and history.
-[DnDAgent] Processing task 44a1e7ea-cf66-45a5-8719-027acac7881e with state submitted
-[DnDAgent] Task 44a1e7ea-cf66-45a5-8719-027acac7881e finished with state: completed
-[Task 4f305f6e-cffb-4500-bead-a11f5f7efde4] Created new task and history.
-[DnDAgent] Processing task 4f305f6e-cffb-4500-bead-a11f5f7efde4 with state submitted
-[DnDAgent] Task 4f305f6e-cffb-4500-bead-a11f5f7efde4 finished with state: input-required
-[Task 0db4e331-2a44-4514-bd0d-c26ac16e2191] Created new task and history.
-[DnDAgent] Processing task 0db4e331-2a44-4514-bd0d-c26ac16e2191 with state submitted
-[DnDAgent] Task 0db4e331-2a44-4514-bd0d-c26ac16e2191 finished with state: completed
-[Task db7cc22c-63e8-4b56-8b34-da366318891a] Created new task and history.
-[DnDAgent] Processing task db7cc22c-63e8-4b56-8b34-da366318891a with state submitted
-[DnDAgent] Task db7cc22c-63e8-4b56-8b34-da366318891a finished with state: input-required
+[Task 81a2df92-5e7f-4ffa-99bf-68cc12bf92e6] Created new task and history.
+[DnDAgent] Processing task 81a2df92-5e7f-4ffa-99bf-68cc12bf92e6 with state submitted
+[DnDAgent] Task 81a2df92-5e7f-4ffa-99bf-68cc12bf92e6 finished with state: input-required
+[Task 97b631ce-77cb-4b3b-8037-898ae3a8ab92] Created new task and history.
+[DnDAgent] Processing task 97b631ce-77cb-4b3b-8037-898ae3a8ab92 with state submitted
+[DnDAgent] Task 97b631ce-77cb-4b3b-8037-898ae3a8ab92 finished with state: input-required
+[Task 399469c2-0bf9-4fff-a0bf-54adf9f07400] Created new task and history.
+[DnDAgent] Processing task 399469c2-0bf9-4fff-a0bf-54adf9f07400 with state submitted
+[DnDAgent] Task 399469c2-0bf9-4fff-a0bf-54adf9f07400 finished with state: input-required
+[Task 4d7122f6-a6a5-41a3-9ad3-0000785db39d] Created new task and history.
+[DnDAgent] Processing task 4d7122f6-a6a5-41a3-9ad3-0000785db39d with state submitted
+[DnDAgent] Task 4d7122f6-a6a5-41a3-9ad3-0000785db39d finished with state: input-required
+[Task c292a558-8df2-446c-acf1-08c920ff4906] Created new task and history.
+[DnDAgent] Processing task c292a558-8df2-446c-acf1-08c920ff4906 with state submitted
+[DnDAgent] Task c292a558-8df2-446c-acf1-08c920ff4906 finished with state: input-required
 Shutting down all Genkit servers...

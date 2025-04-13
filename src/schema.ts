@@ -262,6 +262,13 @@ export interface AgentCard {
    * List of specific skills offered by the agent.
    */
   skills: AgentSkill[];
+  
+  /**
+   * Optional metadata associated with the agent.
+   * Allows for custom attributes like icon, branding colors, etc.
+   * @default null
+   */
+  metadata?: Record<string, unknown> | null;
 }
 
 export interface FileContentBase {

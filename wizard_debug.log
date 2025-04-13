@@ -1,0 +1,28 @@
+[WizardAgent] Server started on http://localhost:41248
+[WizardAgent] Press Ctrl+C to stop the server
+ERROR: node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::41248
+    at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+    at listenInCluster (node:net:1865:12)
+    at Server.listen (node:net:1953:7)
+    at Function.listen (/home/patruff/A2A/samples/js/node_modules/express/lib/application.js:635:24)
+    at A2AServer.start (file:///home/patruff/A2A/samples/js/dist/server/server.js:125:13)
+    at file:///home/patruff/A2A/samples/js/dist/agents/wizard/index.js:411:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:106:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1844:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 41248
+}
+
+Node.js v18.20.7

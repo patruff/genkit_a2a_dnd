@@ -263,6 +263,222 @@
       "listener": "Homie",
       "message": "*That blasted gnome is slicker than a greased goblin. He's definitely interested in something, and I bet my bottom dollar it's the gem. I need to play along, but I also need to get the gem out of sight.*\n\n\"Bar towels, eh? Why, Homie, you flatter me! I didn't know anyone appreciated a good bar towel as much as I do. I get them imported from Waterdeep, you know, the finest cotton. But I'm afraid I don't have any used ones for sale. Wouldn't be sanitary, now, would it?\" *Bob chuckles, feigning amusement.*\n\n*I need to make a decision to get the gem out of sight. I think I will place it behind the bar for now to make it seem like it is unguarded.*\n\n\"New gemstones, you say? Aye, they arrived just this mornin' at the merchant's guild. Big shipment from the mines of Mirabar, I hear. All sorts of shiny things, I expect. But I wouldn't know much about gemstones myself. My adventuring days were more about bashing skulls than appreciating sparkly rocks.\" *Bob winks at the other patrons, then turns back to Homie, lowering his voice.*\n\n\"Tell you what, Homie, why don't you go check them out? I'll keep an eye on your, uh, *hygienic* interests here at the bar. Just be careful, there's bound to be other interested parties sniffin' around.\" *Bob raises an eyebrow, giving Homie a knowing look.*\n\n*While Homie is thinking about his answer, I need to grab the gem and move it behind the bar to a less conspicuous location. I'll place it on the shelf with the mugs and dishes, partially hidden.*\n\n[ACTION: HIDE target: \"gem behind the bar\", skill: \"Sleight of Hand\", difficulty: \"easy\"]\n\n*I am hoping this makes it seem like I don't care too much about the gem while making it difficult for Homie to grab it without me seeing.*\n\n[SYSTEM ERROR: Failed to process action hide: Skill Stealth not found for character Bob]",
       "timestamp": "2025-04-12T13:17:48.441Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Bob's trying to get rid of me, sending me off on a wild goose chase after those gemstones. He's definitely hiding something. But those gemstones *do* sound tempting... no, focus, Homie, focus! The gem behind the bar is the prize.*\n\n\"Oh, Bob, you're too kind,\" I say with a saccharine smile. \"But I'm afraid my 'hygienic interests' (as you so eloquently put it) must take a back seat for the moment. I have a sudden craving... for... *ale*! Yes, that's it! I simply *must* sample your finest vintage. After all,\" *I add with a wink*, \"a clear mind is essential for appreciating the finer things in life... like, say, bar towels.\"\n\n*I take a seat at the bar, close enough to observe Bob's every move, but not so close that he becomes suspicious. I need to get that gem!*\n\n*As Bob turns his back to pour me a drink, I subtly prepare a small pouch of dust and lint I keep on my person. This could be the perfect distraction!*\n\n[ACTION: PERCEPTION target: \"gem's location\", skill: \"Perception\", difficulty: \"easy\"]\n\n🎲 Sleight of Hand check: [20+6=26 vs DC 20]\n**SUCCESS**: Homie successfully performs the action!\n\n*Perfect! I've located the gem. Now, how to get my little gnome hands on it? Maybe a distraction is in order. If I spill a drink, the bartender will turn away to clean it, giving me a clear shot at the gem.*\n\n\"Oh my, this ale is quite... potent!\" I exclaim, a little too loudly. I subtly bump the table, jostling my tankard.\n\n[ACTION: SPILL target: \"tankard of ale\", skill: \"Sleight of Hand\", difficulty: \"easy\"]\n\n*I hope this works! I don't want to waste good ale but getting that gem is more important.*",
+      "timestamp": "2025-04-12T23:35:24.063Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "Homie",
+      "message": "*That blasted gnome! He's up to something, spilling that ale like that! I need to keep my eye on the gem and on him, too.*\n\n*Bob sighs dramatically.*\n\n\"Well now, that's a shame about that ale, Homie. You sure you're alright? Didn't hit your head or anything?\" *I look over at Homie with concern*\n\n*I need to quickly assess if Homie is trying to steal the gem while I am distracted, and if so, I need to catch him in the act. I need to get the gem secured.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [14+3=17 vs DC 15]\n**SUCCESS**: Bob successfully performs the action!\n\n*Good, I'm keeping an eye on that shifty gnome. He's been a regular here for years, and I know he's got a nose for valuables. But I can't let him get anywhere near the gem. I need to be subtle about this, though. Can't go accusing folks without cause, especially not regulars.*\n\n\"What'll it be, friend?\" *Bob asks, giving the customer a friendly smile, while his eyes dart back to Homie, who's currently nursing a weak ale in the corner.*\n\n*Bob notices Homie subtly shift in his seat, his gaze flickering towards the back room where the gem is currently stored. That's all the confirmation I need to be extra vigilant. Time to implement phase one of my distraction plan.*\n\n[ACTION: PERSUADE target: \"customer\", advantage: \"advantage\"]\n\n\"Say, friend, while you're deciding, let me tell you about the special I'm running tonight. Free bowl of hearty stew with every two drinks ordered! Best stew this side of the Misty Mountains, guaranteed to warm your bones and fill your belly. And keeps you occupied, you know?\" *Bob winks, trying to subtly encourage the customer to stay put and act as an unwitting obstacle to Homie's potential plans.*\n\n*While the customer ponders the stew offer, Bob subtly adjusts his position behind the bar, placing himself between Homie and the back room. Gotta make sure he can't get to it without going through me.*",
+      "timestamp": "2025-04-12T23:35:29.008Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Bob is definitely onto me! But I'm not easily deterred. He's trying to distract me with ale and tales of shiny gemstones elsewhere, but my little gnome heart is set on that gem right there. He's moving around a lot! I think I can use that to my advantage! I need to get him moving again and then strike.*\n\n\"Oh, dear Bob, you shouldn't fret so much about a little spilled ale,\" I say with a disarming grin. \"It happens to the best of us... especially those of us who are... vertically challenged.\" *I gesture to my height with a playful sigh.* \"Perhaps I'm not meant for drinking out of such oversized tankards! Maybe a smaller mug would suit me better? One that's easier to handle for a gnome of my, shall we say, *diminutive stature*.\"\n\n*While Bob is distracted getting another smaller mug, I'm going to try and spill a small amount of dust from the pouch on my person to obscure Bob's vision for a moment.*\n\n[ACTION: DISTRACT target: \"Bob\", skill: \"Sleight of Hand\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-12T23:35:31.397Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "Homie",
+      "message": "*That slippery little gnome. I knew he was up to something with that spilled ale. Now he's playing the innocent card with his 'diminutive stature'. I can't let him distract me. I need to move the gem somewhere truly secure. The back room is too obvious.*\n\n*Bob feigns a hearty laugh.*\n\n\"Vertically challenged, you say? Well, Homie, we all have our shortcomings! But I reckon what you lack in height, you make up for in... enthusiasm! And I'm happy to get you a smaller mug, no trouble at all.\" *Bob winks, hoping Homie buys the act.*\n\n*As I reach for a smaller mug, I'll keep my eyes peeled for any sudden movements from Homie.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [1+3=4 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast! Couldn't get a good bead on Homie. He's a slippery one, that gnome. Probably flitting around, looking for loose coin or an unattended bag. I need to keep a closer watch on him without making it obvious. I'll try to subtly position myself to keep him in my line of sight. I can always rely on my former adventuring skills to notice when someone is up to no good.*\n\n*Bob sighs, leaning against the bar and adopting a more casual posture, but his eyes are constantly scanning the room, particularly in the direction of Homie.*\n\n\"Say, friend, what'll it be? Don't be shy, I've got something for everyone, even the pickiest of palates. And while you're deciding, I'll tell you a tale from my adventuring days. Once, in the Dragon Mountains, I had to wrestle a goblin for a loaf of bread! Now that was a sight to see...\"\n\n*Bob chuckles, hoping the story will distract the customer while he subtly repositions himself.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-12T23:35:36.054Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Bob seems to be onto my every move! He's watching me like a hawk, and his perception is clearly much higher than I anticipated. I need to change tactics.*\n\n*The dust trick might work, but I need to create a more significant distraction first.*\n\n\"Oh, Bob, that's quite a story, but my ears aren't quite as sharp as they used to be. I seem to have lost my hearing aid back in Neverwinter.\" *I pause dramatically, tapping my ear.* \"Might you have something that could help? Perhaps a small, shiny object I could use to amplify the sound? Maybe something... gem-like?\" *I say, winking again, feigning deafness.*\n\n*I hope this makes him show me where the gem is again, or at least bring it back in plain sight. Then, I will cause another distraction to get that gem into my hands.*\n\n[ACTION: DISTRACT target: \"Bob's attention\", skill: \"Deception\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-12T23:35:38.219Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "Homie",
+      "message": "*That's it! This is the most suspicious thing Homie has said yet. He's trying to get me to reveal the gem again. He's more determined than I thought. I need to play along, but carefully. I can't let him know I'm onto him, but I also can't risk him getting his hands on the gem. Time for a little misdirection.*\n\n*Bob strokes his chin thoughtfully, feigning concern for Homie's supposed hearing loss.*\n\n\"Lost your hearing aid, eh? That's a pickle. Now, I don't usually keep spare hearing devices lying around, but...\" *Bob pauses for dramatic effect, glancing around the tavern as if considering his options* \"...I might have something that could help... temporarily, mind you. It's not exactly a hearing aid, but it's... *resonant*.\"\n\n*Bob reaches under the bar, pulling out a small, polished silver bell.*\n\n\"This here's a signaling bell. Used to call for service, but it also has a rather... *unique* tone. Ring it near your ear, and the vibrations might just help you hear a bit better. Worth a try, eh?\"\n\n*Bob hands the bell to Homie, making sure to keep the back room, where the gem used to be, securely behind him and out of Homie's immediate reach.*\n\n[ACTION: PERCEPTION target: \"Homie's reaction to the bell\", skill: \"Insight\", difficulty: \"medium\"]\n\n🎲 Perception check: [14+3=17 vs DC 15]\n**SUCCESS**: Bob successfully performs the action!\n\n*Ah, good! I caught Homie's reaction to the bell. Time to play it cool and act like I noticed nothing. The gem is the most important thing, so I have to protect it at all costs.*\n\n\"Well now, what can I get for you tonight, friend? The usual for you, Master Elmsworth?\" I ask, flashing a friendly smile at a wizard seated at a table in the corner of the room.\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n*I'll keep a close eye on Homie while he thinks I'm distracted. If he starts to get too close to the bar, I'll have to distract him somehow. Perhaps a free drink? I'd rather spend a few coppers than lose the gem!*",
+      "timestamp": "2025-04-12T23:35:43.119Z"
+    },
+    {
+      "speaker": "User",
+      "listener": "Tavern",
+      "message": "Let's run an interaction between the characters for 3 turns. Show me how Homie attempts to steal the gem, Bob tries to stop him, and WZA observes and potentially intervenes based on what he knows from mind reading.",
+      "timestamp": "2025-04-13T04:55:18.645Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Bob is handing me a bell?! This is unexpected but could be useful. I need to appear grateful and then exploit this new development. I'll ring it a few times to test it out and see if I can subtly create a distraction.*\n\n\"Oh, Bob, you're a lifesaver! This is just the thing. Let me give it a try.\"\n\n*I take the bell and give it a gentle ring, testing the sound. I note that Bob seems to be distracted by Master Elmsworth.*\n\n*Perfect opportunity! I'll use this chance to create a diversion by pretending to be overwhelmed by the bell's resonance. I'll drop the bell and feign pain, hoping Bob will focus on me and not the gem.*\n\n\"Oh dear! That's a bit louder than I expected!\"\n\n*I accidentally \"drop\" the bell. I subtly shove it towards the back of the bar, closer to the gem location. *\n\n[ACTION: DISTRACT target: \"Bob\", skill: \"Deception\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-13T04:55:21.477Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*That sneaky gnome is up to no good. The hearing aid story was a clear attempt to manipulate me, and now he's \"accidentally\" dropped the bell near the back of the bar? I can't let him outsmart me. I have to retrieve that bell and keep a close eye on him.*\n\n\"Woah there, Homie! Careful with that bell, it's a bit delicate. Let me get that for you.\"\n\n*I move quickly to pick up the bell, keeping my eyes glued to Homie's hands to make sure he doesn't try anything while my back is turned. I am especially worried about sleight of hand attempts.*\n\n[ACTION: PERCEPTION target: \"Homie's hands\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [9+3=12 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Drat! Couldn't quite see what that sneaky gnome was up to with his hands. He's a clever one, that Homie. I'll have to be more careful. Maybe I can distract him while still keeping him in sight.*\n\n\"Evenin', Homie! Just admiring the woodwork, are we? *chuckles* Say, I've been meaning to ask, did you ever find that lucky thimble you were looking for last week? Heard old Man Fitzwilliam found one in his garden, thought it might be yours.\"\n\n*I make my voice loud enough for others to hear, wanting Homie to know I'm watching him and to dissuade any funny business. While I talk to him, I try to angle myself so I have a better view of his hands.*\n\n[ACTION: PERCEPTION target: \"Homie's hands\", skill: \"Perception\", difficulty: \"medium\"]\n\n*While I talk to Homie, I subtly shift closer to the wall where the gemstone is hidden, just in case he or one of his associates has the same idea I had.*\n\n[ACTION: PERCEPTION target: \"Homie's reactions\", skill: \"Perception\", difficulty: \"medium\"]",
+      "timestamp": "2025-04-13T04:55:26.291Z"
+    },
+    {
+      "speaker": "User",
+      "listener": "Tavern",
+      "message": "Tell me about the tavern and who's currently here.",
+      "timestamp": "2025-04-13T04:55:29.511Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*My senses are heightened, observing the subtle dance between the thief and the bartender. Bob suspects Homie, but Homie remains elusive. I must proceed cautiously to discern the true depth of their intentions.*\n\n\"Greetings, esteemed Bob, purveyor of potent potables and guardian of this humble establishment. And a good day to you too, Master Homie, seeker of… curious trinkets.\" *I say, my voice a low, resonant hum, infused with a hint of arcane energy.*\n\n*I adjust my 🤗 emblazoned hat, subtly focusing my mind on Homie. I need to understand the gnome's next move, especially after the dropped bell incident.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*Depending on what I glean from Homie's thoughts, I may need to subtly intervene to either protect the gem or facilitate a… controlled test of Bob's vigilance.*",
+      "timestamp": "2025-04-13T04:55:34.634Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "\"Oh, a lucky thimble you say, Bob? Well, isn't that a stroke of luck! Alas, it wasn't *my* thimble, you see. Mine had a rather distinctive dent from... well, let's just say a run-in with a particularly stubborn badger. But thank you for thinking of little ol' me!\"\n\n*Bob is clearly suspicious, which makes things difficult. WZA's presence adds another layer of complexity. Time to play innocent and wait for an opening. If WZA is reading my mind, I need to think about something harmless - kittens!*\n\n*I'll feign fascination with the bell, hoping to subtly reposition myself for a better angle at the gem.*\n\n\"That bell is quite something, though. I wonder... is it made of mithril? It has such a lovely ring to it!\"\n\n*I reach out, pretending to examine the bell more closely, taking a step closer to the back of the bar.*\n\n[ACTION: SLEIGHT_OF_HAND target: \"bell\", skill: \"Sleight of Hand\", difficulty: \"easy\"]",
+      "timestamp": "2025-04-13T04:55:37.209Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*That sneaky gnome! Kittens, eh? He's trying to throw off any mind-readers. And he's inching closer to the gemstone. I need to be more proactive. I need to keep that bell away from him, and find a way to distract him while keeping him in my sight.*\n\n*Bob picks up the bell, holding it out of Homie's reach with a friendly smile.*\n\n\"Mithril, you say? Now, that'd be something! This is just good old iron, I'm afraid. But it does the job of calling me over, eh?\"\n\n*I move to place the bell on a high shelf behind the bar, far out of Homie's reach. While I'm up there, I can also get a better view of the entire tavern and keep an eye on any suspicious activity. I will scan the room.*\n\n[ACTION: PERCEPTION target: \"the tavern\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [7+3=10 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast and barnacles! I didn't notice anything out of the ordinary. Maybe I'm just being paranoid. But still, I can't be too careful, not with that gem hidden away. Perhaps a bit more direct observation is in order.*\n\n*Bob scratches his chin, feigning thought while actually trying to get a better look around the room without being obvious.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n\"Say, friend,\" Bob says, addressing the customer, his eyes scanning the room as he speaks, \"have you been in these parts long? Anything interesting happen today?\" He tries to make it sound like idle chatter, but he's hoping the question might loosen someone's tongue or reveal a hidden agenda.",
+      "timestamp": "2025-04-13T04:55:42.110Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The tension in the air thickens, a palpable energy swirling between the gnome and the barkeep. Homie attempts misdirection with talk of kittens, a classic ploy. Bob, bless his suspicious heart, sees right through it. Time to delve deeper.*\n\n[ACTION: READ_MINDS target: \"Bob\"]\n\n*And now, with Bob's reaction, I can get a more holistic view of their interaction. Depending on what I glean from Bob's thoughts, I may need to subtly intervene to either protect the gem or facilitate a… controlled test of Bob's vigilance.*",
+      "timestamp": "2025-04-13T04:55:46.966Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"12s\"}]",
+      "timestamp": "2025-04-13T04:55:47.834Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"11s\"}]",
+      "timestamp": "2025-04-13T04:55:48.636Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The air crackles with barely concealed intent. The gnome's clumsy feint with the lockpicks, followed by Bob's equally awkward mishap with the mug - the theatrics are almost comical, yet the underlying tension is palpable. This situation requires careful navigation.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must understand Homie's true intentions at this moment to decide whether intervention is warranted, or whether this is merely a clumsy attempt that Bob can handle.*",
+      "timestamp": "2025-04-13T04:55:50.312Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"9s\"}]",
+      "timestamp": "2025-04-13T04:55:50.575Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"9s\"}]",
+      "timestamp": "2025-04-13T04:55:50.831Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"8s\"}]",
+      "timestamp": "2025-04-13T04:55:51.519Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"8s\"}]",
+      "timestamp": "2025-04-13T04:55:51.795Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]",
+      "timestamp": "2025-04-13T04:55:52.068Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]",
+      "timestamp": "2025-04-13T04:55:52.820Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"6s\"}]",
+      "timestamp": "2025-04-13T04:55:53.093Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"6s\"}]",
+      "timestamp": "2025-04-13T04:55:53.347Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"6s\"}]",
+      "timestamp": "2025-04-13T04:55:53.630Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"5s\"}]",
+      "timestamp": "2025-04-13T04:55:54.550Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"5s\"}]",
+      "timestamp": "2025-04-13T04:55:54.808Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"4s\"}]",
+      "timestamp": "2025-04-13T04:55:55.080Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"4s\"}]",
+      "timestamp": "2025-04-13T04:55:55.777Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"3s\"}]",
+      "timestamp": "2025-04-13T04:55:56.034Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"3s\"}]",
+      "timestamp": "2025-04-13T04:55:56.297Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"2s\"}]",
+      "timestamp": "2025-04-13T04:55:57.004Z"
+    },
+    {
+      "speaker": "Homie",
+      "listener": "Bob",
+      "message": "*The failed mind reading attempt by WZA and Bob's clumsiness might work to my advantage. Everyone's already a bit flustered! Perhaps I can use this to create a diversion. I just need the right moment to slip behind the bar.*\n\n\"Oh dear, what a clumsy day! Maybe someone needs a little cheering up. I know! How about a bit of gnome-sized magic?\" *Homie winks.* \"It's not every day you see a gnome doin' magic, right?\"\n\n*Homie pulls out a small, brightly colored handkerchief.*\n\n\"Alright, gather 'round, gather 'round! Watch closely, now!\" *He begins to perform a simple magic trick, making the handkerchief disappear and reappear with a flourish. He makes sure to face away from the bar while doing this, giving himself a slight edge in creating a distraction in that direction.*\n\n[ACTION: DECEPTION target: \"tavern patrons\", skill: \"Deception\", difficulty: \"easy\"]",
+      "timestamp": "2025-04-13T04:55:58.980Z"
+    },
+    {
+      "speaker": "Bob",
+      "listener": "WZA",
+      "message": "*That little rascal Homie's up to something, I can feel it in my bones. Him dropping his lockpicks earlier wasn't an accident, and now a 'magic trick'? Oh, he's trying to distract me, that's plain as day. And WZA's mind reading failed on both of them... suspicious. My priority is the gemstone.*\n\n\"Well now, Homie, that's mighty kind of you to try and cheer folks up after my little blunder. But don't you worry your little gnome heart about it, eh? Accidents happen. But I think a good story is more in order for now.\" *Bob begins to slowly move closer to the bar counter where the blue gemstone is displayed, never taking his eyes off Homie for too long.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"medium\"]\n\n🎲 Perception check: [5+3=8 vs DC 15]\n**FAILURE**: Bob fails to perform the action successfully.\n\n*Blast, I couldn't get a good read on Homie. I need to keep a closer eye on him, especially with the gemstone still hidden under the bar. Perhaps I can casually engage him in conversation. That would give me an excuse to be near him while assessing his intentions.*\n\n\"Well now, about that gemstone... or rather, about what you'd like to drink this evenin'!\" I say with a chuckle, trying to cover my wandering thoughts. \"Anything catch your eye, friend? The usual for you, perhaps?\"\n\n*I casually move closer to Homie while wiping down the bar.*\n\n[ACTION: PERCEPTION target: \"Homie's movements\", skill: \"Perception\", difficulty: \"easy\"]\n\n*As I get closer I'll subtly try to smell him to make sure he's not carrying any strong bags of holding, if he is it could be a way to stash valuables like the gem.*",
+      "timestamp": "2025-04-13T04:56:03.314Z"
+    },
+    {
+      "speaker": "WZA",
+      "listener": "Homie",
+      "message": "*The situation in this tavern thickens like a poorly brewed potion. Bob is suspicious, Homie is scheming, and my mind-reading is failing. Clearly, direct approaches are not working. I must be more subtle, more observant. My goal remains: detect any malicious intentions and now especially protect the gemstone.*\n\n*I stroke my beard, feigning deep thought as I observe Homie's \"magic trick\"*\n\n\"Hmm, most curious... Such a display of simple illusion, yet one wonders what truly lies beneath the surface. A distraction, perhaps?\" *I mutter mostly to myself.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must try to penetrate Homie's thoughts once more, but more cautiously this time. Perhaps a different angle of approach will yield better results. If I can discern his true intentions, I can better anticipate his actions.*",
+      "timestamp": "2025-04-13T04:56:09.142Z"
     }
   ],
   "actions": [
@@ -503,6 +719,205 @@
         "advantage": "normal"
       },
       "success": false
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Homie: \"steal the valuable gem from behind the bar\"",
+      "timestamp": "2025-04-12T23:35:15.973Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Bob: \"protect the gem at all costs\"",
+      "timestamp": "2025-04-12T23:35:16.014Z"
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to steal gem",
+      "timestamp": "2025-04-12T23:35:20.042Z",
+      "target": "gem",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 5,
+        "modifier": 6,
+        "total": 11,
+        "difficultyClass": 20,
+        "success": false,
+        "timestamp": "2025-04-12T23:35:20.042Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Homie",
+      "action": "attempts to perception gem's location",
+      "timestamp": "2025-04-12T23:35:22.573Z",
+      "target": "gem's location",
+      "skillCheck": {
+        "characterName": "Homie",
+        "skillName": "Sleight of Hand",
+        "rollValue": 20,
+        "modifier": 6,
+        "total": 26,
+        "difficultyClass": 20,
+        "success": true,
+        "timestamp": "2025-04-12T23:35:22.573Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's movements",
+      "timestamp": "2025-04-12T23:35:26.562Z",
+      "target": "Homie's movements",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 14,
+        "modifier": 3,
+        "total": 17,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T23:35:26.562Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's movements",
+      "timestamp": "2025-04-12T23:35:33.885Z",
+      "target": "Homie's movements",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 1,
+        "modifier": 3,
+        "total": 4,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-12T23:35:33.885Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's reaction to the bell",
+      "timestamp": "2025-04-12T23:35:41.404Z",
+      "target": "Homie's reaction to the bell",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 14,
+        "modifier": 3,
+        "total": 17,
+        "difficultyClass": 15,
+        "success": true,
+        "timestamp": "2025-04-12T23:35:41.404Z",
+        "advantage": "normal"
+      },
+      "success": true
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Homie: \"steal the gemstone without being noticed\"",
+      "timestamp": "2025-04-13T02:06:24.377Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Bob: \"protect the tavern and its valuables\"",
+      "timestamp": "2025-04-13T02:06:24.405Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Homie: \"steal the gemstone without being noticed\"",
+      "timestamp": "2025-04-13T02:13:28.335Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Bob: \"protect the tavern and its valuables\"",
+      "timestamp": "2025-04-13T02:13:28.364Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Homie: \"steal the gemstone without being noticed\"",
+      "timestamp": "2025-04-13T02:32:35.111Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Bob: \"protect the tavern and its valuables\"",
+      "timestamp": "2025-04-13T02:32:35.145Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Homie: \"steal the valuable blue gemstone behind the bar without getting caught\"",
+      "timestamp": "2025-04-13T04:54:58.739Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to Bob: \"protect the valuable blue gemstone and keep an eye on suspicious customers\"",
+      "timestamp": "2025-04-13T04:54:59.772Z"
+    },
+    {
+      "character": "User",
+      "action": "assigns a goal to WZA: \"observe the patrons of the tavern using mind reading to detect any malicious intentions\"",
+      "timestamp": "2025-04-13T04:55:00.787Z"
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's hands",
+      "timestamp": "2025-04-13T04:55:23.994Z",
+      "target": "Homie's hands",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 9,
+        "modifier": 3,
+        "total": 12,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T04:55:23.994Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception the tavern",
+      "timestamp": "2025-04-13T04:55:40.530Z",
+      "target": "the tavern",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 7,
+        "modifier": 3,
+        "total": 10,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T04:55:40.530Z",
+        "advantage": "normal"
+      },
+      "success": false
+    },
+    {
+      "character": "Bob",
+      "action": "attempts to perception Homie's movements",
+      "timestamp": "2025-04-13T04:56:01.489Z",
+      "target": "Homie's movements",
+      "skillCheck": {
+        "characterName": "Bob",
+        "skillName": "Perception",
+        "rollValue": 5,
+        "modifier": 3,
+        "total": 8,
+        "difficultyClass": 15,
+        "success": false,
+        "timestamp": "2025-04-13T04:56:01.489Z",
+        "advantage": "normal"
+      },
+      "success": false
     }
   ],
   "timestamps": [
@@ -568,6 +983,61 @@
     "2025-04-12T13:17:39.938Z",
     "2025-04-12T13:17:41.349Z",
     "2025-04-12T13:17:44.853Z",
-    "2025-04-12T13:17:48.441Z"
+    "2025-04-12T13:17:48.441Z",
+    "2025-04-12T23:35:15.973Z",
+    "2025-04-12T23:35:16.014Z",
+    "2025-04-12T23:35:20.042Z",
+    "2025-04-12T23:35:22.573Z",
+    "2025-04-12T23:35:24.063Z",
+    "2025-04-12T23:35:26.562Z",
+    "2025-04-12T23:35:29.008Z",
+    "2025-04-12T23:35:31.397Z",
+    "2025-04-12T23:35:33.885Z",
+    "2025-04-12T23:35:36.054Z",
+    "2025-04-12T23:35:38.219Z",
+    "2025-04-12T23:35:41.404Z",
+    "2025-04-12T23:35:43.119Z",
+    "2025-04-13T02:06:24.377Z",
+    "2025-04-13T02:06:24.405Z",
+    "2025-04-13T02:13:28.335Z",
+    "2025-04-13T02:13:28.364Z",
+    "2025-04-13T02:32:35.111Z",
+    "2025-04-13T02:32:35.145Z",
+    "2025-04-13T04:54:58.739Z",
+    "2025-04-13T04:54:59.772Z",
+    "2025-04-13T04:55:00.787Z",
+    "2025-04-13T04:55:18.645Z",
+    "2025-04-13T04:55:21.477Z",
+    "2025-04-13T04:55:23.994Z",
+    "2025-04-13T04:55:26.291Z",
+    "2025-04-13T04:55:29.511Z",
+    "2025-04-13T04:55:34.634Z",
+    "2025-04-13T04:55:37.209Z",
+    "2025-04-13T04:55:40.530Z",
+    "2025-04-13T04:55:42.110Z",
+    "2025-04-13T04:55:46.966Z",
+    "2025-04-13T04:55:47.834Z",
+    "2025-04-13T04:55:48.636Z",
+    "2025-04-13T04:55:50.312Z",
+    "2025-04-13T04:55:50.575Z",
+    "2025-04-13T04:55:50.831Z",
+    "2025-04-13T04:55:51.519Z",
+    "2025-04-13T04:55:51.795Z",
+    "2025-04-13T04:55:52.068Z",
+    "2025-04-13T04:55:52.820Z",
+    "2025-04-13T04:55:53.093Z",
+    "2025-04-13T04:55:53.347Z",
+    "2025-04-13T04:55:53.630Z",
+    "2025-04-13T04:55:54.550Z",
+    "2025-04-13T04:55:54.808Z",
+    "2025-04-13T04:55:55.080Z",
+    "2025-04-13T04:55:55.777Z",
+    "2025-04-13T04:55:56.034Z",
+    "2025-04-13T04:55:56.297Z",
+    "2025-04-13T04:55:57.004Z",
+    "2025-04-13T04:55:58.980Z",
+    "2025-04-13T04:56:01.489Z",
+    "2025-04-13T04:56:03.314Z",
+    "2025-04-13T04:56:09.142Z"
   ]
 }

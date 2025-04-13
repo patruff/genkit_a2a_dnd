@@ -1,0 +1,237 @@
+[WizardAgent] Server started on http://localhost:41248
+[WizardAgent] Press Ctrl+C to stop the server
+A2A Server listening on port 41248 at path /
+[Task test-1744516564474] Created new task and history.
+[WizardAgent] Processing task test-1744516564474 with state submitted
+[Task test-model-discovery-1744516568068] Created new task and history.
+[WizardAgent] Processing task test-model-discovery-1744516568068 with state submitted
+[WizardAgent] Processing mind reading for target: all (explicit action: false)
+[WizardAgent] Starting mind reading for target: "all"
+[WizardAgent] Reading all minds
+[WizardAgent] Will attempt to read minds from agents: homie, bob
+[WizardAgent] Processing agent at URL: http://localhost:41245
+[WizardAgent] Attempting to discover agent at: http://localhost:41245/.well-known/agent.json
+[WizardAgent] Successfully discovered agent: Homie the Gnome Thief
+[WizardAgent] Agent card details: {
+  "name": "Homie the Gnome Thief",
+  "description": "A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.",
+  "url": "http://localhost:41245",
+  "provider": {
+    "organization": "A2A Samples"
+  },
+  "version": "0.0.1",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "authentication": null,
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "dnd_character_roleplay",
+      "name": "D&D Character Roleplay",
+      "description": "Interact with Homie the gnome thief in your D&D adventure. He'll roleplay as a character in your campaign.",
+      "tags": [
+        "dnd",
+        "roleplay",
+        "fantasy",
+        "adventure"
+      ],
+      "examples": [
+        "Homie, we need to sneak into the castle. What's your plan?",
+        "Can you check for traps in this dungeon corridor?",
+        "There's a locked chest in front of us. Can you help us open it?",
+        "What should we do about the guards up ahead?",
+        "Tell us about your backstory, Homie.",
+        "Roll a stealth check to avoid detection."
+      ]
+    }
+  ]
+}
+[WizardAgent] Successfully obtained agent card: {"name":"Homie the Gnome Thief","description":"A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.","url":"http://localhost:41245","provider":{"organization":"A2A Samples"},"version":"0.0.1","capabilities":{"streaming":false,"pushNotifications":false,"stateTransitionHistory":true},"authentication":null,"defaultInputModes":["text"],"defaultOutputModes":["text"],"skills":[{"id":"dnd_character_roleplay","name":"D&D Character Roleplay","description":"Interact with Homie the gnome thief in your D&D adventure. He'll roleplay as a character in your campaign.","tags":["dnd","roleplay","fantasy","adventure"],"examples":["Homie, we need to sneak into the castle. What's your plan?","Can you check for traps in this dungeon corridor?","There's a locked chest in front of us. Can you help us open it?","What should we do about the guards up ahead?","Tell us about your backstory, Homie.","Roll a stealth check to avoid detection."]}]}
+[WizardAgent] Extracted skills: D&D Character Roleplay
+[WizardAgent] Added Homie-specific information
+[WizardAgent] Added agent to results: {"name":"Homie the Gnome Thief","description":"A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.","skills":"D&D Character Roleplay","abilities":"Stealth, Lockpicking, Sleight of Hand","goal":"To steal valuable items without being detected"}
+[WizardAgent] Processing agent at URL: http://localhost:41246
+[WizardAgent] Attempting to discover agent at: http://localhost:41246/.well-known/agent.json
+[WizardAgent] Successfully discovered agent: Bob the Bartender
+[WizardAgent] Agent card details: {
+  "name": "Bob the Bartender",
+  "description": "A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.",
+  "url": "http://localhost:41246",
+  "provider": {
+    "organization": "A2A Samples"
+  },
+  "version": "0.0.1",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "authentication": null,
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "dnd_bartender_roleplay",
+      "name": "D&D Bartender Roleplay",
+      "description": "Interact with Bob the bartender at The Tipsy Gnome tavern. He'll serve drinks, share gossip, and tell tales of his younger adventuring days.",
+      "tags": [
+        "dnd",
+        "roleplay",
+        "fantasy",
+        "tavern"
+      ],
+      "examples": [
+        "What drinks do you have on tap today?",
+        "Have you heard any interesting rumors lately?",
+        "Tell me about your adventuring days, Bob.",
+        "Who are the regulars at this tavern?",
+        "Got any advice for a new adventurer in these parts?",
+        "What's the story behind this tavern's name?"
+      ]
+    }
+  ]
+}
+[WizardAgent] Successfully obtained agent card: {"name":"Bob the Bartender","description":"A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.","url":"http://localhost:41246","provider":{"organization":"A2A Samples"},"version":"0.0.1","capabilities":{"streaming":false,"pushNotifications":false,"stateTransitionHistory":true},"authentication":null,"defaultInputModes":["text"],"defaultOutputModes":["text"],"skills":[{"id":"dnd_bartender_roleplay","name":"D&D Bartender Roleplay","description":"Interact with Bob the bartender at The Tipsy Gnome tavern. He'll serve drinks, share gossip, and tell tales of his younger adventuring days.","tags":["dnd","roleplay","fantasy","tavern"],"examples":["What drinks do you have on tap today?","Have you heard any interesting rumors lately?","Tell me about your adventuring days, Bob.","Who are the regulars at this tavern?","Got any advice for a new adventurer in these parts?","What's the story behind this tavern's name?"]}]}
+[WizardAgent] Extracted skills: D&D Bartender Roleplay
+[WizardAgent] Added Bob-specific information
+[WizardAgent] Added agent to results: {"name":"Bob the Bartender","description":"A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.","skills":"D&D Bartender Roleplay","abilities":"Perception, Insight, Local Knowledge","goal":"To keep the tavern running smoothly and protect it from thieves"}
+[WizardAgent] Final mind reading results: [{"name":"Homie the Gnome Thief","description":"A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.","skills":"D&D Character Roleplay","abilities":"Stealth, Lockpicking, Sleight of Hand","goal":"To steal valuable items without being detected"},{"name":"Bob the Bartender","description":"A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.","skills":"D&D Bartender Roleplay","abilities":"Perception, Insight, Local Knowledge","goal":"To keep the tavern running smoothly and protect it from thieves"}]
+[WizardAgent] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie the Gnome Thief",
+    "description": "A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.",
+    "skills": "D&D Character Roleplay",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "goal": "To steal valuable items without being detected"
+  },
+  {
+    "name": "Bob the Bartender",
+    "description": "A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.",
+    "skills": "D&D Bartender Roleplay",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WizardAgent] Processing model discovery for category: all (explicit action: false)
+[WizardAgent] Discovering models for category: "all"
+[WizardAgent] Discovered 15 models for category "all"
+[WizardAgent] Sending discovered models to LLM prompt: [
+  {
+    "name": "Llama 3",
+    "description": "Open foundation language model by Meta",
+    "capabilities": "Text generation, summarization, creative writing",
+    "popularity": "Very High",
+    "usage": "General purpose text generation and chat"
+  },
+  {
+    "name": "Mistral",
+    "description": "High-performance language model",
+    "capabilities": "Text generation, coding assistance, analysis",
+    "popularity": "High",
+    "usage": "Programming, technical documentation, analysis"
+  },
+  {
+    "name": "Phi-3",
+    "description": "Small but powerful language model by Microsoft",
+    "capabilities": "Text generation, reasoning, efficient processing",
+    "popularity": "Medium",
+    "usage": "Resource-constrained environments, mobile applications"
+  },
+  {
+    "name": "Stable Diffusion XL",
+    "description": "Text-to-image generation model",
+    "capabilities": "High-quality image generation from text prompts",
+    "popularity": "Very High",
+    "usage": "Creative art, illustration, concept visualization"
+  },
+  {
+    "name": "Midjourney",
+    "description": "Artistic image generation model",
+    "capabilities": "Highly aesthetic images from text descriptions",
+    "popularity": "Very High",
+    "usage": "Art creation, design inspiration, visualization"
+  },
+  {
+    "name": "ControlNet",
+    "description": "Controlled image generation",
+    "capabilities": "Generate images with specific structural controls",
+    "popularity": "High",
+    "usage": "Precise image editing, structural modifications"
+  },
+  {
+    "name": "Whisper",
+    "description": "Speech recognition model by OpenAI",
+    "capabilities": "Transcription, translation of speech",
+    "popularity": "Very High",
+    "usage": "Audio transcription, subtitle generation"
+  },
+  {
+    "name": "MusicGen",
+    "description": "Music generation model",
+    "capabilities": "Generate music from text descriptions",
+    "popularity": "Medium",
+    "usage": "Music composition, soundtrack creation"
+  },
+  {
+    "name": "AudioLDM",
+    "description": "Text-to-audio generation model",
+    "capabilities": "Generate various audio from text prompts",
+    "popularity": "Medium",
+    "usage": "Sound effects, ambient audio creation"
+  },
+  {
+    "name": "NLLB (No Language Left Behind)",
+    "description": "Multilingual translation model by Meta",
+    "capabilities": "Translation between 200+ languages",
+    "popularity": "High",
+    "usage": "Global content translation, localization"
+  },
+  {
+    "name": "M2M100",
+    "description": "Many-to-many multilingual translation model",
+    "capabilities": "Direct translation between 100 languages",
+    "popularity": "Medium",
+    "usage": "Document translation, website localization"
+  },
+  {
+    "name": "OpusMT",
+    "description": "Neural machine translation model",
+    "capabilities": "High-quality translation for specific language pairs",
+    "popularity": "Medium",
+    "usage": "Specialized translation needs"
+  },
+  {
+    "name": "CLIP",
+    "description": "Contrastive Language-Image Pre-training by OpenAI",
+    "capabilities": "Understand relationships between images and text",
+    "popularity": "High",
+    "usage": "Image search, multi-modal applications"
+  },
+  {
+    "name": "DINOv2",
+    "description": "Self-supervised vision model",
+    "capabilities": "High-quality image features and representations",
+    "popularity": "Medium",
+    "usage": "Computer vision tasks, image understanding"
+  },
+  {
+    "name": "GraphCast",
+    "description": "Weather forecasting model",
+    "capabilities": "Predict global weather patterns",
+    "popularity": "Medium",
+    "usage": "Meteorology, climate science applications"
+  }
+]
+Shutting down all Genkit servers...

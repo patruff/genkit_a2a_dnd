@@ -1,19 +1,22 @@
 [BobAgent] Server started on http://localhost:41246
 [BobAgent] Press Ctrl+C to stop the server
 A2A Server listening on port 41246 at path /
-[Task 83ef9af6-1401-4e75-b641-58823a2482b2] Created new task and history.
-[BobAgent] Processing task 83ef9af6-1401-4e75-b641-58823a2482b2 with state submitted
-[BobAgent] Task 83ef9af6-1401-4e75-b641-58823a2482b2 finished with state: input-required
-[Task 1307cc20-f3f0-4940-ab6e-20858c27677b] Created new task and history.
-[BobAgent] Processing task 1307cc20-f3f0-4940-ab6e-20858c27677b with state submitted
-[BobAgent] Task 1307cc20-f3f0-4940-ab6e-20858c27677b finished with state: completed
-[Task 0337f1d0-e71f-4d13-8872-32a6aa1e8426] Created new task and history.
-[BobAgent] Processing task 0337f1d0-e71f-4d13-8872-32a6aa1e8426 with state submitted
-[BobAgent] Task 0337f1d0-e71f-4d13-8872-32a6aa1e8426 finished with state: completed
-[Task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa] Created new task and history.
-[BobAgent] Processing task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa with state submitted
-[BobAgent] Task 783c7c8d-5cbf-43ab-af94-951af0d5e4fa finished with state: input-required
-[Task 2caa1087-51de-4a8a-bfaf-3069a6f491ef] Created new task and history.
-[BobAgent] Processing task 2caa1087-51de-4a8a-bfaf-3069a6f491ef with state submitted
-[BobAgent] Task 2caa1087-51de-4a8a-bfaf-3069a6f491ef finished with state: completed
+[Task 07adf391-f91b-4f79-9b0f-6ba044d621e2] Created new task and history.
+[BobAgent] Processing task 07adf391-f91b-4f79-9b0f-6ba044d621e2 with state submitted
+[BobAgent] Task 07adf391-f91b-4f79-9b0f-6ba044d621e2 finished with state: input-required
+[Task 5d1f4a57-e0f5-4c26-976b-c04fb678ff1b] Created new task and history.
+[BobAgent] Processing task 5d1f4a57-e0f5-4c26-976b-c04fb678ff1b with state submitted
+[BobAgent] Task 5d1f4a57-e0f5-4c26-976b-c04fb678ff1b finished with state: input-required
+[Task d60dddfe-53a7-4160-9092-1cce8e2ea4af] Created new task and history.
+[BobAgent] Processing task d60dddfe-53a7-4160-9092-1cce8e2ea4af with state submitted
+[BobAgent] Task d60dddfe-53a7-4160-9092-1cce8e2ea4af finished with state: input-required
+[Task b79eae3f-b2f6-4053-9e80-d8ac943e6e34] Created new task and history.
+[BobAgent] Processing task b79eae3f-b2f6-4053-9e80-d8ac943e6e34 with state submitted
+[BobAgent] Task b79eae3f-b2f6-4053-9e80-d8ac943e6e34 finished with state: input-required
+[Task c2ed1ea5-2a00-4cf7-9f6c-283358535468] Created new task and history.
+[BobAgent] Processing task c2ed1ea5-2a00-4cf7-9f6c-283358535468 with state submitted
+[BobAgent] Task c2ed1ea5-2a00-4cf7-9f6c-283358535468 finished with state: completed
+[Task 41547435-37f7-4604-875e-50dc59634306] Created new task and history.
+[BobAgent] Processing task 41547435-37f7-4604-875e-50dc59634306 with state submitted
+[BobAgent] Task 41547435-37f7-4604-875e-50dc59634306 finished with state: completed
 Shutting down all Genkit servers...

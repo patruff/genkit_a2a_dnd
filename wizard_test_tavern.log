@@ -4,4 +4,9 @@
 [TavernServer] Server started on http://localhost:41247
 [TavernServer] Press Ctrl+C to stop the server
 A2A Server listening on port 41247 at path /
-Shutting down all Genkit servers...
+[Task task123] Created new task and history.
+[TavernServer] Processing task task123 with state submitted
+[TavernServer] Saved tavern state and log
+[Task task124] Created new task and history.
+[TavernServer] Processing task task124 with state submitted
+[TavernServer] Saved tavern state and log

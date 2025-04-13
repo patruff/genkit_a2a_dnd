@@ -5,6 +5,7 @@
   "type": "module",
   "devDependencies": {
     "@types/node": "^22.13.14",
+    "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },
@@ -13,10 +14,11 @@
     "agents:movie-agent": "npx tsx src/agents/movie-agent/index.ts",
     "agents:coder": "npx tsx src/agents/coder/index.ts",
     "build": "tsc",
-    "postbuild": "cp src/agents/dnd/dnd_agent.prompt dist/agents/dnd/ && cp src/agents/bob/bob_agent.prompt dist/agents/bob/ && cp src/agents/dndserver/tavern_server.prompt dist/agents/dndserver/",
+    "postbuild": "cp src/agents/dnd/dnd_agent.prompt dist/agents/dnd/ && cp src/agents/bob/bob_agent.prompt dist/agents/bob/ && cp src/agents/dndserver/tavern_server.prompt dist/agents/dndserver/ && cp src/agents/wizard/wizard_agent.prompt dist/agents/wizard/",
     "agents:dnd": "npx tsx src/agents/dnd/index.ts",
     "agents:bob": "npx tsx src/agents/bob/index.ts",
     "agents:dndserver": "npx tsx src/agents/dndserver/index.ts",
+    "agents:wizard": "npx tsx src/agents/wizard/index.ts",
     "scenario": "npx tsx src/agents/dndserver/start_scenario.ts"
   },
   "dependencies": {
@@ -27,10 +29,11 @@
     "@types/node-fetch": "^2.6.12",
     "@types/uuid": "^10.0.0",
     "body-parser": "^2.2.0",
+    "chalk": "^5.4.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "genkit": "^1.4.0",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.7.0",
     "uuid": "^11.1.0"
   },
   "packageManager": "pnpm@10.7.1+sha512.2d92c86b7928dc8284f53494fb4201f983da65f0fb4f0d40baafa5cf628fa31dae3e5968f12466f17df7e97310e30f343a648baea1b9b350685dafafffdf5808"

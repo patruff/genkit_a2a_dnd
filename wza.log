@@ -1,0 +1,989 @@
+[WZA] Server started on http://localhost:41248
+[WZA] Press Ctrl+C to stop the server
+A2A Server listening on port 41248 at path /
+[Task test-1744518038190] Created new task and history.
+[WZA] Processing task test-1744518038190 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744518038201",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:20:41.955Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome exudes a warm and inviting atmosphere this evening.*\n\nThe tavern is relatively quiet, with a soft hum of conversation filling the air. A crackling fire in the large stone fireplace casts a warm glow across the room, highlighting the polished wooden bar and the scattered tables where patrons are enjoying their drinks and meals. The air is thick with the aroma of roasted meats, spiced ale, and pipe tobacco.\n\n**Currently in The Tipsy Gnome:**\n\n*   **Homie (gnome thief):** Perched at the bar, feigning casual interest in a silver bell Bob offered him. However, Homie's goal is to \"steal the gemstone without being noticed.\" He's likely plotting his next move, trying to find an opening to snatch the gemstone.\n\n*   **Bob (human bartender):** Behind the bar, serving drinks and engaging in conversation with the customers. However, Bob's primary goal is to \"protect the tavern and its valuables\". After becoming aware of Homie's intent to steal, he is keeping a close watch on the gnome thief, ready to thwart any attempts at theft.\n\n*   **WZA (mind-reading wizard):** Sitting quietly in a shadowy corner, sipping on a drink. WZA is a background presence, observing the events unfolding in the tavern.\n\nThe blue gemstone remains hidden behind the bar, a silent object of desire and contention between Homie and Bob. The tension in the room is subtle but palpable, like the calm before a storm."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Added Homie-specific information
+[WZA] Added character to results: {"name":"Homie","description":"A cheerful gnome thief with nimble fingers and a mischievous smile","type":"gnome thief","abilities":"Stealth, Lockpicking, Sleight of Hand","role":"Steals valuable items from unsuspecting patrons","skills":"Stealing, Sneaking, Deception, Lockpicking","personality":"Mischievous, Cunning, Quick-witted","goal":"To acquire valuable treasures without being detected"}
+[WZA] Added Bob-specific information
+[WZA] Added character to results: {"name":"Bob","description":"A friendly human bartender who runs The Tipsy Gnome tavern","type":"human bartender","abilities":"Perception, Insight, Local Knowledge","role":"Runs The Tipsy Gnome tavern, serving drinks and keeping the peace","skills":"Bartending, Conversation, Local Knowledge, Perception","personality":"Friendly, Observant, Good listener","goal":"To keep the tavern running smoothly and protect it from thieves"}
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task task-1744520101810] Created new task and history.
+[WZA] Processing task task-1744520101810 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520101835",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:55:04.450Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome welcomes you with its warm, inviting atmosphere this evening.*\n\nThe tavern is bustling with activity, the common room filled with the chatter of adventurers and locals alike. A crackling fire in the large stone fireplace casts dancing shadows on the wooden walls, illuminating the various patrons scattered around the room. The air is thick with the aroma of roasted meats, freshly baked bread, and the sweet tang of various ales and wines.\n\nCurrently, we have:\n\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile. He is sitting at the bar, carefully observing Bob, strategizing to steal the gemstone behind the bar without getting caught. Homie failed the last skill check to get the gem, and needs to find a way to distract Bob.\n*   **Bob (human bartender):** A friendly middle-aged human with a hearty laugh who keeps the tavern running. He's currently tending the bar, polishing glasses and serving drinks, all while keeping a watchful eye on Homie. Bob's main focus is to protect the valuable blue gemstone and keep an eye on suspicious customers.\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. He sits quietly in a corner, observing the patrons, using his mind-reading abilities to detect any malicious intentions.\n\nThe valuable blue gemstone sits prominently displayed in a case behind the bar, a constant point of focus for Homie and a source of concern for Bob. The tension between these two is palpable, creating a subtle undercurrent amidst the otherwise jovial atmosphere of the Tipsy Gnome."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task task-1744520108249] Created new task and history.
+[WZA] Processing task task-1744520108249 with state submitted
+[Task 1d9f36a9-68d8-45f4-93d2-68dccef7872f] Created new task and history.
+[WZA] Processing task 1d9f36a9-68d8-45f4-93d2-68dccef7872f with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[Task 93d80fb3-0016-4f3e-afd5-abbe60005358] Created new task and history.
+[WZA] Processing task 93d80fb3-0016-4f3e-afd5-abbe60005358 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520129531",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:55:32.067Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome exudes a warm and inviting atmosphere this evening, with the fireplace crackling merrily and casting a soft glow across the room.*\n\nThe tavern itself is a cozy establishment, complete with a long wooden bar, several tables scattered throughout the room, and a stone fireplace that provides a comforting warmth. Behind the bar, a glittering blue gemstone is displayed in a case, its value a tempting lure for some, a treasure to protect for others. The air is filled with the aroma of roasted meats, spiced ale, and the general buzz of conversation.\n\nCurrently, the following characters are present:\n\n*   **Bob (human bartender):** A friendly, middle-aged human with a hearty laugh, Bob is tending the bar. His goal is to protect the valuable blue gemstone and keep an eye on suspicious customers, particularly Homie. Bob just failed a perception check, meaning he is having difficulty noticing any suspicious actions on Homie's part.\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile, Homie is currently attempting to steal the blue gemstone behind the bar without getting caught. He has been actively creating distractions and subtly positioning himself for the heist.\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills, WZA is sitting quietly in the corner, observing the patrons and using his mind-reading abilities to detect any malicious intentions. His goal is to observe and intervene if necessary. He has not taken any action yet."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task a87cd257-20dc-4f32-bc62-b014e0c5bdb3] Created new task and history.
+[WZA] Processing task a87cd257-20dc-4f32-bc62-b014e0c5bdb3 with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520142119",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:55:44.923Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome is alive with the sounds of a typical evening, the aroma of roasted meats and spiced ale filling the air.*\n\nThe tavern itself is a cozy space, defined by its warm fireplace, sturdy wooden tables, and well-worn bar. It's a place for adventurers and locals alike to relax, share stories, and enjoy a drink. Behind the bar, displayed prominently, is the valuable blue gemstone, a constant reminder of the stakes at play.\n\nHere's a rundown of who's currently present:\n\n*   **Bob (Human Bartender):** A friendly, middle-aged human with a hearty laugh. He's currently tending the bar, serving drinks, and keeping a close eye on the patrons, particularly Homie. Bob is focused on \"protecting the valuable blue gemstone and keeping an eye on suspicious customers.\" He seems particularly wary of Homie.\n*   **Homie (Gnome Thief):** A cheerful gnome thief with nimble fingers and a mischievous smile. He's currently at the bar, attempting to \"steal the valuable blue gemstone behind the bar without getting caught.\" His recent actions suggest a cat-and-mouse game with Bob.\n*   **WZA (Mind-Reading Wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. He's sitting quietly in the corner, \"observing the patrons of the tavern using mind reading to detect any malicious intentions.\""
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[Task 46a0b103-de9d-4894-abbb-03adaa45c2c9] Created new task and history.
+[WZA] Processing task 46a0b103-de9d-4894-abbb-03adaa45c2c9 with state submitted
+[WZA] Processing mind reading for target: Bob (explicit action: true)
+[WZA] Starting mind reading for target: "Bob"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520148646",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:49.078Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"10s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Bob
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task eedb09ca-b211-40a3-9c4b-1200b8ac44c9] Created new task and history.
+[WZA] Processing task eedb09ca-b211-40a3-9c4b-1200b8ac44c9 with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520150842",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:51.270Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"8s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"8s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '8s'
+    }
+  ],
+  traceId: '4a495ef8d81b0846f8588ed4aa780314'
+}
+[Task c6fbe81e-1e78-4a4c-acc9-547a073ce4a8] Created new task and history.
+[WZA] Processing task c6fbe81e-1e78-4a4c-acc9-547a073ce4a8 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520152076",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:52.554Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"7s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '7s'
+    }
+  ],
+  traceId: '8b0cc8669430b4a3810f373c2cedb073'
+}
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520126301",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:55:52.829Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "# The Tipsy Gnome - Recent Interactions\n\n**WZA**: \"*The tension in the air thickens, a palpable energy swirling between the gnome and the barkeep. Homie attempts misdirection with talk of kittens, a classic ploy. Bob, bless his suspicious heart, sees right through it. Time to delve deeper.*\n\n[ACTION: READ_MINDS target: \"Bob\"]\n\n*And now, with Bob's reaction, I can get a more holistic view of their interaction. Depending on what I glean from Bob's thoughts, I may need to subtly intervene to either protect the gem or facilitate a… controlled test of Bob's vigilance.*\"\n\n**Homie**: \"*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"12s\"}]\"\n\n**Bob**: \"*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"11s\"}]\"\n\n**WZA**: \"*The air crackles with barely concealed intent. The gnome's clumsy feint with the lockpicks, followed by Bob's equally awkward mishap with the mug - the theatrics are almost comical, yet the underlying tension is palpable. This situation requires careful navigation.*\n\n[ACTION: READ_MINDS target: \"Homie\"]\n\n*I must understand Homie's true intentions at this moment to decide whether intervention is warranted, or whether this is merely a clumsy attempt that Bob can handle.*\"\n\n**Homie**: \"*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"9s\"}]\"\n\n**Bob**: \"*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"9s\"}]\"\n\n**WZA**: \"*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"8s\"}]\"\n\n**Homie**: \"*Homie fumbles and drops his lockpicks* Oh no! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"8s\"}]\"\n\n**Bob**: \"*Bob drops a mug that shatters on the floor* Blast! [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]\"\n\n**WZA**: \"*WZA's spell fizzles as arcane energy dissipates* My mind reading powers are failing me: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-2.0-flash\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"7s\"}]\""
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"6s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '6s'
+    }
+  ],
+  traceId: 'bd338a919c992fa56465348bf497e418'
+}
+[Task f1b8c999-75e8-4b23-9122-a96fcb434571] Created new task and history.
+[WZA] Processing task f1b8c999-75e8-4b23-9122-a96fcb434571 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520153636",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:54.076Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"5s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"5s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '5s'
+    }
+  ],
+  traceId: '7177e58093b5949ec2fd0840e27d8566'
+}
+[Task 74236c0f-4e80-4f75-bc19-50e86fcdfc0c] Created new task and history.
+[WZA] Processing task 74236c0f-4e80-4f75-bc19-50e86fcdfc0c with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520155087",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:55.518Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"4s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"4s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '4s'
+    }
+  ],
+  traceId: 'ec69c05027743595de78362a630dbb34'
+}
+[Task 253852e5-5c59-4eb6-9a7c-fc9a3db712bb] Created new task and history.
+[WZA] Processing task 253852e5-5c59-4eb6-9a7c-fc9a3db712bb with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520156305",
+    "status": {
+      "state": "failed",
+      "timestamp": "2025-04-13T04:55:56.746Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The tavern server encountered an error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-2.0-flash\",\"location\":\"global\"},\"quotaValue\":\"15\"}]},{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"3s\"}]*"
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"},"quotaValue":"15"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"2s"}]
+    at handleResponseNotOk (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeRequest (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async ChatSession.sendMessage (/home/patruff/A2A/samples/js/node_modules/@google/generative-ai/dist/index.js:1205:9)
+    at async callGemini (/home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:792:26)
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/googleai/lib/gemini.js:837:11
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:205:14
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/action.js:126:27
+    at async /home/patruff/A2A/samples/js/node_modules/@genkit-ai/core/lib/tracing/instrumentation.js:65:16 {
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [Array]
+    },
+    { '@type': 'type.googleapis.com/google.rpc.Help', links: [Array] },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '2s'
+    }
+  ],
+  traceId: 'a824b4a3115f6ea4a85590221fd16b4d'
+}
+[Task 91d89740-4e76-41fb-aad3-7a97566983ee] Created new task and history.
+[WZA] Processing task 91d89740-4e76-41fb-aad3-7a97566983ee with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744520163325",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T04:56:06.673Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome exudes a warm, inviting atmosphere, the air thick with the mingled scents of roasting meat, spilled ale, and pipeweed.*\n\nEvening has settled, and the tavern is comfortably busy. A crackling fire in the large stone fireplace casts dancing shadows on the wooden walls, where various mismatched tankards and hunting trophies are displayed. Several sturdy wooden tables are scattered around the room, each occupied by a mix of locals and travelers.\n\n**Currently in the tavern:**\n\n*   **Bob:** A friendly, middle-aged human with a hearty laugh and a neatly trimmed beard. He's tending bar, polishing mugs, and carefully monitoring the patrons, ever vigilant in his goal to protect the valuable blue gemstone. He is subtly trying to smell Homie to make sure he is not carrying any bags of holding.\n*   **Homie:** A cheerful gnome thief with nimble fingers, currently performing a simple magic trick to try and create a diversion so he can steal the valuable blue gemstone. He is trying to execute his goal of stealing the gemstone behind the bar without getting caught, and is hoping Bob's clumsiness and WZA's mind-reading failure will help him.\n*   **WZA:** A wise-looking wizard with mystical mind-reading capabilities, sitting quietly in a corner booth. He's trying to observe the patrons, subtly attempting to detect any malicious intentions, but his powers seem to be failing him.\n\nThe glittering blue gemstone sits securely in a display case behind the bar, the object of both Homie and Bob's attention. The tension is palpable, though masked by the jovial tavern atmosphere."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task task-1744520172160] Created new task and history.
+[WZA] Processing task task-1744520172160 with state submitted
