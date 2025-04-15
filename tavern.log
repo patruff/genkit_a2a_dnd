@@ -85,3 +85,15 @@ A2A Server listening on port 41247 at path /
 [Task task-1744542296225] Created new task and history.
 [TavernServer] Processing task task-1744542296225 with state submitted
 [TavernServer] Task task-1744542296225 finished with state: completed
+[Task task-1744544153949] Created new task and history.
+[TavernServer] Processing task task-1744544153949 with state submitted
+[TavernServer] Task task-1744544153949 finished with state: input-required
+[Task wza-tavern-query-1744544171084] Created new task and history.
+[TavernServer] Processing task wza-tavern-query-1744544171084 with state submitted
+[TavernServer] Task wza-tavern-query-1744544171084 finished with state: completed
+[Task wza-tavern-query-1744544178686] Created new task and history.
+[TavernServer] Processing task wza-tavern-query-1744544178686 with state submitted
+[TavernServer] Task wza-tavern-query-1744544178686 finished with state: completed
+[Task task-1744544211952] Created new task and history.
+[TavernServer] Processing task task-1744544211952 with state submitted
+[TavernServer] Task task-1744544211952 finished with state: input-required

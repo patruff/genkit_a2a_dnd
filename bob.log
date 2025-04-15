@@ -40,3 +40,9 @@ A2A Server listening on port 41246 at path /
 [Task task-1744542278781] Created new task and history.
 [BobAgent] Processing task task-1744542278781 with state submitted
 [BobAgent] Task task-1744542278781 finished with state: input-required
+[Task task-1744544165466] Created new task and history.
+[BobAgent] Processing task task-1744544165466 with state submitted
+[BobAgent] Task task-1744544165466 finished with state: input-required
+[Task task-1744544195671] Created new task and history.
+[BobAgent] Processing task task-1744544195671 with state submitted
+[BobAgent] Task task-1744544195671 finished with state: input-required

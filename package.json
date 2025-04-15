@@ -19,7 +19,11 @@
     "agents:bob": "npx tsx src/agents/bob/index.ts",
     "agents:dndserver": "npx tsx src/agents/dndserver/index.ts",
     "agents:wizard": "npx tsx src/agents/wizard/index.ts",
-    "scenario": "npx tsx src/agents/dndserver/start_scenario.ts"
+    "scenario": "npx tsx src/agents/dndserver/start_scenario.ts",
+    "agent:generate": "node src/scripts/agent_generator.js generate",
+    "agent:list": "node src/scripts/agent_generator.js list",
+    "start:pipwick": "npx tsx src/agents/pipwick/index.ts",
+    "start:thorne": "npx tsx src/agents/thorne/index.ts"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.4.0",
@@ -31,9 +35,11 @@
     "@types/uuid": "^10.0.0",
     "body-parser": "^2.2.0",
     "chalk": "^5.4.1",
+    "commander": "^11.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "genkit": "^1.4.0",
+    "handlebars": "^4.7.8",
     "node-fetch": "^2.7.0",
     "uuid": "^11.1.0"
   },

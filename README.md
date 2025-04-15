@@ -6,6 +6,7 @@ This system creates a virtual D&D tavern called "The Tipsy Gnome" with interacti
 
 - A tavern server that manages the environment and coordinates characters
 - Character agents (Homie the gnome thief, Bob the bartender, and WZA the wizard)
+- **Agent Templating System** for easily creating new D&D character agents
 - **MCP Integration** allowing WZA to access the filesystem for "Future Sight" capabilities
 - **Mind Reading capabilities** that allow WZA to detect other agents via the A2A protocol 
 - **Interactive narrative** with dramatic progressions and character development
@@ -84,19 +85,6 @@ Each character in the tavern is implemented as an A2A agent with its own agent c
         "[ACTION: SEE_FUTURE]",
         "[ACTION: CHANGE_FUTURE content: \"A new future vision\"]"
       ]
-    },
-    {
-      "id": "knowledge_retrieval",
-      "name": "Magical Knowledge Repository",
-      "description": "Can access ancient magical knowledge about artifacts, spells, and lore",
-      "tags": ["dnd", "wizard", "arcana", "history", "knowledge"],
-      "examples": [
-        "What do you know about magical gems?",
-        "Tell me about protection spells.",
-        "What knowledge do you have about thieves and magical items?",
-        "Research the Blue Sapphire of Netheril.",
-        "Consult your magical repository about warding spells."
-      ]
     }
   ],
   "metadata": {
@@ -106,7 +94,7 @@ Each character in the tavern is implemented as an A2A agent with its own agent c
     "mcp": {
       "enabled": true,
       "endpoint": "http://localhost:8080",
-      "capabilities": ["filesystem", "lightrag"],
+      "capabilities": ["filesystem"],
       "tools": [
         {
           "name": "filesystem/readFile",
@@ -115,23 +103,100 @@ Each character in the tavern is implemented as an A2A agent with its own agent c
         {
           "name": "filesystem/writeFile", 
           "description": "Write content to a file"
-        },
-        {
-          "name": "query_rag",
-          "description": "Query the knowledge repository"
-        },
-        {
-          "name": "insert_text",
-          "description": "Add new knowledge to the repository"
-        },
-        {
-          "name": "clear_rag",
-          "description": "Clear the knowledge repository"
         }
       ]
     }
   }
 }
+```
+
+## Agent Templating System
+
+The system includes a templating system for creating new D&D character agents. This allows you to quickly generate new agents by defining their properties in agent card configurations.
+
+### Location of Templates
+
+Templates are located in the following directories:
+- **Agent Templates**: `/src/templates/`
+- **Agent Cards**: `/src/agentcards/`
+- **Generator Script**: `/src/scripts/agent_generator.js`
+
+### Example Agent Card
+
+Here's an example agent card for a gnome bard:
+
+```json
+{
+  "agent_id": "pipwick",
+  "character": {
+    "name": "Pipwick Glitterstring",
+    "race": "Gnome",
+    "class": "Bard",
+    "level": 6,
+    "personality": "cheerful and witty",
+    "speech_style": "poetic and musical",
+    "description": "A Dungeons & Dragons character agent - Pipwick is a cheerful gnome bard who uses music and stories to charm audiences and share valuable information about the world around them.",
+    "port": 41249,
+    "initial_action": "Pipwick strums a cheerful tune on their lute and gives a little bow",
+    "skills": ["Performance", "Persuasion", "History", "Deception", "Insight"],
+    "stats": {
+      "strength": 8,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 13,
+      "wisdom": 10,
+      "charisma": 18
+    },
+    "skills_list": [
+      {
+        "id": "bardic_performance",
+        "name": "Bardic Performance",
+        "description": "Can perform music, poetry, and stories that inspire allies and influence others",
+        "tags": ["dnd", "bard", "performance", "charisma"],
+        "examples": [
+          "Can you play a song for us?",
+          "Tell us a story about ancient heroes.",
+          "Do you know any songs about dragons?"
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Generating a New Agent
+
+To generate a new agent from an agent card:
+
+```bash
+# List available agent cards
+npm run agent:list
+
+# Generate an agent from a specific card
+npm run agent:generate <card_name>
+
+# Example: Generate a gnome bard agent
+npm run agent:generate gnome_bard
+```
+
+This will:
+1. Create a new agent directory with all necessary files
+2. Generate the agent implementation based on the template
+3. Add an npm script to start the agent
+
+### Running a Generated Agent
+
+After generating an agent, you can start it using:
+
+```bash
+# Start a generated agent
+npm run start:<agent_id>
+
+# Example: Start the gnome bard agent
+npm run start:pipwick
+```
+
+For more details on the agent templating system, see the [Agent Templating README](src/README_AGENT_TEMPLATES.md).
 
 ## Getting Started
 
@@ -343,177 +408,6 @@ This configuration:
 3. Sets the allowed directory for file operations
 4. Is automatically generated with correct paths by the `easy_mcp_wizard.sh` script
 
-### How A2A and MCP Work Together
-
-The system integrates the A2A protocol for agent communication with MCP for tool access:
-
-1. **A2A provides agent discovery and communication**:
-   - Agents register capabilities through well-known endpoints
-   - Agents interact through standardized JSON-RPC messages
-   - The tavern server coordinates interactions between agents
-
-2. **MCP provides access to external tools using stdio**:
-   - The system spawns an MCP server subprocess
-   - Communication occurs through stdin/stdout pipes
-   - JSON-RPC messages follow the MCP protocol specification
-   - The MCP client tracks requests and matches responses
-
-3. **Integration flow**:
-   - WZA discovers Homie and Bob via A2A protocol
-   - WZA reads their intentions through A2A mind reading
-   - WZA accesses future.txt through MCP filesystem tools
-   - WZA alters the future by writing to the file via MCP
-   - The narrative progresses with A2A agent interactions
-
-The implementation demonstrates a clean approach to MCP integration using proper stdio-based communication rather than HTTP endpoints.
-
-## Example MCP Scenario Output
-
-Here's an example of what the MCP scenario looks like when run:
-
-```
-🔮 STARTING SCENARIO: WZA SEES THE FUTURE WITH MCP 🔮
-
-================================================================================
-STEP 1: Initializing Agents
-================================================================================
-
-Checking if agents are running on their respective ports...
-
-================================================================================
-STEP 2: Initializing MCP for WZA wizard
-================================================================================
-
-Registering filesystem MCP capability for WZA...
-Creating future.txt at ./wizard_data/future.txt for WZA to access...
-
-[MCP FILESYSTEM REQUEST] Operation: writeFile
-{
-  "path": "./wizard_data/future.txt",
-  "content": "Homie will try to steal Bob's gem tonight!"
-}
-
-[MCP FILESYSTEM RESPONSE]:
-{
-  "success": true,
-  "message": "File written successfully"
-}
-
-================================================================================
-STEP 3: WZA reads the future using MCP
-================================================================================
-
-[Simulated MCP Interaction] WZA accesses the filesystem to read future.txt...
-
-[MCP FILESYSTEM REQUEST] Operation: readFile
-{
-  "path": "./wizard_data/future.txt"
-}
-
-[MCP FILESYSTEM RESPONSE]:
-{
-  "content": "Homie will try to steal Bob's gem tonight!"
-}
-
-[WZA A2A REQUEST] Sending to http://localhost:41248:
-{
-  "jsonrpc": "2.0",
-  "method": "tasks/send",
-  "params": {
-    "id": "task-1234567890",
-    "message": {
-      "role": "user",
-      "parts": [
-        {
-          "text": "You just used your magical powers to see the future. The vision was clear: \"Homie will try to steal Bob's gem tonight!\". Announce what you've seen to the tavern!"
-        }
-      ]
-    }
-  }
-}
-
-[WZA A2A RESPONSE]:
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "id": "task-1234567890",
-    "status": {
-      "state": "input-required",
-      "message": {
-        "role": "agent",
-        "parts": [
-          {
-            "type": "text",
-            "text": "*WZA rises dramatically from his seat in the corner, his eyes glowing with an otherworldly blue light. He raises his staff, which begins to emanate arcane symbols that float in the air.*\n\n\"ATTENTION, PATRONS OF THE TIPSY GNOME!\" *his voice resonates with magical authority, causing the ambient conversations to cease immediately.*\n\n\"I have pierced the veil of time itself and glimpsed events yet to unfold. The future has revealed itself to me in no uncertain terms.\" *He points his staff directly at Homie, the gnome thief.*\n\n\"Homie will attempt to steal Bob's precious gem tonight! I have seen it clearly, as if it were happening before my very eyes!\"\n\n*WZA's eyes return to normal as he lowers his staff, the magical symbols fading.*\n\n\"The future can be changed, of course... but only if actions are altered. Bob, consider yourself warned. Homie...\" *he fixes the gnome with a knowing stare* \"...perhaps you might reconsider your plans for this evening?\""
-          }
-        ]
-      }
-    }
-  }
-}
-
-================================================================================
-STEP 6: WZA changes the future with MCP
-================================================================================
-
-[Simulated MCP Interaction] WZA accesses the filesystem to update future.txt...
-
-[MCP FILESYSTEM REQUEST] Operation: writeFile
-{
-  "path": "./wizard_data/future.txt",
-  "content": "Bob has protected the gem, Homie does not steal the gem now"
-}
-
-[MCP FILESYSTEM RESPONSE]:
-{
-  "success": true,
-  "message": "File written successfully"
-}
-
-[WZA A2A REQUEST] Sending to http://localhost:41248:
-{
-  "jsonrpc": "2.0",
-  "method": "tasks/send",
-  "params": {
-    "id": "task-1234567891",
-    "message": {
-      "role": "user",
-      "parts": [
-        {
-          "text": "You've used your magical powers to alter the future. You've written a new future that says: \"Bob has protected the gem, Homie does not steal the gem now\". Announce to everyone that you've changed fate itself!"
-        }
-      ]
-    }
-  }
-}
-
-[WZA A2A RESPONSE]:
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "id": "task-1234567891",
-    "status": {
-      "state": "input-required",
-      "message": {
-        "role": "agent",
-        "parts": [
-          {
-            "type": "text",
-            "text": "*WZA's eyes begin to glow with intense arcane energy once more. The wizard raises both hands toward the ceiling, causing mystical runes to appear in a circle around him. The air crackles with magical potential.*\n\n\"BEHOLD THE POWER TO ALTER DESTINY ITSELF!\" *he proclaims as the tavern patrons fall silent again, all eyes turning to the spectacle.*\n\n*The runes spinning around WZA begin to shift and change, rearranging themselves into new patterns.*\n\n\"I have reached across the threads of fate and rewoven them to a new design! The future changes before my very eyes!\" *His voice echoes with supernatural resonance.* \"Bob has taken heed of my warning and has protected the gem with additional wards and vigilance. Homie's path has shifted - he will NOT steal the gem tonight!\"\n\n*The magical energy subsides, and WZA lowers his arms as the floating runes fade away.*\n\n\"The currents of destiny now flow in a new direction. What was certain is now impossible. What was written has been unwritten and rewritten by my hand.\" *He looks between Bob and Homie with a satisfied smile.* \"Sometimes, foreknowledge itself is enough to change what is to come.\""
-          }
-        ]
-      }
-    }
-  }
-}
-
-🔮 THE MCP SCENARIO HAS CONCLUDED 🔮
-
-The final contents of future.txt: "Bob has protected the gem, Homie does not steal the gem now"
-```
-
 ## Summary of Key Files
 
 ### Core Script Files
@@ -521,6 +415,12 @@ The final contents of future.txt: "Bob has protected the gem, Homie does not ste
 - `run_direct_wizard.sh` - Alternative launcher using direct filesystem access
 - `run_wizard_scenario.sh` - Basic mind reading scenario
 - `start_a2a_agents.sh` - Script to start all A2A agents
+
+### Agent Templating Files
+- `/src/templates/` - Templates for agent files
+- `/src/agentcards/` - Agent card configurations
+- `/src/scripts/agent_generator.js` - Script for generating agents
+- `/src/README_AGENT_TEMPLATES.md` - Documentation for the templating system
 
 ### Configuration Files
 - `easy_mcp_config.json` - Configuration for the stdio-based MCP server
@@ -530,7 +430,6 @@ The final contents of future.txt: "Bob has protected the gem, Homie does not ste
 - `wizard_simple_mcp.js` - Main implementation with stdio-based MCP
 - `wizard_direct_scenario.js` - Alternative implementation with direct file access
 - `wizard_scenario.js` - Basic mind reading scenario implementation
-- `src/lightrag-mcp-client.js` - Library for LightRAG MCP integration
 - `src/mcp-client.js` - General MCP client library
 
 ---

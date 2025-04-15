@@ -1095,3 +1095,135 @@ A2A Server listening on port 41248 at path /
 [WZA] Processing task task-1744542274453 with state submitted
 [Task task-1744542291259] Created new task and history.
 [WZA] Processing task task-1744542291259 with state submitted
+[Task task-1744544171076] Created new task and history.
+[WZA] Processing task task-1744544171076 with state submitted
+[WZA] Processing mind reading for target: all (explicit action: false)
+[WZA] Starting mind reading for target: "all"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744544171084",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T11:36:14.211Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome is bustling with activity as the evening progresses*\n\nThe tavern is warm and inviting, with a crackling fire in the hearth casting dancing shadows on the walls. The air is thick with the aroma of roasted meats, freshly baked bread, and various ales and spirits. Mugs clink, voices chatter, and the occasional burst of laughter fills the space.\n\nCurrently, the following characters are present:\n\n*   **Bob (human bartender):** A friendly middle-aged human with a hearty laugh who keeps the tavern running. His current goal is to \"protect the gemstone on display behind the bar.\" He's currently tending bar, serving drinks and keeping a close eye on Homie. He just failed a Perception check, making him unaware of Homie's subtle movements.\n\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile. His current goal is to \"acquire the glittering blue gemstone.\" He is feigning interest in WZA's magic trick, while secretly trying to create an opportunity to steal the gemstone.\n\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. His goal is \"understand the motivations of Bob and Homie related to the gem.\" He is currently performing a minor illusion for Homie while simultaneously trying to read his thoughts.\n\nThe gemstone, a glittering blue gem displayed in a case behind the bar, is the focal point of much of the tension in the room. Bob is subtly guarding it, Homie is plotting to steal it, and WZA is trying to understand its significance."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] Will read minds of 2 characters: Homie, Bob
+[WZA] Character Homie already discovered, using cached information
+[WZA] Character Bob already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  },
+  {
+    "name": "Bob",
+    "description": "A friendly human bartender who runs The Tipsy Gnome tavern",
+    "type": "human bartender",
+    "abilities": "Perception, Insight, Local Knowledge",
+    "role": "Runs The Tipsy Gnome tavern, serving drinks and keeping the peace",
+    "skills": "Bartending, Conversation, Local Knowledge, Perception",
+    "personality": "Friendly, Observant, Good listener",
+    "goal": "To keep the tavern running smoothly and protect it from thieves"
+  }
+]
+[Task task-1744544178683] Created new task and history.
+[WZA] Processing task task-1744544178683 with state submitted
+[WZA] Processing mind reading for target: Homie (explicit action: true)
+[WZA] Starting mind reading for target: "Homie"
+[WZA] Querying tavern at http://localhost:41247 for character information
+[WZA] Received tavern data: {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "id": "wza-tavern-query-1744544178686",
+    "status": {
+      "state": "completed",
+      "timestamp": "2025-04-13T11:36:21.686Z",
+      "message": {
+        "role": "agent",
+        "parts": [
+          {
+            "type": "text",
+            "text": "*The Tipsy Gnome welcomes weary travelers with a warm and inviting atmosphere*\n\nEvening has settled upon the tavern, casting long shadows from the flickering candlelight. The air is thick with the mingled scents of roasted meats, mulled wine, and the earthy aroma of pipeweed. A crackling fire in the large stone fireplace casts dancing shadows on the walls, illuminating the various patrons scattered throughout the room.\n\n**Characters currently present:**\n\n*   **Bob (human bartender):** A friendly middle-aged human with a hearty laugh. He's currently tending bar, polishing glasses and keeping a watchful eye on the patrons. Bob is extremely protective of the tavern and its reputation.\n*   **Homie (gnome thief):** A cheerful gnome thief with nimble fingers and a mischievous smile. He's currently perched at the bar, appearing nonchalant while subtly planning his next heist.\n*   **WZA (mind-reading wizard):** A wise wizard with mystical mind-reading capabilities and keen observational skills. He's sitting quietly in a corner, observing the other patrons and subtly probing their thoughts.\n\n**Atmosphere:**\n\nThe tavern is currently bustling with activity. Laughter and conversation fill the air, punctuated by the clinking of mugs and the occasional burst of song. Despite the lively atmosphere, there's an undercurrent of tension, fueled by Homie's presence and WZA's veiled observations."
+          }
+        ]
+      }
+    },
+    "artifacts": []
+  }
+}
+[WZA] No character data found in tavern response, using default character information
+[WZA] Will read minds of 1 characters: Homie
+[WZA] Character Homie already discovered, using cached information
+[WZA] Final mind reading results: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[WZA] Sending discovered agents to LLM prompt: [
+  {
+    "name": "Homie",
+    "description": "A cheerful gnome thief with nimble fingers and a mischievous smile",
+    "type": "gnome thief",
+    "abilities": "Stealth, Lockpicking, Sleight of Hand",
+    "role": "Steals valuable items from unsuspecting patrons",
+    "skills": "Stealing, Sneaking, Deception, Lockpicking",
+    "personality": "Mischievous, Cunning, Quick-witted",
+    "goal": "To acquire valuable treasures without being detected"
+  }
+]
+[Task task-1744544186537] Created new task and history.
+[WZA] Processing task task-1744544186537 with state submitted
+[Task task-1744544191123] Created new task and history.
+[WZA] Processing task task-1744544191123 with state submitted
+[Task task-1744544207806] Created new task and history.
+[WZA] Processing task task-1744544207806 with state submitted

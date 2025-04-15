@@ -40,3 +40,9 @@ A2A Server listening on port 41245 at path /
 [Task task-1744542285253] Created new task and history.
 [DnDAgent] Processing task task-1744542285253 with state submitted
 [DnDAgent] Task task-1744542285253 finished with state: completed
+[Task task-1744544159022] Created new task and history.
+[DnDAgent] Processing task task-1744544159022 with state submitted
+[DnDAgent] Task task-1744544159022 finished with state: input-required
+[Task task-1744544201388] Created new task and history.
+[DnDAgent] Processing task task-1744544201388 with state submitted
+[DnDAgent] Task task-1744544201388 finished with state: completed
