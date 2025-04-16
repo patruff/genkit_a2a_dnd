@@ -432,6 +432,18 @@ This configuration:
 - `wizard_scenario.js` - Basic mind reading scenario implementation
 - `src/mcp-client.js` - General MCP client library
 
+## Portability and Dependencies
+
+This codebase is designed to be completely portable and self-contained within the `js` directory. No files or dependencies outside of the `js` folder are required:
+
+- **Dynamic Configuration**: Configuration files are generated at runtime
+- **Relative Paths**: All file paths are relative to the JS directory
+- **Self-contained Templates**: The agent templating system is fully contained in the src directory
+- **Automatic MCP Setup**: The MCP wizard script auto-detects node and creates appropriate configuration
+- **Local Storage**: By default, all data is stored in a local `wizard_data` directory
+
+When porting this code to another system, you can simply copy the entire `js` directory with all its contents.
+
 ---
 **NOTE:** 
 This is sample code for demonstration purposes only.

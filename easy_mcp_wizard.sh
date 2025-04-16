@@ -23,8 +23,8 @@ if ! npm list chalk > /dev/null 2>&1; then
   npm install chalk
 fi
 
-# Make sure the anthropicFun directory exists
-FUTURE_DIR="/mnt/c/Users/patru/anthropicFun"
+# Set up a future directory within the JS project
+FUTURE_DIR="./wizard_data"
 echo -e "${BLUE}Checking if directory exists: ${FUTURE_DIR}${NC}"
 if [ ! -d "$FUTURE_DIR" ]; then
   echo -e "${YELLOW}Creating directory: ${FUTURE_DIR}${NC}"
