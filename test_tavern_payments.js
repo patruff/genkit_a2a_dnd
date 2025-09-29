@@ -1,4 +1,6 @@
 // Test script for D&D Tavern Solana Payment Integration
+// NOTE: Using very low SOL amounts (0.0001-0.0002 SOL) for safe testing
+// Configure actual wallet addresses in config.json before running
 import fetch from 'node-fetch';
 import { setTimeout } from 'timers/promises';
 
@@ -6,8 +8,6 @@ import { setTimeout } from 'timers/promises';
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
-async function testTavernPayments() {
   console.log('🏰========================================================🏰');
   console.log('    TESTING D&D TAVERN SOLANA PAYMENT INTEGRATION');
   console.log('🏰========================================================🏰');
@@ -58,11 +58,8 @@ async function testTavernPayments() {
           id: `homie-pays-${Date.now()}`,
           message: {
             role: 'user',
-            parts: [{ text: 'Homie, pay Bob 0.15 SOL for the ale and some bread. You owe him for the good service!' }]
+            parts: [{ text: 'Homie, pay Bob 0.0002 SOL for the ale and some bread. You owe him for the good service!' }]
           }
-        }
-      })
-    });
     
     if (homiePaymentResponse.ok) {
       const result = await homiePaymentResponse.json();

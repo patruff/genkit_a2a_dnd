@@ -1,0 +1,41 @@
+{
+  "wallets": {
+    "homie": {
+      "name": "Homie the Gnome Thief",
+      "characterType": "gnome_thief",
+      "phantomAddress": "HOMIE_PHANTOM_WALLET_ADDRESS_HERE",
+      "initialBalance": 0.001,
+      "description": "Replace HOMIE_PHANTOM_WALLET_ADDRESS_HERE with actual Phantom wallet address"
+    },
+    "bob": {
+      "name": "Bob the Bartender", 
+      "characterType": "human_bartender",
+      "phantomAddress": "BOB_PHANTOM_WALLET_ADDRESS_HERE",
+      "initialBalance": 0.002,
+      "description": "Replace BOB_PHANTOM_WALLET_ADDRESS_HERE with actual Phantom wallet address"
+    },
+    "wza": {
+      "name": "WZA the Wizard",
+      "characterType": "wizard", 
+      "phantomAddress": "WZA_PHANTOM_WALLET_ADDRESS_HERE",
+      "initialBalance": 0.0015,
+      "description": "Replace WZA_PHANTOM_WALLET_ADDRESS_HERE with actual Phantom wallet address"
+    }
+  },
+  "paymentAmounts": {
+    "beerPrice": 0.0001,
+    "standardPayment": 0.0002,
+    "theftAmount": 0.00005,
+    "tipAmount": 0.00001
+  },
+  "network": {
+    "type": "devnet",
+    "rpcUrl": "https://api.devnet.solana.com"
+  },
+  "settings": {
+    "enablePayments": true,
+    "enableTheft": true,
+    "logTransactions": true,
+    "description": "Very low SOL amounts for testing - safe for development"
+  }
+}

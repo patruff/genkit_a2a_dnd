@@ -4,24 +4,36 @@
  */
 
 import { SimpleA2PClient } from '@a2p-protocol/mcp-service';
+import * as fs from 'fs';
+import * as path from 'path';
 
-export interface TavernWallet {
-  agentId: string;
-  name: string;
-  characterType: 'gnome_thief' | 'human_bartender' | 'wizard';
-  balance: number;
-  publicKey?: string;
-}
+// Load configuration
+const configPath = path.join(process.cwd(), 'config.json');
+let config: any = {};
 
-export interface PaymentTransaction {
-  id: string;
-  fromAgent: string;
-  toAgent: string;
-  amount: number;
-  message: string;
-  transactionType: 'payment' | 'theft' | 'purchase';
-  timestamp: string;
-  blockchainTxId?: string;
+try {
+  const configData = fs.readFileSync(configPath, 'utf8');
+  config = JSON.parse(configData);
+  console.log('[Config] Loaded payment configuration from config.json');
+} catch (error) {
+  console.warn('[Config] Could not load config.json, using default values:', error.message);
+  // Default fallback config
+  config = {
+    wallets: {
+      homie: { initialBalance: 0.001, phantomAddress: 'DEFAULT_HOMIE_ADDRESS' },
+      bob: { initialBalance: 0.002, phantomAddress: 'DEFAULT_BOB_ADDRESS' },
+      wza: { initialBalance: 0.0015, phantomAddress: 'DEFAULT_WZA_ADDRESS' }
+    },
+    paymentAmounts: {
+      beerPrice: 0.0001,
+      standardPayment: 0.0002,
+      theftAmount: 0.00005
+    },
+    network: {
+      type: 'devnet',
+      rpcUrl: 'https://api.devnet.solana.com'
+    }
+  };
 }
 
 export class SolanaPaymentService {
@@ -31,8 +43,8 @@ export class SolanaPaymentService {
 
   constructor() {
     this.client = new SimpleA2PClient({
-      network: process.env.A2P_NETWORK || 'devnet',
-      rpcUrl: process.env.A2P_RPC_URL || 'https://api.devnet.solana.com'
+      network: config.network?.type || process.env.A2P_NETWORK || 'devnet',
+      rpcUrl: config.network?.rpcUrl || process.env.A2P_RPC_URL || 'https://api.devnet.solana.com'
     });
   }
 
@@ -43,29 +55,59 @@ export class SolanaPaymentService {
     console.log('[Solana] Initializing tavern character wallets...');
 
     // Initialize Homie the Gnome Thief
+    const homieConfig = config.wallets?.homie || { initialBalance: 0.001 };
     const homieAgent = await this.client.createAgent({
       name: 'Homie the Gnome Thief',
       capabilities: ['stealth', 'lockpicking', 'pickpocketing', 'coin_purse_management'],
-      initialBalance: 0.5 // Starting with some SOL for thievery activities
+      initialBalance: homieConfig.initialBalance // Very low starting amount from config
     });
 
     this.wallets.set('homie', {
       agentId: homieAgent.id,
       name: 'Homie the Gnome Thief',
       characterType: 'gnome_thief',
-      balance: 0.5,
-      publicKey: homieAgent.publicKey
+      balance: homieConfig.initialBalance,
+      publicKey: homieAgent.publicKey,
+      phantomAddress: homieConfig.phantomAddress
     });
 
     // Initialize Bob the Bartender
+    const bobConfig = config.wallets?.bob || { initialBalance: 0.002 };
     const bobAgent = await this.client.createAgent({
       name: 'Bob the Bartender',
       capabilities: ['tavern_management', 'drink_mixing', 'payment_processing', 'merchant_services'],
-      initialBalance: 2.0 // Bartender starts with more SOL for business operations
+      initialBalance: bobConfig.initialBalance // Very low starting amount from config
     });
 
     this.wallets.set('bob', {
       agentId: bobAgent.id,
+      name: 'Bob the Bartender',
+      characterType: 'human_bartender',
+      balance: bobConfig.initialBalance,
+      publicKey: bobAgent.publicKey,
+      phantomAddress: bobConfig.phantomAddress
+    });
+
+    // Initialize WZA the Wizard
+    const wzaConfig = config.wallets?.wza || { initialBalance: 0.0015 };
+    const wzaAgent = await this.client.createAgent({
+      name: 'WZA the Wizard',
+      capabilities: ['divination', 'mind_reading', 'future_sight', 'magical_payments'],
+      initialBalance: wzaConfig.initialBalance // Very low starting amount from config
+    });
+
+    this.wallets.set('wza', {
+      agentId: wzaAgent.id,
+      name: 'WZA the Wizard',
+      characterType: 'wizard',
+      balance: wzaConfig.initialBalance,
+      publicKey: wzaAgent.publicKey,
+      phantomAddress: wzaConfig.phantomAddress
+    });
+
+    console.log('[Solana] All tavern wallets initialized successfully with very low SOL amounts!');
+    console.log(`[Solana] Homie: ${homieConfig.initialBalance} SOL, Bob: ${bobConfig.initialBalance} SOL, WZA: ${wzaConfig.initialBalance} SOL`);
+  }
       name: 'Bob the Bartender',
       characterType: 'human_bartender',
       balance: 2.0,
@@ -100,23 +142,34 @@ export class SolanaPaymentService {
     if (!homieWallet || !bobWallet) {
       throw new Error('Wallet not found for payment participants');
     }
+  /**
+   * Process a payment from WZA to Bob (wizard buying beer)
+   */
+  async wzaBuysBeer(beerType: string = 'Mystical Ale'): Promise<PaymentTransaction> {
+    const wzaWallet = this.wallets.get('wza');
+    const bobWallet = this.wallets.get('bob');
+    const beerPrice = config.paymentAmounts?.beerPrice || 0.0001; // Very low beer price from config
 
-    console.log(`[Solana] Homie pays Bob ${amount} SOL for: ${reason}`);
+    if (!wzaWallet || !bobWallet) {
+      throw new Error('Wallet not found for beer purchase');
+    }
+
+    console.log(`[Solana] WZA buys ${beerType} from Bob for ${beerPrice} SOL (very low amount)`);
 
     const result = await this.client.transferFunds({
-      fromAgentId: homieWallet.agentId,
+      fromAgentId: wzaWallet.agentId,
       toAgentId: bobWallet.agentId,
-      amount: amount,
-      message: `🧙‍♂️ Gnome's Payment: ${reason}`
+      amount: beerPrice,
+      message: `🍺 Wizard's Beer Purchase: ${beerType}`
     });
 
     const transaction: PaymentTransaction = {
-      id: `homie-bob-${Date.now()}`,
-      fromAgent: 'homie',
+      id: `wza-beer-${Date.now()}`,
+      fromAgent: 'wza',
       toAgent: 'bob',
-      amount: amount,
-      message: reason,
-      transactionType: 'payment',
+      amount: beerPrice,
+      message: `Purchased ${beerType}`,
+      transactionType: 'purchase',
       timestamp: new Date().toISOString(),
       blockchainTxId: result.transactionId
     };
@@ -126,14 +179,6 @@ export class SolanaPaymentService {
 
     return transaction;
   }
-
-  /**
-   * Process a payment from WZA to Bob (wizard buying beer)
-   */
-  async wzaBuysBeer(beerType: string = 'Mystical Ale'): Promise<PaymentTransaction> {
-    const wzaWallet = this.wallets.get('wza');
-    const bobWallet = this.wallets.get('bob');
-    const beerPrice = 0.1; // Standard beer price in SOL
 
     if (!wzaWallet || !bobWallet) {
       throw new Error('Wallet not found for beer purchase');
@@ -168,26 +213,27 @@ export class SolanaPaymentService {
   /**
    * Process theft by Homie (stealing from other patrons or finding coins)
    */
-  async homieStealsMoney(targetName: string, amount: number): Promise<PaymentTransaction> {
+  async homieStealsMoney(targetName: string, amount?: number): Promise<PaymentTransaction> {
     const homieWallet = this.wallets.get('homie');
+    const theftAmount = amount || config.paymentAmounts?.theftAmount || 0.00005; // Very low theft amount from config
 
     if (!homieWallet) {
       throw new Error('Homie wallet not found for theft operation');
     }
 
-    console.log(`[Solana] Homie steals ${amount} SOL from ${targetName}`);
+    console.log(`[Solana] Homie steals ${theftAmount} SOL from ${targetName} (very low amount)`);
 
     // Create a temporary "victim" agent for the theft simulation
     const victimAgent = await this.client.createAgent({
       name: `${targetName} (Tavern Patron)`,
       capabilities: ['tavern_patron'],
-      initialBalance: amount + 0.1 // Ensure victim has enough to be stolen from
+      initialBalance: theftAmount + 0.0001 // Ensure victim has enough to be stolen from (very low)
     });
 
     const result = await this.client.transferFunds({
       fromAgentId: victimAgent.id,
       toAgentId: homieWallet.agentId,
-      amount: amount,
+      amount: theftAmount,
       message: `💰 Gnome's Theft: Pickpocketed from ${targetName}`
     });
 
@@ -195,7 +241,7 @@ export class SolanaPaymentService {
       id: `homie-theft-${Date.now()}`,
       fromAgent: targetName.toLowerCase().replace(' ', '_'),
       toAgent: 'homie',
-      amount: amount,
+      amount: theftAmount,
       message: `Stole from ${targetName}`,
       transactionType: 'theft',
       timestamp: new Date().toISOString(),
@@ -207,9 +253,8 @@ export class SolanaPaymentService {
 
     return transaction;
   }
-
   /**
-   * Get wallet balance for a character
+   * Get wallet balance for a specific character
    */
   async getWalletBalance(characterId: string): Promise<number> {
     const wallet = this.wallets.get(characterId);
@@ -220,6 +265,20 @@ export class SolanaPaymentService {
     const balance = await this.client.getBalance(wallet.agentId);
     wallet.balance = balance;
     return balance;
+  }
+
+  /**
+   * Get wallet configuration from config.json
+   */
+  getWalletConfig(): any {
+    return config.wallets || {};
+  }
+
+  /**
+   * Get payment amounts configuration from config.json
+   */
+  getPaymentAmounts(): any {
+    return config.paymentAmounts || {};
   }
 
   /**
