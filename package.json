@@ -23,12 +23,18 @@
     "agent:generate": "node src/scripts/agent_generator.js generate",
     "agent:list": "node src/scripts/agent_generator.js list",
     "start:pipwick": "npx tsx src/agents/pipwick/index.ts",
-    "start:thorne": "npx tsx src/agents/thorne/index.ts"
+    "start:thorne": "npx tsx src/agents/thorne/index.ts",
+    "tavern:start": "./start_tavern_with_payments.sh",
+    "tavern:test": "node test_tavern_payments.js",
+    "payments:init": "npx @a2p-protocol/mcp-service",
+    "solana:devnet": "A2P_NETWORK=devnet A2P_RPC_URL=https://api.devnet.solana.com npm run payments:init"
   },
   "dependencies": {
+    "@a2p-protocol/mcp-service": "^1.0.0",
     "@genkit-ai/googleai": "^1.4.0",
     "@genkit-ai/vertexai": "^1.4.0",
     "@modelcontextprotocol/server-filesystem": "^2025.3.28",
+    "@solana/web3.js": "^1.95.2",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node-fetch": "^2.6.12",

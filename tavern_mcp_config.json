@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "a2p-solana": {
+      "command": "node",
+      "args": ["node_modules/@a2p-protocol/mcp-service/dist/SimpleA2PMCPServer.js"],
+      "env": {
+        "A2P_NETWORK": "devnet",
+        "A2P_RPC_URL": "https://api.devnet.solana.com"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"],
+      "env": {}
+    }
+  }
+}

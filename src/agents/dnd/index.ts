@@ -144,12 +144,12 @@ async function* dndAgentHandler(
 const dndAgentCard: schema.AgentCard = {
   name: "Homie the Gnome Thief",
   description:
-    "A Dungeons & Dragons character agent - Homie is a cheerful gnome thief who specializes in lockpicking, stealth, and getting into trouble.",
-  url: "http://localhost:41245", // Using a different port to avoid conflicts
+    "A Dungeons & Dragons character agent - Homie is a sneaky gnome thief with nimble fingers, lockpicking abilities, and a talent for 'redistributing' wealth. Now equipped with a Phantom wallet for blockchain-based thievery and payments.",
+  url: "http://localhost:41245",
   provider: {
     organization: "A2A Samples",
   },
-  version: "0.0.1",
+  version: "0.2.0",
   capabilities: {
     streaming: false,
     pushNotifications: false,
@@ -174,7 +174,77 @@ const dndAgentCard: schema.AgentCard = {
         "Roll a stealth check to avoid detection.",
       ],
     },
+    {
+      id: "solana_payments",
+      name: "Blockchain Payments",
+      description: "Can send and receive SOL payments through Phantom wallet integration, perfect for tavern transactions",
+      tags: ["solana", "payments", "phantom", "blockchain", "tavern"],
+      examples: [
+        "Pay Bob 0.1 SOL for the ale",
+        "Send payment to the bartender for my drinks",
+        "Transfer some SOL to cover my tab",
+        "What's my wallet balance?",
+        "Show me my recent transactions"
+      ]
+    },
+    {
+      id: "pickpocketing",
+      name: "Digital Pickpocketing",
+      description: "Can 'liberate' SOL from unsuspecting tavern patrons through stealthy blockchain transactions",
+      tags: ["theft", "stealth", "solana", "pickpocket", "gnome"],
+      examples: [
+        "Steal some coins from that wealthy merchant",
+        "Pickpocket the sleeping patron in the corner",
+        "Can you 'borrow' some SOL from someone?",
+        "Use your thieving skills to get some money",
+        "What valuables can you find around here?"
+      ]
+    },
+    {
+      id: "coin_purse_management",
+      name: "Coin Purse Management",
+      description: "Expert at managing stolen goods and legitimate earnings through secure wallet operations",
+      tags: ["wallet", "management", "security", "gnome", "finance"],
+      examples: [
+        "How much have you stolen today?",
+        "Show me your coin purse contents",
+        "What's your total wealth?",
+        "Organize your stolen treasures",
+        "Check your wallet security"
+      ]
+    }
   ],
+  metadata: {
+    icon: "🧙‍♂️💰",
+    theme_color: "#8B4513",
+    display_name: "Homie the Gnome Thief",
+    character_stats: {
+      race: "Gnome",
+      class: "Thief",
+      level: 5,
+      stats: {
+        strength: 8,
+        dexterity: 16,
+        constitution: 10,
+        intelligence: 14,
+        wisdom: 12,
+        charisma: 15
+      },
+      skills: ["Stealth", "Lockpicking", "Sleight of Hand", "Deception", "Acrobatics"]
+    },
+    phantom_wallet: {
+      enabled: true,
+      network: "devnet",
+      capabilities: ["pickpocket_transactions", "stealth_payments", "coin_purse_manipulation", "shadow_transfers"],
+      character_type: "gnome_thief"
+    },
+    solana_integration: {
+      can_send_payments: true,
+      can_receive_payments: true,
+      can_perform_theft: true,
+      special_abilities: ["pickpocket_transactions", "stealth_payments", "coin_purse_manipulation", "shadow_transfers"]
+    }
+  }
 };
 
 // Create server with the task handler. Defaults to InMemoryTaskStore.

@@ -152,12 +152,12 @@ async function* bobAgentHandler(
 const bobAgentCard: schema.AgentCard = {
   name: "Bob the Bartender",
   description:
-    "A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days.",
+    "A Dungeons & Dragons character agent - Bob is a friendly human bartender at The Tipsy Gnome tavern, with a wealth of knowledge about local gossip and a few stories from his former adventuring days. Now accepts SOL payments through his Phantom wallet for all tavern services.",
   url: "http://localhost:41246", // Using a different port to avoid conflicts
   provider: {
     organization: "A2A Samples",
   },
-  version: "0.0.1",
+  version: "0.2.0",
   capabilities: {
     streaming: false,
     pushNotifications: false,
@@ -182,7 +182,88 @@ const bobAgentCard: schema.AgentCard = {
         "What's the story behind this tavern's name?",
       ],
     },
+    {
+      id: "tavern_payment_processing",
+      name: "Tavern Payment Processing",
+      description: "Accepts SOL payments for drinks, food, and lodging through secure Phantom wallet integration",
+      tags: ["solana", "payments", "merchant", "tavern", "phantom"],
+      examples: [
+        "I'd like to pay for my drinks with SOL",
+        "Accept payment for the room upstairs",
+        "Process payment for the group's tab",
+        "What's the total for our order?",
+        "Can you take SOL for this meal?"
+      ]
+    },
+    {
+      id: "merchant_services",
+      name: "Merchant Services",
+      description: "Provides various tavern services with transparent SOL pricing and secure blockchain transactions",
+      tags: ["merchant", "services", "blockchain", "pricing", "tavern"],
+      examples: [
+        "What are your prices in SOL?",
+        "Show me the tavern menu with prices",
+        "What services do you offer?",
+        "Can I get a receipt for my payment?",
+        "Do you offer any discounts for regular customers?"
+      ]
+    },
+    {
+      id: "tip_jar_management",
+      name: "Digital Tip Jar",
+      description: "Manages a digital tip jar for excellent service, accepting SOL tips from satisfied customers",
+      tags: ["tips", "service", "solana", "appreciation", "hospitality"],
+      examples: [
+        "Here's a tip for great service",
+        "Add a tip to my payment",
+        "You deserve extra SOL for that story",
+        "Keep the change as a tip",
+        "Thanks for the excellent service, here's some SOL"
+      ]
+    }
   ],
+  metadata: {
+    icon: "🍺💰",
+    theme_color: "#8B4513",
+    display_name: "Bob the Bartender",
+    character_stats: {
+      race: "Human",
+      class: "Commoner",
+      occupation: "Bartender",
+      age: 45,
+      stats: {
+        strength: 12,
+        dexterity: 10,
+        constitution: 14,
+        intelligence: 11,
+        wisdom: 13,
+        charisma: 15
+      },
+      traits: ["Friendly", "Attentive", "Good listener", "Knows all the local gossip", "Former adventurer"]
+    },
+    phantom_wallet: {
+      enabled: true,
+      network: "devnet",
+      capabilities: ["merchant_processing", "tavern_payments", "bulk_transactions", "tip_jar_management"],
+      character_type: "human_bartender"
+    },
+    solana_integration: {
+      can_send_payments: true,
+      can_receive_payments: true,
+      can_perform_theft: false,
+      special_abilities: ["merchant_processing", "tavern_payments", "bulk_transactions", "tip_jar_management"]
+    },
+    tavern_info: {
+      name: "The Tipsy Gnome",
+      services: ["Drinks", "Food", "Lodging", "Information"],
+      pricing: {
+        ale: "0.1 SOL",
+        wine: "0.15 SOL",
+        meal: "0.25 SOL",
+        room: "0.5 SOL/night"
+      }
+    }
+  }
 };
 
 // Create server with the task handler. Defaults to InMemoryTaskStore.

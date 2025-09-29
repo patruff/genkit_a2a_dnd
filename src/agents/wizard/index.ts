@@ -542,12 +542,12 @@ async function* wzaAgentHandler(
 const wzaAgentCard: schema.AgentCard = {
   name: "WZA",
   description:
-    "A Dungeons & Dragons character agent - A wise and perceptive wizard with mystical mind reading abilities who can perceive the thoughts and motivations of those around them.",
+    "A Dungeons & Dragons character agent - A wise and perceptive wizard with mystical mind reading abilities who can perceive the thoughts and motivations of those around them. Now equipped with a Phantom wallet for magical payments and mystical transactions.",
   url: "http://localhost:41248",
   provider: {
     organization: "A2A Samples",
   },
-  version: "0.2.0",
+  version: "0.3.0",
   capabilities: {
     streaming: false,
     pushNotifications: false,
@@ -584,16 +584,81 @@ const wzaAgentCard: schema.AgentCard = {
         "[ACTION: SEE_FUTURE]",
         "[ACTION: CHANGE_FUTURE content: \"A new future vision\"]",
       ],
+    },
+    {
+      id: "mystical_payments",
+      name: "Mystical Payments",
+      description: "Can send SOL payments through ethereal channels and magical blockchain transactions",
+      tags: ["solana", "payments", "magic", "wizard", "phantom"],
+      examples: [
+        "Pay Bob for a mystical ale with SOL",
+        "Send ethereal payment for magical services",
+        "Transfer SOL through the astral plane",
+        "What's my magical wallet balance?",
+        "Buy a drink using mystical currency"
+      ]
+    },
+    {
+      id: "divination_fees",
+      name: "Divination Services",
+      description: "Accepts SOL payments for fortune telling, future sight readings, and mystical consultations",
+      tags: ["services", "divination", "payments", "consulting", "magic"],
+      examples: [
+        "I'll pay SOL for a future reading",
+        "What do you charge for divination services?",
+        "Accept payment for your mystical wisdom",
+        "Here's SOL for reading my fortune",
+        "Charge me for your magical consultation"
+      ]
+    },
+    {
+      id: "ethereal_transfers",
+      name: "Ethereal Transfers",
+      description: "Can facilitate magical money transfers between tavern patrons using mystical blockchain powers",
+      tags: ["transfers", "magic", "facilitation", "wizard", "blockchain"],
+      examples: [
+        "Help transfer SOL between patrons",
+        "Use magic to facilitate a payment",
+        "Cast a spell to move money safely",
+        "Magically assist with a transaction",
+        "Use your powers to help with payments"
+      ]
     }
   ],
   metadata: {
-    icon: "🧙‍♂️", // Wizard emoji
+    icon: "🧙‍♂️💫", // Wizard with sparkles
     theme_color: "#9966CC", // Mystical purple
-    display_name: "WZA",
+    display_name: "WZA the Wizard",
+    character_stats: {
+      race: "Human",
+      class: "Wizard",
+      level: 8,
+      stats: {
+        strength: 8,
+        dexterity: 12,
+        constitution: 13,
+        intelligence: 18,
+        wisdom: 15,
+        charisma: 14
+      },
+      spells: ["Mind Reading", "Future Sight", "Detect Magic", "Mystical Payment", "Ethereal Transfer"]
+    },
+    phantom_wallet: {
+      enabled: true,
+      network: "devnet",
+      capabilities: ["mystical_payments", "future_sight_transactions", "ethereal_transfers", "divination_fees"],
+      character_type: "wizard"
+    },
+    solana_integration: {
+      can_send_payments: true,
+      can_receive_payments: true,
+      can_perform_theft: false,
+      special_abilities: ["mystical_payments", "future_sight_transactions", "ethereal_transfers", "divination_fees"]
+    },
     mcp: {
       enabled: true,
       endpoint: MCP_BASE_URL,
-      capabilities: ["filesystem"],
+      capabilities: ["filesystem", "solana_payments"],
       tools: [
         {
           name: "filesystem/readFile",
@@ -602,6 +667,14 @@ const wzaAgentCard: schema.AgentCard = {
         {
           name: "filesystem/writeFile", 
           description: "Write content to a file"
+        },
+        {
+          name: "solana/sendPayment",
+          description: "Send SOL payments through mystical channels"
+        },
+        {
+          name: "solana/receivePayment",
+          description: "Receive SOL payments for magical services"
         }
       ]
     }
